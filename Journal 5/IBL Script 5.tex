@@ -1,0 +1,356 @@
+\documentclass[12pt]{article}
+
+%----------Packages----------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[mathcal]{eucal}
+\usepackage[all]{xy}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+ 
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\to}
+\providecommand{\sm}{\setminus}
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 5: CONTINUOUS FUNCTIONS}
+%\author{John Boller, Daniele Rosso}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 161, SHEET 5: CONTINUOUS FUNCTIONS} \\ 
+\vspace{.2in}  
+%John Boller, Daniele Rosso \quad $\bullet$ \quad January 4, 2010 
+%Major revision: Sarah Ziesler and Laurie Field, 20 November 2013
+\end{center}
+Jeffrey Zhang, IBL Script 5 Journal
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{5}   
+
+
+%This sheet discusses continuous functions, including a nice consequence of the Heine-Borel theorem.
+
+\begin{definition} Let $A\subset X\subset C$. 
+We say that $A$ is {\em  open in $X$} 
+if it is the intersection of $X$ with an open set,
+and {\em closed in $X$} if it is the intersection of $X$ with a closed set. (This is called the subspace topology on $X$.)
+\end{definition}
+
+\begin{exercise} Let $A\subset X\subset C$. Show that $X\setminus A$ is closed in $X$ if, and only if, $A$ is open in $X$.
+\end{exercise}
+
+\begin{proof}
+We let $X \setminus A$ be closed in $X$. Then we know that $X \setminus A = X \cap S$, where $S$ is some closed set.  $S$ is closed, so $C \setminus S$ is open. It follows then that $X \cap (C \setminus S) = X \setminus (X \setminus A)$. $X \setminus (X \setminus A) = A$ so $X \cap (C \setminus S) = A$. $C \setminus S$ is open, so by Definition 5.1 $A$ is open in $X$. 
+Now, let $A$ be open in $X$. Then $A = X \cap R$, where $R$ is some open set. $C \setminus R$ is closed then, so $X \cap (C \setminus R) = X \setminus A$. So $X \setminus A$ is closed in $X$ by Definition 5.1.
+\end{proof}
+
+\begin{exercise}
+\renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}
+\item Let $X=[a,b]\subset C$. Give an example of a set $A\subset X$ such that $A$ is open in $X$ but not in $C$.
+\item Give an example of sets $A\subset X\subset C$ such that $A$ is closed in $X$ but not in $C$. 
+\end{enumerate}
+\end{exercise}
+
+\begin{proof}
+a. Let $A = X$. Then $A = X \cap \emptyset$, and $\emptyset$ is open, so $A$ is open in $X$. $A$ is closed in $C$, and $A \not = \emptyset$ and $A \not = C$, so we know that $A$ is not open.
+\newline b. Let $A = \_{ab}$ where $a, b \in C$ and $A \not = \emptyset$, $A \not = C$. Then it follows that $A$ is open and not closed. Let $X = A$, then $A = X \cap C$. $C$ is closed, so $A$ is closed in $X$, but not closed in $C$. 
+\end{proof}
+
+\begin{definition}  Let $X\subset C$. A function $f \colon X \arr C$ is \emph{continuous} if for every open set $U \subset C$, the preimage $f^{-1}(U) = \{x \in X \mid f(x) \in U \}$ is open in $X$.
+\end{definition}
+
+\begin{exercise}\label{preimage-closed}
+Let $X\subset C$. A function  $f\colon X\arr C$ is continuous if, and only if, for every closed set $F\subset C,$ the preimage $f^{-1}(F)$ is closed in $X$.
+\end{exercise}
+
+\begin{proof}
+Let $X \subset C$. Let a function $f : X \to C$ be continuous. Then we have by Definition 5.4 that the preimage $f^{-1}(U)$ is open in $X$ where $U$ is some open set. So we know $U = C \setminus F$, where $F$ is some closed set. We have then that $f^{-1}(F) = \{x \in X \mid f(x) \in F\}$. It follows that $f^{-1}(C \setminus F) = \{x \in X \mid f(x) \not \in F\}$. $f^{-1}(C \setminus F)$ is open in $X$ because $f^{-1}(U)$ is open in $X$ and $U = C \setminus F$. This means then that $X \setminus \{x \in X \mid f(x) \not \in F\}$ is closed in $X$ by Exercise 5.2. $X \setminus \{x \in X \mid f(x) \not \in F\} = f^{-1}(F)$, so it follows that $f^{-1}(F)$ is closed in $X$. \newline
+Let $f : X \to C$ and $f^{-1}(F)$ be closed in $X$. Then for every closed set $F \subset C$, $\{x \in X \mid f(x) \in F\}$ is closed in $X$. It follows then that $X \setminus \{x \in X \mid f(x) \in F\}$ is open in $X$. $X \setminus \{x \in X \mid f(x) \in F\} = \{ x \in X \mid f(x) \not \in F\} = f^{-1}(C \setminus F)$. It follows then that $f^{-1}(C \setminus F)$ is open in $X$. $F$ is an arbitrary closed set, so for every open set $U$, $U$ can be expressed as $C \setminus F$ for some closed set $F$. Thus, for every open set $U$, we have that $f^{-1}(U)$ is open in $X$. So by Definition 5.4, $f : X \to C$ is continuous.
+\end{proof}
+
+\begin{proposition}
+Let $X\subset Y\subset C$. If $f\colon Y\to C$ is continuous, then the restriction of~$f$ to~$X$ (denoted~$f|_X\colon X\to C$) is continuous.
+\end{proposition}
+
+\begin{proof}
+Let $U$ be an open set in $C$ and $f : Y \to C$ be continuous. We know then that $f^{-1}(U) = \{x \in X \mid f(x) \in U\}$. Also, by Definition 5.4, we have that $f^{-1}(U) = Y \cap V$ such that $V$ is some open set. It follows then that $f^{-1}(U) \cap X = (Y \cap V) \cap X$. We can express this as $f^{-1}(U) \cap X = (Y \cap X) \cap V$. $X \subset Y$, so $Y \cap X = X$. We have then that $f^{-1}(U) \cap X = X \cap V$. $f^{-1}(U) \cap X = f^{-1}|_X(U)$, so $f^{-1}|_X(U) = X \cap V$. So we have that $f^{-1}|_X(U)$ is open in $X$ for every open set $U$ in $C$. By Definition 5.4 then we know that $f|_X\colon X\to C$ is continuous.
+\end{proof}
+
+It is important that the definition of continuity of $f\colon X\arr C$ states that the inverse image of an open set is 
+{\em open in $X$}, but not necessarily open in $C$. 
+\begin{exercise}  Find a function $f \colon [0, 1] \arr \bbR$ that appears to be continuous (in the ``not lifting your pencil" sense), but for which there exists an open set $U \subset \bbR$ such that $f^{-1}(U)$ is \emph{not} open in $\bbR$. Show that, nevertheless, $f^{-1}(U)$ is open in $[0,1]$.
+\end{exercise}
+
+\begin{proof}
+Let $f : [0,1] \to \mathbb R$ such that $f(x) = X$. Let $U$ be the set $(-0.5,0.5)$. $U$ is a region, so it is open. It follows then that $f^{-1}(U)= [0,0.5)$, which is not open in $R$ because no region $S$ can be constructed such that $0 \in S \subset f^{-1}(U)$ (Theorem 3.10). $f^{-1}(U)$ is open in $[0,1]$ however because $[0,0.5) = [0,1] \cap U$, and $U$ is open.
+\end{proof}
+
+\begin{remark}
+We review some properties of preimages from Homework 3.  
+Let $X\subset C$ and $f\colon X\arr C$.
+If $A, B \subset C$,  then
+\begin{align*}
+f^{-1}(A\cup B) &= f^{-1}(A) \cup f^{-1}(B),\\
+\text{and}\quad
+f^{-1}(A\cap B) &= f^{-1}(A) \cap f^{-1}(B).
+\end{align*}
+\end{remark}
+
+%\begin{exercise}
+%Show that if $X\subset C, f\colon X\arr C$ and $A,B\subset C,$ then 
+%$$f^{-1}(A\sm B)=f^{-1}(A)\sm f^{-1}(B).$$
+%\end{exercise}
+
+\begin{exercise}\label{image-preimage}
+Let $f\colon X\arr C$. Let $A\subset X$ and $B\subset C$. Then 
+\[
+f(f^{-1}(B))\subset B\quad\text{and}\quad A\subset f^{-1}(f(A)).
+\]
+\end{exercise}
+
+\begin{proof}
+Let $f : X \to C$ with $A \subset X$ and $B \subset C$. 
+\newline Let $y \in f(f^{-1}(B))$, then $\exists x \in f^{-1}(B)$ such that $f(x) = y$. Since for all $x \in f^{-1}(B)$, we know that $f(x) \in B$. Since $f(x) = y$, we know that $y \in B$. Thus we have that $f(f^{-1}(B)) \subset B$. 
+\newline Let $x \in A$, then $f(x) \in f(A)$. We have that $f^{-1}(A) = \{x \in X \mid f(x) \in A\}$ so $f^{-1}(f(A)) = \{x \in X \mid f(x) \in f(A)\}$. $f(x) \in f(A)$, so $x \in f^{-1}(f(A))$. Thus it follows that $A\subset f^{-1}(f(A))$.
+\end{proof}
+
+\begin{exercise} Let $f\colon X\arr C$.  Show that $f$ is continuous if, and only if, $f(\overline{A}\cap X)\subset \overline{f(A)},$ for all $A\subset X$.
+
+Note: You should try to do this exercise without considering limit points explicitly. Instead use~\ref{preimage-closed}, \ref{image-preimage} and the result from question 3(a) of Homework 4.
+\end{exercise}
+
+\begin{proof}
+Suppose that $f$ is continuous. then for a set $F \subset C$ such that $F$ is closed, $f^{-1}(F)$ is closed in $X$ by Exercise 5.5. We know that $\overline{f(A)}$ is closed, so choose $F = \overline{f(A)}$. Then we have that $f^{-1}(\overline{f(A)})$ is closed in $X$ so $f^{-1}(\overline{f(A)}) = X \cap V$ for some closed set $V$. It follows then that $f^{-1}(f(A)) \cup f^{-1}(\{x \in C \mid x \text{ is a limit point of } f(A)\}) = X \cap V$. We have then that $f^{-1}(f(A)) \subset (X \cap V)$ and from Exercise 5.9 we have that $A \subset f^{-1}(f(A))$ so $A \subset (X \cap V)$. $A \subset V$ and $V$ is closed, so by problem 3a on homework 4, $\overline{A} \subset V$. $\overline{A} \subset V$ so $\overline{A} \cap X \subset (V \cap X)$. $(V \cap X) = f^{-1}(\overline{f(A)})$ so we have $(\overline{A} \cap X) \subset f^{-1}(\overline{f(A)})$. It follows then that $f(\overline{A} \cap X) \subset f(f^{-1}(\overline{f(A)}))$. Using Exercise 5.9 again, we have that $f(f^{-1}(\overline{f(A)})) \subset \overline{f(A)}$ so $f(\overline{A} \cap X) \subset \overline{f(A)}$.
+\newline Suppose $f(\overline{A} \cap X) \subset \overline{f(A)}$ holds for $A \subset X$. Let $A = f(f^{-1}(F))$ for some closed set $F$. Then $f(f^{-1}(F)) \subset X$ because $f : X \to C$.  Using Exercise 5.9, we know that $f(f^{_1}(F)) \subset F$. $F$ is closed, so applying homework 4, problem 3a, we get that $f(\overline{f^{-1}(F)}) \subset F$. Applying the initial assumption, we get that $f(\overline{f^{-1}(F)} \cap X) \subset F$. Taking the pre-image on both sides, we get $f^{-1}(f(\overline{F^{-1}(F)} \cap X)) \subset f^{-1}(F)$. We know that $\overline{f^{-1}(F)} \cap X \subset f^{-1}(f(\overline{F^{-1}(F)} \cap X))$ so $\overline{f^{-1}(F)} \cap X \subset f^{-1}(F)$. We also know $f^{-1}(F) \subset X$ and $f^{-1}(F) \subset \overline{f^{-1}(F)}$ by the definition of closure. So it follows that $f^{-1}(F) \subset \overline{f^{-1}(F)} \cap X$. We have shown then that $\overline{f^{-1}(F)} \cap X \subset f^{-1}(F)$ and $f^{-1}(F) \subset f^{-1}(F) \subset \overline{f^{-1}(F)} \cap X$, so we know $f^{-1}(F) = \overline{f^{-1}(F)} \cap X$. Thus we have shown that the pre-image of $F$ is the intersection of a closed set and $X$, so by Definition 5.4 we have that $f$ is continuous.
+\end{proof}
+
+\begin{definition}
+The function $f\colon X\to C$ is {\em continuous at $x\in X$} if, 
+for every region $R$ containing $f(x)$, there exists a region $S$ containing $x$ such that $f(S\cap X)\subset R$.
+\end{definition}
+
+\begin{theorem}\label{reformulation}
+The function $f\colon X\to C$ is continuous if and only if it is continuous at every $x\in X$. 
+\end{theorem}
+
+\begin{proof}
+Let $f : X \to C$ be continuous. TIt folllows then that for all open sets $U \subset C$, $f^{-1}(U) = X \cap A$ where $A$ is an open set. Let $x \in X$, and let $R$ be a region such that $f(x) \in R$. $R \subset C$ is an open set, so $f^{-1}(R)$ must be open in $X$ by Definition 5.4. So we get $f^{-1}(R) = X \cap S$ where $S$ is some open set. $S$ is open, so we know there exists a region $P$ such that $x \in P \subset S$. Then $X \cap P \subset f^{-1}(R)$, so $f(X \cap P) \subset f(f^{-1}(R))$. Applying Exercise 5.9, we get $f(f^{-1}(R)) \subset R$, so $f(X \cap P) \subset R$. We also have that $f$ is continuous, so $f(X \cap P) \subset R$ for a region $R$ containing $f(x)$ and a region $P$ containing $x$. Then it follows by Definition 5.11 that $f$ is continuous at all $x \in X$.
+\newline
+Let $f$ be continuous at every $x \in X$, so for every region $R$ such that $f(x) \in R$ there must exist a region $S$ such that $x \in S$ and $f(S \cap X) \subset R$. By taking the pre-image and applying Exercise 5.9 we get that $S \cap X \subset f^{-1}(R)$. A union of the preimages of the regions $R$ will form any open set $U \subset C$< so $(\bigcup_{\lambda}S_{\lambda}) \cap X \subset f^{-1}(U)$, for any open set $U$. $f : X \to C$, so $f^{-1}(U) \subset \subset X$. Assume that there exists some $f(x) \in U$, then since $f$ is continuous at every point, $x$ is contained within some $S_{\lambda}$. So $x \in \bigcup_{\lambda}S_{\lambda}$. Then we have $f^{-1}(U) \subset \bigcup_{\lambda}S_{\lambda}$. It follows then that $f^{-1}(U) \subset \bigcup_{\lambda}S_{\lambda} \cap X$. So we know that for every open set $U \subset C, f^{-1}(U) = \bigcup_{\lambda}S_{\lambda} \cap X$. Since $\bigcup_{\lambda}S_{\lambda}$ is a union of open sets (regions), it is an open set. So we know that the pre-image of any open set $U$ is open in $X$. Thus we have that if $f$ is continuous at every $x \in X$, then $f$ is continuous.
+\end{proof}
+
+First, we discuss the relationship between continuity and connectedness. Now that we have defined the subspace topology, Definition 4.1 tells us that a set $X\subset C$ is {\em connected} 
+if it cannot be written as the union $X = A \cup B$ of disjoint, non-empty sets $A$ and $B$ that are open in $X$.
+
+\begin{theorem}
+Let $X\subset C$. Then $X$ is connected if, and only if, for all $a,b\in X$ with $a<b,$ $\underline{ab}\subset X$.
+\end{theorem}
+
+\begin{proof}
+Let $X \subset C$ and let $X$ be connected. Assume that for $a,b \in X$ with $a < b$, there exists a point $c$ such that $a < c < b$, $c \not \in X$, $c \in \_{ab}$. Then $X = \{x \in X \mid x < c\} \cup \{x \in X \mid c < x\}$, so $X$ is the disjoint union of two non-empty open sets and thus $X$ is disconnected. These two sets are non-empty because $a \in \{x \in X |mid x < c\}$ and $b \in \{x \in X \mid c < x\}$. These sets are open by Corollary 3.12. This is a contradiction, so for all $c \in \_{ab}$, $\_{ab} \subset X$.
+\newline Let it be true that for all $a,b \in X$ with $a < b$, $\_{ab} \subset X$. Assume $X$ is disconnected, then we can write $X = A \cup B$ where $A,B$ are non-empty disjoint and open in $X$. We choose $a \in A$ and $b \in B$ such that $a < b$. Let $c = \sup(A \cap [a,b])$. We know $c$ exists by Theorem 4.18 because $a \in (A \cap [a,b])$ so $(A \cap [a,b])$ is non-empty and $(A \cap [a,b])$ is bounded by $[a,b]$. We have three cases here, either $c \in A$, $c \in B$, or $c \not \in A,B$. We consider the first case by assuming $c \in A$. $A$ is open in $X$, so $A = X \cap U$ where $U$ is some open set. Then by Theorem 3.10 we know that there exists a region $R$ such that $c \in R \subset U$. We then have $(R \cap X) \subset (U \cap X)$. $U \cap X = A$, so $(R \cap X) \subset A$. We write $R$ as $\_{de}$ for $d,e \in C$. Then $c \in R$ so $d < c < e$. By Theorem 4.3, we have that there exists a point $f$ such that $d < c < f < e$. $f \in R$, and $(R \cap X) \subset A$ so $f \in A$. Note that $c \in (A \cap [a,b])$ because the intersection of two closed sets is closed and $A$ is closed in $X$ ($B = X \setminus A$ is open in $X$) and $[a,b]$ is closed in $X$. So $c \in [a,b]$. This means that $c < f < e < b$, so $f \in (A \cap [a,b])$. This is a contradiction, as $c = \sup(A \cap [a,b])$ and $f \in (A \cap [a,b])$, $c < f$. Note that if $f \not \in X$, $f \in \_{ab}$ so $\_{ab} \not \subset X$ which is also a contradiction. We now consider the second case, where $c \in B$. We know that $B$ is open in $X$, so $c \in S \subset B$ for some region $S$. Similarly we have $S \cap X \subset B \cap X$, and $B \subset X$ so $S \cap X \subset B$. We write $S$ as $S = \_{gh}$ where $g,h \in C$. Using Lemma 4.28, we know that there exists some $x \in A$ such that $x \in S$. This is a contradiction because $x \in S \subset B$, so $x \in B$, but we have $A,B$ as disjoint so $x \in A$ and $x \in B$ contradicts $X$ being disconnected. Note that if there is no $x \in A$ such that $g < x < c$, then $g$ is an upper bound of $A$ and $c \not = \sup(A \cap [a,b])$. Finally we consider the third case, where $c \not \in A$ and $c \not \in B$. It follows then that $c \not \in X$, but $c  \in \_{ab}$ so $\_{ab} \not \subset X$, which contradicts the initial assumption.
+\end{proof}
+
+\begin{corollary}
+Every region $R\subset C$ is connected.
+\end{corollary}
+
+\begin{proof}
+Let $R$ be a region \_{ab}. Let $a',b' \in R$, then $a < a' < b' < b$. It follows then that $\_{a'b'} \subset \_{ab}$, so $R$ is connected.
+\end{proof}
+
+\begin{theorem}[Intermediate Value Theorem]\label{int_value_thm}
+Suppose that $f \colon X \arr C$ is continuous.  If $X$ is connected, then $f(X)$ is connected.
+\end{theorem}
+
+\begin{proof}
+Let $f$ be continuous and $X$ be connected. Assume that $f(X)$ is disconnnected, so $f(X) = A \cup B$ where $A,B$ are non-empty, disjoint, and open in $X$. From Exercise 5.9 we have that $X \subset f^{-1}(f(X))$. Substituting $f(X) = A \cup B$ we get $X \subset f^{-1}(A \cup B)$. It foollows then that $X \subset f^{-1}(A) \cup f^{-1}(B)$. We then have that $X = (f^{-1}(A) \cap X) \cup (f^{-1}(B) \cap X)$. But we know that $f: X \to C$, so $f^{-1}(A) \subset X$, $f^{-1}(B) \subset X$. Thus we end up with $X = f^{-1}(A) \cup f^{-1}(B)$. To show that $f^{-1}(A)$ and $f^{-1}(B)$ are disjoint, we assume that they are not, that is there exists some $y$ such that $y \in f^{-1}(A)$ and $y \in f^{-1}(B)$. Then we have $f(y) \in A$, $f(y) \in B$. This is a contradiction, as $A,B$ are disjoint, so $f^{-1}(A)$ and $f^{-1}(B)$ are disjoint. To show that $f^{-1}(A)$ and $f^{-1}(B)$ are non-empty, we assume that $f^{-1}(A)$ is empty. Then either $A$ or $B$ covers all of $f(X)$, so $f(X)$ is not disconnected which is a contradiction. Without loss of generality it can be similarly shown that $f^{-1}(B)$ must be non-empty. We know that $f$ is continuous, so $f^{-1}(A)$ and $f^{-1}(B)$ must be open in $X$ by Exercise 5.5. Thus we have shown that $f^{-1}(A)$ and $f^{-1}(B)$ are non-empty disjoint sets that are both open in $X$. So we have that $X$ is disconnected, which is a contradiction to the given that $X$ is connected. As a result, $f(X)$ must be connected if $f : X \to C$ is continuous and $X$ is connected.
+\end{proof}
+
+\begin{exercise}  
+Use Theorem~\ref{int_value_thm} to prove that if $f\colon [a,b] \arr C $ is continuous, then for every point $p$ between $f(a)$ and $f(b)$ there exists $c$ such that $a<c<b$ and $f(c)=p$. 
+
+Note that this is the statement of the Intermediate Value Theorem given in calculus texts (with $C$ replaced by $\bbR$).
+\end{exercise}
+
+\begin{proof}
+Let $f : [a,b] \to C$ be continuous. Then we know by Theorem 5.15 that $f([a,b])$ is connected. Let $f(a) < p < f(b)$. By Theorem 5.13, we have that $p \in f([a,b])$. We have then that there exists $c$ such that $f(c) = p$. $c \in [a,b]$ and $p \not = f(a)$, $p \not = f(b)$, so $c \not = a$, $c \not = b$. Thus there exists $c$ such that $a < c < b$ and $f(c) = p$.
+\end{proof}
+
+Second, we discuss the relationship between continuity and compactness.
+\begin{theorem}  Suppose that $f\colon X\to C$ is continuous.  If $X$ is compact, then $f(X)$ is compact.
+\end{theorem}
+
+\begin{proof}
+Let $X$ be compact and $\mathcal{U}$ be an open cover of $f(X)$. Then we can write $\mathcal{U} = \bigcup_{\lambda}U_{\lambda}$. We have that $f^{-1}(f(X)) \subset f^{-1}(\bigcup_{\lambda}U_{\lambda})$. Using Exercise 5.9, we can write that $X \subset f^{-1}(\bigcup_{\lambda}U_{\lambda})$ because $X \subset f^{-1}(f(X))$. So it follows that $X \subset \bigcup_{\lambda}f^{-1}(U_{\lambda})$. We know by Exercise 5.5 that $f^{-1}(U_{\lambda})$ is open in $X$, so $f^{-1}(U_{\lambda}) = V_{\lambda} \cap X$ where $V_{\lambda}$ is an open set. So we have $X \subset \bigcup_{\lambda}(V_{\lambda} \cap X)$. $X \subset X$, so it follows that $X \subset \bigcup_{\lambda}V_{\lambda}$. We have that $X$ is compact, so we know that there must exist a finite subcover such that $X \subset \bigcup_{i=1}^{n}(V_{\lambda_{i}})$. We can rewrite this as $X \subset \bigcup_{i=1}^{n}(V_{\lambda_{i}} \cap X)$ because again $X \subset X$. So we then substitute and get $X \subset \bigcup_{i=1}^{n}(f^{-1}(U_{\lambda_{i}}))$. It follows directly that we can write this as $X \subset f^{-1}\bigcup_{i=1}^{n}U_{\lambda_{i}}$. It then follows that $f(X) \subset f(f^{-1}\bigcup_{i=1}^{n}U_{\lambda_{i}})$. Using Exercise 5.9 again, we get $f(X) \subset \bigcup_{i=1}^{n}U_{\lambda{i}}$, which is a finite subcover of $\mathcal{U}$. So we have $f(X)$ is compact.
+\end{proof}
+
+\begin{corollary}[Extreme Value Theorem]  If $X \subset C$ is non-empty, closed, and bounded
+and $f\colon X \arr C$ is continuous, then 
+$f(X)$ has a first and last point.
+\end{corollary}
+
+\begin{proof}
+Let $X$ be non-empty, closed, and bounded. Then by Heine-Borel we have that $X$ is compact. $X$ is compact, so by Theorem 5.17 we have that $f(X)$ is compact. Again by Heine-Borel, this gives us that $f(X)$ is closed and bounded. $f(X)$ is non-empty because $X$ is non-empty, so $sup(f(X))$ exists by Theorem 4.18. Also, $sup(f(X)) \in f(X)$ because $f(X)$ is closed. So $sup(f(X))$ is the last point of $f(X)$. Without loss of generality it can be similarly shown that $inf(f(X))$ is the first point of $f(X)$.
+\end{proof}
+
+\begin{exercise}  Use Corollary 5.19 to prove that  if $f \colon [a,b] \arr C$ is continuous, then there exists a point $c \in [a, b]$ such that $f(c) \geq f(x)$ for all $x \in [a, b]$.  Similarly, there exists a point $d \in [a, b]$ such that $f(d) \leq f(x)$ for all $x \in [a, b]$.
+
+Note that this is the statement of the Extreme Value Theorem given in calculus texts (with $C$ replaced by $\bbR$).
+\end{exercise}
+
+\begin{proof}
+Let $f : [a,b] \to C$ be continuous. $[a,b]$ is non-empty, closed, and bounded, so by Corollary 5.18 $f([a,b])$ has a first and last point. Let $m$ be the first point of $f([a,b])$ and $n$ be the last point of $f([a,b])$. $[a,b]$ is compact, so $f([a,b])$ is also compact by Theorem 5.17. Then by Heine-Borel we have that $f([a,b])$ is closed which means it contains all of its limit points, so by Theorem 4.14 $m \in f([a,b])$ and $n \in f([a,b])$. Then it follows by Exercise 5.16 that there exist $c,d \in [a,b]$ such that $f(c) = m$ and $f(d) = n$.
+\end{proof}
+
+
+
+
+
+
+
+
+\end{document}

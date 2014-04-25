@@ -1,0 +1,651 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\sarr}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+
+\begin{document}
+
+\begin{center}
+{\large SHEET 10: LIMITS and DERIVATIVES of FUNCTIONS} \\ 
+\vspace{.2in}  
+\end{center}
+Jeffrey Zhang IBL Journal Sheet 11 4/11/2014
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{10}   
+\setcounter{theorem}{-1} 
+
+The following lemma is very useful in proofs involving inequalities.
+
+\begin{lemma}  For any real numbers $x$ and $y$, we have: 
+\begin{align*}
+&\text{The Triangle Inequality:} \quad   \abs{x + y} \leq \abs{x} + \abs{y} \\
+&\text{The Reverse Triangle Inequality:} \quad \abs{\abs{x} - \abs{y}} \leq \abs{x - y}.
+\end{align*}
+(Hint: the second inequality follows from the first.)
+\end{lemma}
+
+\begin{proof}
+Note that $x \leq \abs{x}$ and $y \leq \abs{y}$. Then consider two cases: \newline
+Case 1: If $x + y > 0$, then we have that $x + y = \abs{x + y}$. It follows then that $x + y \leq \abs{x} + \abs{y}$, so $\abs{x + y} \leq \abs{x} + \abs{y}$. \newline
+Case 2: If $x + y < 0$, then we have $\abs{x + y} = -x - y$. $-x \leq \abs{-x}$, so we have that $\abs{x + y} = - x - y \leq \abs{-x} + \abs{-y}$. Note that $\abs{-x} = \abs{x}$, so we have then that $\abs{x + y} \leq \abs{x} + \abs{y}$. \newline
+To show the reverse triangle inequality, note that $\abs{x + y} \leq \abs{x} + \abs{y}$ by the triangle inequality. It follows then that $\abs{y} = \abs{x + (y - x)} \leq \abs{x} + \abs{y - x}$ and similarly that $\abs{x} = \abs{y + (x - y)} \leq \abs{y} + \abs{x - y}$. It follows then that $\abs{x - y} \geq \abs{x} - \abs{y}$ and that $\abs{y - x} \geq \abs{y} - \abs{x}$. $\abs{x - y} = \abs{y - x}$, so we know that $\abs{x - y} \geq \abs{x} - \abs{y}$ and that $\abs{x - y} \geq \abs{y} - \abs{x}$. It follows directly then that $\abs{x - y} \geq \abs{\abs{x} - \abs{y}}$.
+\end{proof}
+Throughout this sheet, we let  $f \colon A \arr \bbR$
+be a real valued function  with domain $A \subset \bbR$.
+
+
+
+\begin{definition}  Let $a \in \bbR$ be such that there exists a region $R$ containing $a$ with $R\setminus \lbrace a \rbrace \subset A.$  A \emph{limit} of $f$ at a point $a \in \bbR$ is a number $L \in \bbR$ satisfying the following condition: for every $\epsilon > 0$, there exists a $\delta > 0$ such that 
+\[
+\text{if $x \in A$ and $0 < \abs{x - a} < \delta$, \quad then $\abs{f(x) - L } < \epsilon$ }.
+\]
+\end{definition}
+
+\begin{lemma} Limits are unique:  if $L$ and $L'$ are both limits of $f$ at a point $a,$ then $L=L'.$ 
+\end{lemma}
+
+\begin{proof}
+Assume that $L,L'$ are both limits of $f$ at point $a$. We arbitrarily assume that $L' > L$, then we let $\epsilon = \frac{L' - L}{2}$. It follows then by Definition 10.1 that there exists $\delta, \delta'$ such that for $x \in A$, if $0 < \abs{x - a} < \delta$ then $\abs{f(x) - L} < \epsilon$ and if $0 < \abs{x - a} < \delta'$ then $\abs{f(x) - L'} < \epsilon$. Without loss of generality we may note that $\delta' > \delta$. Then let $x \in A$ such that $0  < \abs{x - a} < \delta$, then we have that $0  < \abs{x - a} < \delta'$, so we know that $\abs{f(x) - L} < \epsilon$ and that $\abs{f(x) - L'} < \epsilon$. It follows then that $-\epsilon < f(x) - L < \epsilon$. Expanding, we get that $\frac{3L - L'}{2} < f(x) < \frac{L' + L}{2}$. Similarly, we have that $-\epsilon < f(x) - L' < \epsilon$. Expanding, we get that $\frac{L' + L}{2} < f(x) < \frac{3L' - L}{2}$, so we have a contradiction. Thus, we know that $L' = L$.
+\end{proof}
+
+\begin{definition} If the limit $L$ of $f$ at $a$ exists, we write this as:
+\[
+\lim_{x \sarr a} f(x) = L.
+\]
+\end{definition}
+
+More generally, we can extend the above definition to any $a \in \bbR$ such that $a$ is a limit point of $A$.  In this case, the fact that $a$ is a limit point guarantees that for all $\delta > 0$ there exists an $x$ such that $x \in A$ and $0 < \abs{x -a } < \delta$.  So the ``if'' part of the statement is never vacuous.  
+
+
+%\noindent Notice that $a$ need not be an element of $A$, but that for the definition to make sense, we implicitly assume that $f$ is defined on $R \setminus \{a \}$ for some region $R$ containing $a$.
+
+
+
+
+\begin{exercise}  
+Give an example of a set $A\subset \bbR$, a function $f\colon A\arr \bbR$, and a point $a$ (such that
+there exists a region $R$ containing $a$ with $R\setminus\{a\}\subset A$) such that 
+$\underset{x \sarr a}{\lim} \, f(x)$ does not exist.
+\end{exercise}
+
+\begin{proof}
+Let $f: A \to \bbR$ be defined as follows: \newline
+\[
+f(x) = \begin{cases}
+x \leq 0 \quad &-1 \\
+x > 0 \quad &1
+\end{cases}
+\] 
+Then let $\epsilon = \frac{1}{2}$ and $a = 0 \in A$. It follows that there exists no $\delta > 0$ such that if $\abs{x} < \delta$, then $\abs{f(x)} < \frac{1}{2}$ because there does not exist $f(x)$ such that $\abs{f(x)} < \frac{1}{2}$.
+\end{proof}
+
+\begin{theorem}  A function $f$ is continuous at $a$ if and only if
+\[
+\lim_{x \sarr a} f(x) = f(a).
+\]
+\end{theorem}
+
+\begin{proof}
+Let $f$ continuous at $a \in A$. Then by 9.21, we have that for all $\epsilon > 0$, there exists $\delta > 0$ such that for $a \in \bbR$, if $x \in A$ and $\abs{x - a} < \delta$, then $\abs{f(x) - f(a)} < \epsilon$. Let $L = f(a)$, then by Definition 10.1 we have that $L = f(a) = \lim_{x \to a}f(x)$. \newline
+Let $\lim_{x \to a}f(x) = f(a)$. Then we have by 10.1 that for all $\epsilon > 0$, there exists $\delta > 0$ such that if $x \in A$ and $0 < \abs{x - a} < \delta$, then $\abs{f(x) - f(a)} < \epsilon$. Then by 9.21 we have that $f$ is continuous at $a$.
+\end{proof}
+
+\begin{exercise}
+\begin{itemize}
+\item[(i)] For every $c\in\bbR$, the constant function $f:\bbR\to\bbR$, defined by $f(x)=c$ for all $x\in\bbR$, is continuous.
+\item[(ii)] The identity function, defined by $g(x)=x$, is continuous.
+\end{itemize}
+\end{exercise}
+
+\begin{proof}
+(i) Let $c \in \bbR$ such that $f(x) = c$. Let $y \in \bbR$ be arbitrary, then we let $L = c$ and note that $\abs{f(x) - c} < \epsilon$ is always true as $0 < \epsilon$. So we have then by Definition 10.1 that $\lim_{x \to a}f(x) = c = f(y)$, so by Theorem 10.5 we have that $f$ is continuous at $y$. $y \in \bbR$ is arbitrary, so we have that $f$ is continuous. \newline
+(ii) Let $y \in \bbR$ and let $g(x) = x$. Then we have that $g(y) = y$. Let $L = g(y) = y$, then for any $\epsilon > 0$, let $\delta = \epsilon$. It follows then that if $x \in A$ such that $0 < \abs{x - y} < \delta$, then $0 < \abs{f(x) - f(y)} = \abs{x - L} < \delta = \epsilon$. We have then that $\lim_{x \to y}g(x) = L = y = g(y)$, so by 10.5 we know that $f$ is continuous at $y$. $y$ is arbitrary, so we know that $f$ is continuous.
+\end{proof}
+
+
+\begin{exercise}Show that the 
+absolute value function $f:\bbR\to\bbR$, $f(x)=\abs{x}$ is continuous.
+\end{exercise}
+
+\begin{proof}
+Let $f(x) = \abs{x}$. Let $y \in \bbR$ be arbitrary, then for $\epsilon > 0$, let $\delta = \epsilon$. We have then that if $x \in \bbR$ such that $\abs{x - y} < \delta$, then $\abs{\abs{x} - \abs{y}} < \epsilon$. By 10.0, we know that $\abs{\abs{x} - \abs{y}} \leq \abs{x - y} < \epsilon$. $\delta = \epsilon$, so this is always true. Then it follows that $L = \abs{y} = f(y)$, so $f(y) = \lim_{x \to y}f(x)$ and by 10.5 then we have that $f$ is continuous at $y$. $y$ is arbitrary, so we know then that $f$ is continuous.
+\end{proof}
+
+\noindent Given real-valued functions $f$ and $g$, we define new functions $f + g$, $fg$ and $\tfrac{1}{f}$ by
+\begin{itemize}
+\item $(f + g)(x) = f(x) + g(x)$
+\item $(f g)(x) = f(x) \cdot g(x)$
+\item $\tfrac{1}{f}(x) = \frac{1}{f(x)}$, provided that $f(x) \neq 0$.
+\end{itemize}
+We wish to understand the limits of $f + g$, $fg$ and $\frac{1}{f}$ in terms of the limits of $f$ and $g$.
+
+
+%\begin{lemma}  If $\abs{x - x_0} < \frac{\epsilon}{2}$ and $\abs{y - y_0} < \frac{\epsilon}{2}$, then $\abs{ (x + y) - (x_0 + y_0) } < \epsilon$.
+%\end{lemma}
+
+
+\begin{theorem}  Suppose that $\underset{x \sarr a}{\lim} \, f(x) = L$ and $\underset{x \sarr a}{\lim} \, g(x) = M$.  Then
+\[
+\lim_{x \sarr a} (f + g)(x) = L + M.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\epsilon > 0$ and define $\epsilon' = \frac{\epsilon}{2}$. By 10.1, we know that there exist $\delta_1, \delta_2$ such that if $0 < \abs{x - a} \leq \delta_1$ then $\abs{f(x) - L} < \epsilon'$ and if $0 < \abs{x - a} \leq \delta_2$ then $\abs{g(x) - M} < \epsilon'$. Let $\delta = \min(\delta_1, \delta_2)$. Then it follows that if $0 < \abs{x - a} \leq \delta$, then $\abs{f(x) - L} + \abs{g(x) - M} < \epsilon' + \epsilon'$. Using the triangle inequality and simplifying, we get then that $\abs{(f + g)(x) - (L + M)} < \epsilon$, so we have that $\lim_{x \sarr a} (f + g)(x) = L + M$.
+\end{proof}
+
+\begin{lemma} If
+\[
+\abs{x - x_0} < \min \Bigl( 1, \frac{\epsilon}{2(\abs{y_0} + 1)} \Bigr) \quad \text{and} \quad \abs{y - y_0} < \frac{\epsilon}{2 (\abs{x_0} + 1)},
+\]
+then
+\[
+\abs{xy - x_0 y_0} < \epsilon.
+\]
+\end{lemma}
+
+\begin{proof}
+$\abs{xy - x_0y_0} = \abs{(y - y_0)x + y_0x - x_0y_0}$ \newline
+$= \abs{(y - y_0)x + y_0(x - x_0)}$ \newline
+$\leq \abs{(y - y_0)x} + \abs{y_0(x - x_0)}$ by the triangle inequality \newline
+Note that $\abs{x - x_0} \leq 1$ so we have that $x \leq x_0 + 1$. \newline
+Substituting, then we get that $\abs{xy - x_0y_0} \leq \abs{(y-y_0)(x_0+1)} + \abs{y_0(x-x_0)}$ \newline
+Note that $\abs{y - y_0} < \frac{\epsilon}{2(\abs{x_0} + 1)}$ so substituting we have that $\abs{(y-y_0)(x_0+1)} < \frac{\epsilon \abs{x_0 + 1}}{2 \abs{x_0+1}} = \frac{\epsilon}{2}$. \newline
+Similarly we get that $\abs{y_0(x-x_0)} < \frac{\epsilon(\abs{y_0})}{2(\abs{y_0} + 1)}$. \newline
+Note that $\frac{\abs{y_0}}{\abs{y_0} + 1} < 1$, so we have that $\abs{y_0(x-x_0)} < \frac{\epsilon}{2}$.
+Substituting into the original equation we get that $\abs{xy - x_0y_0} \leq \frac{\epsilon}{2} + \frac{\epsilon}{2}$ so we have $\abs{xy - x_0y_0} < \epsilon$.
+\end{proof}
+
+\begin{theorem} Suppose that $\underset{x \sarr a}{\lim} \, f(x) = L$ and $\underset{x \sarr a}{\lim} \, g(x) = M$.  Then
+\[
+\lim_{x \sarr a} (f g)(x) = L \cdot M.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\epsilon > 0$ be arbitary. Then let $p = \min \Bigl( 1, \frac{\epsilon}{2(\abs{y_0} + 1)} \Bigr) \quad \text{and} \quad q = \frac{\epsilon}{2 (\abs{x_0} + 1)}$. $p,q > 0$, so we know there exist $\delta_1,\delta_2$ such that if $0 < \abs{x - a} < \delta_1$ then $\abs{f(x) - L} < p$ and if $\abs{x - a} < \delta_2$ then $\abs{g(x) - M} < q$. Let $\delta = \min{\delta_1, \delta_2}$. Then we have that for any $\epsilon > 0$, there exists $\delta > 0$ such that if $0 < \abs{x - a} < \delta$, then $\abs{f(x) - L} < p$ and $\abs{g(x) - M} < q$, and thus by Theorem 10.9 then $\abs{(fg)(x) - LM} < \epsilon$. Then by Definition 10.1 we have that $\lim_{x \to a}(fg)(x) = L \cdot M$.
+\end{proof}
+
+\begin{theorem}  Suppose that $\underset{x \sarr a}{\lim} \, f(x) = L \neq 0$.  Then
+\[
+\lim_{x \sarr a} \frac{1}{f}(x) = \frac{1}{L}.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\epsilon > 0$ and let $\abs{f(x) - L} < \sigma$. We know that $\abs{f(x)L} \abs{\frac{1}{f(x)} - \frac{1}{L}} < \sigma$ implies that $\abs{\frac{1}{f(x)} - \frac{1}{L}} < \frac{\sigma}{\abs{f(x)L}}$. We have that $f(x) \in (L - \sigma, L + \sigma)$, so it follows that $0 < \sigma < \abs{L}$. Suppose that $L + \sigma < 0$, then we have that $\abs{f(x)} > \abs{L + \sigma}$. Suppose that $L - \sigma > 0$, then we have that $\abs{f(x)} > \abs{L - a}$. We have then that $\sigma < \frac{\abs{L}}{2}$ and $\abs{f(x)} > \abs{L - \sigma}$. It follows then that $\abs{f(x)} \geq \abs{L} - \abs{L - f(x)}$. Substituting we get that $\abs{L - f(x)} < \abs{L} - \frac{\abs{L}}{2} = \frac{\abs{L}}{2}$. So we have then that $\abs{f(x)}> \frac{\abs{L}}{2}$. It follows then that $\frac{\sigma}{\abs{f(x)L}} < \frac{2\sigma}{L^2}$. \newline
+So we have $\sigma = \min(\frac{\abs{L}}{2}, \frac{\epsilon \abs{L}^2}{2})$ and because $\sigma' > 0$, we know that there exists $\delta' > 0$ such that if $0 < \abs{x - a} < \delta'$, then $\abs{f(x) - L} < \sigma$. It follows then by substituting that $\abs{\frac{1}{f(x)} - \frac{1}{L}} < \epsilon$, so we have that $\lim_{x \sarr a} \frac{1}{f}(x) = \frac{1}{L}$.
+\end{proof}
+
+\begin{corollary}  If $f$ and $g$ are continuous at $a$, then $f + g$ and $fg$  are continuous at $a$. Also, $\frac{1}{f}$ is continuous at $a$,   provided that $f(a) \neq 0$.
+\end{corollary}
+
+\begin{proof}
+$f,g$ continuous at $a$, so we have that $\lim_{x \to a}f(x) = f(a)$ and $\lim_{x \to a}g(x) = g(a)$. \newline
+To show that $f + g$ is continuous at $a$, we have by definition that $\lim_{x \to a}(f + g)(x) = \lim_{x \to a}f(x) + \lim_{x \to a}g(x)$, so $\lim_{x \to a}(f + g)(x) = f(a) + g(a) = (f + g)(a)$. So by 10.5 $f + g$ is continuous at $a$. \newline
+To show that $fg$ is continuous at $a$, we similarly have that $\lim_{x \to a}(fg)(x) = f(a) \cdot g(a) = (fg)(a)$ and thus by 10.5 we know that $fg$ is continuous at $a$. \newline
+To show that $\frac{1}{f}$ is continuous at $a$, we similarly have that $\lim_{x \to a}\frac{1}{f}(x) = \frac{1}{f(a)}$, and thus we know by 10.5 that $\frac{1}{f}$ is continuous at $a$.
+\end{proof}
+
+\begin{definition}A \emph{polynomial in one variable with real coefficients} is a function $f$ of the form 
+$$f(x)=a_n x^n+a_{n-1}x^{n-1}+\cdots+a_1 x+a_0$$ 
+for some $n\in\bbN\cup\{0\}$, where $a_i\in\bbR$ for $0\leq i\leq n$. A \emph{rational function in one variable with real coefficients} is a function of the form $h(x)=\frac{f(x)}{g(x)}$ where $f$ and $g$ are polynomials
+in one variable with real coefficients.\end{definition}
+
+\begin{corollary}Polynomials in one variable with real coefficients are continuous. A rational function in one variable with real coefficients $h(x)=\frac{f(x)}{g(x)}$ is continuous at all $a\in\bbR$ where $g(a)\neq 0$. \end{corollary} 
+
+\begin{proof}
+We know by 10.6 that $f(x) = a$ is continuous for all $x \in \bbR$. Additionally, by 10.12 we know the function $f_2(x) = (f + f)(x) = 2a$ is also continuous. Using induction, assume $f_n(x) = n \cdot a$ is continuous, then we have that $f_{n + 1}(x) = na + a$ is also continuous. We also know that a function $g(x) = x$ is continuous, so by 10.12 the function $g_2(x) = (g \cdot g)(x) = x^2$ is continuous as well. Applying induction, we assume $g_n(x) = x^n$ is continuous, then it follows closely that $g_{n+1}(x) = x^n \cdot x$ is also continuous. So through induction we know that $g_n(x) = x^n$ is continuous for $n \in \bbN$ and $x \in \bbR$.  \newline
+We know that any $f_n(x) = na$ and any $g_n(x) = x^n$ are continuous, so any $(f_n \cdot g_n)(x) = a_nx^n$ is also continuous. It follows then that the sum of these $(f_n \cdot g_n)(x)$ is also continuous, so we know that any polynomial in one variable is continuous. \newline
+For a rational function $h(x) = \frac{f(x)}{g(x)}$, we have just shown that $f,g$ are continuous, so $h(x) = \frac{f(x)}{g(x)} = f(x) * \frac{1}{g(x)}$ is continuous at all $a \in \bbR$ such that $g(a) \not = 0$ as we have that $\frac{1}{g(x)}$ is continuous at all $a \in \bbR$ such that $g(a) \not = 0$. 
+\end{proof}
+
+Now we want to look at limits of the composition of functions. It is not quite true in general that if
+$\lim\limits_{x\to a}g(x)=M\text{ and }\lim\limits_{y\to M}f(y)=L$,
+then $\lim\limits_{x\to a}f(g(x))=L$, but it is true in some cases.
+
+
+\begin{proposition}
+
+Let $a\in\bbR$.  Then 
+$$\lim\limits_{x\to a}f(x)=\lim\limits_{h\to 0}f(a+h),$$
+assuming that the limit on the left exists. (Hint:  
+You can think of the right hand side as the composition of $f$ with the function $g(h)=a+h$.)
+\end{proposition}
+
+\begin{proof}
+Let $a \in \bbR$ and let $\lim_{x \to a}f(x) = L$. Let $\epsilon > 0$ be arbitary, then the limit on the LHS exists so we know that there exists $\delta > 0$ such that if $0 < \abs{x - a} < \delta$ then $\abs{f(x) - L} < \epsilon$ by Definition 10.1. Choose $h = x - a$, so it follows that $0 < \abs{h} < \delta$. We have then that $\abs{(h + a) - L} < \epsilon$, so $L = \lim_{h \to 0}f(a + h)$. So we get $\lim_{x \to a}f(x) = L = \lim_{h \to 0}f(a + h)$.
+\end{proof}
+
+\begin{theorem}
+
+If $\lim\limits_{x\to a}g(x)=M$ and $f$ is continuous at $M$, then
+$\lim\limits_{x\to a}f(g(x))=f(M)$. 
+\end{theorem}
+
+\begin{proof}
+Let $\lim_{x \to a}g(x) = M$, then for $\epsilon, \epsilon' > 0$, there exists $\delta, \delta' > 0$ such that if $0 < \abs{x - a} < \delta$  then $\abs{f(x) - f(M)} < \epsilon$ and if $0 < \abs{x-a} < \delta'$ then $\abs{g(x) - M} < \epsilon'$. Let $\epsilon' = \delta$, then we have that for $\epsilon > 0$, there exists $\delta$ such that if $\abs{g(x) - M} < \delta$, then $\abs{f(g(x)) - f(M)} < \epsilon$. It follows then by 10.1 that $\lim_{x \to a} f(g(x)) = f(M)$.
+\end{proof}
+
+\begin{remark}
+This theorem can also be rewritten as
+$$\lim\limits_{x\to a}f(g(x))=f\left(\lim\limits_{x\to a}g(x)\right),$$
+which can be remembered as ``limits pass through continuous functions.''
+\end{remark}
+\begin{corollary}If $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, then $f\circ g$ is continuous at $a$.
+\end{corollary}
+
+\begin{proof}
+$f$ is continuous at $a$, so by Remark 10.17 we can express $\lim_{x \to a}f(g(x)) = f(\lim_{x \to a}g(x))$. $g(x)$ is continuous at $a$, so we know $\lim_{x \to a}g(x) = g(a)$. It follows then that $\lim_{x \to a}f(g(x)) = f(\lim_{x \to a}g(x)) = f(g(a))$. So by 10.5, we have that $f \circ g$ is continuous at $a$.
+\end{proof}
+
+
+\medskip
+
+
+
+We now assume the domain $A \subset \bbR$ is open.
+\begin{definition}
+The \emph{derivative} of $f$ at a point $a \in A$ is the number $f'(a)$ defined by the following limit:
+\[
+f'(a) = \lim_{h \sarr 0} \frac{f(a + h) - f(a)}{h},
+\]
+provided the limit on the right hand side exists.
+If $f'(a)$ exists, we say that $f$ is \emph{differentiable at $a$}.  If $f$ is differentiable at all points of its domain, we say that $f$ is \emph{differentiable}.  In this case, the values $f'(a)$ define a new function $f' \colon A \arr \bbR$ called the \emph{derivative} of $f$.
+\end{definition}
+
+Here is a useful reformulation of the definition of the derivative.
+
+\begin{theorem}  If $f$ is differentiable at $a$, the derivative of $f$ at $a$ is given by the limit:
+\[
+f'(a) = \lim_{x \sarr a} \frac{f(x) - f(a)}{x - a}.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $x = a + h$, then $f'(a) = \lim_{h \to 0}\frac{f(a+h) - f(a)}{h}$ \newline
+Substituting we get $f'(a) = \lim_{x \to a}\frac{f(x)-f(a)}{x-a}$ 
+\end{proof}
+
+\begin{theorem}\label{diffconta} 
+
+ If $f$ is differentiable at $a$, then $f$ is continuous at $a$.
+\end{theorem}
+
+\begin{proof}
+Let $f$ differentiable at $a$. Note that $\lim_{x \to a}(f(x) - f(a)) = \lim_{x \to a}\frac{f(x) - f(a)}{x - a} \cdot \lim_{x \to a}(x-a) = f'(a) \cdot 0 = 0$. So we have that $\lim_{x \to a}(f(x) - f(a)) = 0$ and $\lim_{x \to a}f(a) = f(a)$, so it follows then that $\lim_{x \to a}(f(x) - f(a)) + \lim_{x \to a}f(a) = f(a) = 0 + f(a)$. So $\lim_{x \to a}(f(x)-f(a)+f(a)) = \lim_{x \to a}(f(x)) = f(a)$ by 10.8. So we have then by 10.5 that $f(x)$ is continuous at $a$.
+\end{proof}
+
+\begin{exercise}
+
+Show that the converse of Theorem \ref{diffconta} is not true in general.
+\end{exercise}
+
+\begin{proof}
+Let $f(x) = \abs{x}$. Then by 10.7, we know that $f$ is continuous. Let $x < 0$, then we have that $\lim_{x \to 0}\frac{f(x)-f(0)}{x-0} = \lim_{x \to 0}\frac{\abs{x}}{x}$. $x < 0$, so we have that $L = \lim_{x \to 0}\frac{\abs{x}}{x} < 0$. Let $x > 0$, then we have that $L = \lim_{x \to 0}\frac{\abs{x}}{x} > 0$. So we have a contradiction, as $L > 0$ and $L < 0$, and we know by 10.2 that limits are unique. Therefore $f(x) = \abs{x}$ is not differentiable at $0$.
+\end{proof}
+
+\begin{exercise}
+\begin{itemize}
+\item[(i)]
+Show that for all $n\in\bbN$, 
+$$x^n-a^n=(x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\cdots+a^{n-2}x+a^{n-1}),$$
+or more formally,
+$$x^n-a^n=(x-a)\left(\sum_{i=0}^{n-1} x^{n-1-i} a^i\right).$$
+
+\item[(ii)]
+Use this to prove that if $f(x)=x^n$ for some $n\in \bbN$, then $f'(a)=na^{n-1}$.
+\end{itemize}
+\end{exercise}
+
+\begin{proof}
+(i) We know by expanding that $(x-a)(x^{n-1} + ax^{n-2} +.... + a^{n-2}x + a^{n-1}) = (x^n + ax^{n-1} + ... + a^{n-2}x^2 + a^{n-1}x) - (ax^{n-1} + a^2x^{n-2} + ... + a^{n-1}x + a^n)$. Notice that all terms except the first and last cancel, so we are left with $(x-a)(x^{n-1} + ax^{n-2} +.... + a^{n-2}x + a^{n-1}) = (x^n + ax^{n-1} + ... + a^{n-2}x^2 + a^{n-1}x) - (ax^{n-1} + a^2x^{n-2} + ... + a^{n-1}x + a^n) = x^n - a^n$. \newline
+(ii) $f'(a) = \lim_{x \to a}\frac{f(x) - f(a)}{x - a}$. $\lim_{x \to a}\frac{x^n-a^n}{x-a} = \lim_{x \to a}(x^{n-1} + ax^{n - 2} + ... + a^{n-1})$. We know that the limit exists because polynomials are continuous, and note that each term inside the sum $(x^{n-1} + ax^{n - 2} + ... + a^{n-1})$ approaches $a^{n-1}$ as $x$ approaches $a$. There are $n$ terms, so we have that $f'(a) = \lim_{x \to a}\frac{x^n-a^n}{x-a} = na^{n-1}$.
+\end{proof}
+
+\begin{lemma} If $f:(a,b)\sarr\bbR$ is continuous and $f(c)>0$ for some $c\in (a,b),$ then there exists a region $R\subset (a,b)$ such that $c\in R$ and $f(x)>0 $ for all $x\in R.$ The analogous statement is true if $f(c)<0.$
+\end{lemma}
+
+\begin{proof}
+Let $f: (a,b) \to \bbR$ be continuous such that $f(c) > 0$ for some $c \in (a,b)$. Let $\epsilon = f(c)$. $f$ is continuous, so we know there exists $\delta > 0$ such that if $x \in (a,b)$, then if $0 < \abs{x - c} < \delta$, then $\abs{f(x) - f(c)} < \epsilon = f(c)$. If $f(x) - f(c) < f(c)$, then we have that $f(x) < 2f(c)$. If $f(c) - f(x) < f(c)$, then we have that $0 < f(x)$. Then we have that $0 < f(x) < 2f(c)$, so we know that $x \in R$ where $R$ is the region $R = (c - \delta, c + \delta)$.
+\end{proof}
+
+\begin{exercise} 
+
+ Suppose that $f$ and $g$ are differentiable at $a$.  
+\begin{itemize}
+\item[(i)]  Compute $(f + g)'(a)$ in terms of $f'(a)$ and $g'(a)$.  
+\item[(ii)]  Compute $(fg)'(a)$ in terms of $f(a)$, $g(a)$, $f'(a)$ and $g'(a)$.  
+\item[(iii)] Compute $\left(\frac{1}{f}\right)'(a)$ in terms of $f'(a)$ and $f(a)$.  What assumption do you need to make? 
+\end{itemize}
+These results are known as the Sum Rule, Product Rule, and (a special case of the) Quotient Rule
+for Derivatives, respectively.
+\end{exercise}
+
+\begin{proof}
+(i) We know the limit of $\frac{(f+g)(x)-(f+g)(a)}{x-a}$ exists because $f$ is differentiable at $a$ so $f$ is continuous at $a$. We compute the limit $\lim_{x \to a} \frac{(f+g)(x)-(f+g)(a)}{x-a} = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} + \lim_{x \to a} \frac{g(x)-g(a)}{x-a} = f'(a) + g'(a)$. Thus, we have that $(f+g)'(a) = f'(a) + g'(a)$. \newline
+(ii) We know the limit of $\frac{(fg)(x)-(fg)(a)}{x-a}$ exists becuase $f$ is differentiable at $a$ so $f$ is continuous at $a$. We compute the limit $\lim_{x \to a} \frac{(fg)(x)-(fg)(a)}{x-a} = \lim_{x \to a} \frac{f(x)(g(x)-g(a)) + g(a)(f(x) - f(a))}{x - a} = f(a)g'(a) + g(a)f'(a)$. So we have that $(fg)'(a) = f(a)g'(a) + g(a)f'(a)$. \newline
+(iii) Assuming $f(a) \not = 0$, we know that the limit of $\frac{\frac{1}{f(x)} - \frac{1}{f(a)}}{x - a}$ exists because $f$ is differentiable at $a$ so $f$ is continuous at $a$. We compute the limit $\lim_{x \to a} \frac{\frac{1}{f(x)} - \frac{1}{f(a)}}{x - a} = \lim_{x \to a} \frac{f(a) - f(x)}{f(x)f(a)(x-a)} = \frac{-f'(a)}{f(a)^2}$. So we have that $\frac{1}{f'(a)} = \frac{-f'(a)}{f(a)^2}$.
+\end{proof}
+
+\begin{exercise} 
+Suppose $f$ and $g$ are differentiable at $a$ and $g(a)\neq 0$.
+\begin{itemize}
+\item[(i)]
+Show that $\frac{f(x)}{g(x)}$ is continuous at $a$.
+
+\item[(ii)]
+Show that $\frac{f(x)}{g(x)}$ is differentiable at $a$, and compute $\left(\frac{f}{g}\right)'(a)$ in 
+terms of  $f(a)$, $g(a)$, $f'(a)$ and $g'(a)$.
+\end{itemize}
+This last result is known as the Quotient Rule for Derivatives.
+\end{exercise}
+
+\begin{proof}
+(i) We know that $\frac{f(x)}{g(x)} = \frac{1}{g(x)} f(x)$, and we have that $\frac{1}{g(x)}$ is continuous, so we know that $\frac{f(x)}{g(x)}$ is also continuous. \newline
+(ii) $\frac{f'(a)}{g'(a)} = \lim_{x \to a} \frac{\frac{f'(x)}{g'(x)} - \frac{f'(a)}{g'(a)}}{x - a}$ \newline
+$= \lim_{x \to a} \frac{f(x)g(a) - g(x)f(a)}{(x-a)g(a)g(x)} = \lim_{x \to a}(\frac{f(x)-f(a)}{x-a}g(a) - \frac{g(x) - g(a)}{x - a}f(a)) \frac{1}{g(a)g(x)}$. \newline
+$= \frac{f'(a)g(a) - g'(a)f(a)}{g(a)^2}$ provided that $g(a) \not = 0$.
+\end{proof}
+
+One of the most important results concerning the differentiation of functions is the Chain Rule
+for the derivative of a composition of functions.
+Let $f:B\to\bbR$, $g:A\to\bbR$ be functions such that $g(A)\subset B$.  
+Thus, the composition $(f \circ g)(x) = f(g(x))$ is defined for all $x\in A$. 
+
+
+\begin{lemma} 
+Given $f$ and $g$ as above, with $f$ differentiable at $g(a),$ 
+define a new function $\phi:B\to\bbR$ (note that the domain is the same as the domain of $f$) by
+\[
+\phi(y) = \begin{cases}
+\dfrac{f(y) - f(g(a))}{y - g(a)} \quad &\text{if $y\neq g(a)$,} \\
+f'(g(a)) \quad &\text{if $y = g(a)$.} 
+\end{cases}
+\]
+
+Then 
+\begin{enumerate}
+\item[a)]$\phi$ is continuous at the point $g(a)$  
+\item[b)] For all $x\neq a,$
+$$\phi(g(x))\frac{g(x)-g(a)}{x-a}=\frac{f(g(x))-f(g(a))}{x-a}.$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+a) We have that $\phi(y) = \frac{f(g) - f(g(a)}{y - g(a)}$ for $y \not = g(a)$. It follows then that $f'(g(a)) = \lim_{y \to g(a)} \phi(y)$. We also know that $\phi(g(a)) = f'(g(a))$ so it follows then that $\lim_{y \to g(a)}\phi(y) = \phi(g(a))$, so by 10.5 $\phi$ is continuous. \newline
+b) Let $x \not = a$, then we have that $\frac{g(x) - g(a)}{x - a}$ exists. It follows then that $\phi(g(x))\frac{g(x) - g(a)}{x-a} = \frac{f(g(x)) - f(g(a))}{g(x) - g(a)}(\frac{g(x) - g(a)}{x - a})$. Cancelling then, we get that $\phi(g(x))\frac{g(x) - g(a)}{x-a} = \frac{f(g(x)) - f(g(a))}{x - a}$. In the case that $g(x) = g(a)$, we have that $\phi(g(x)) * 0 = 0$, which is self-evident.
+\end{proof}
+
+
+\begin{theorem}[Chain Rule] \label{thm-chain-rule} 
+
+Let $a\in A$, suppose that $g$ is differentiable at $a$ and $f$ is differentiable at $g(a)$.  
+Then $f \circ g$ is differentiable at $a$ and:
+\[
+(f \circ g)'(a) = f'(g(a)) \cdot g'(a).
+\]
+\end{theorem}
+
+\begin{proof}
+$(f \circ g)'(a) = \lim_{x \to a}\frac{f(g(x)) - f(g(a))}{x - a}$ \newline
+$ = \lim_{x \to a} \phi(g(x))\frac{g(x) - g(a)}{x - a}$ by Lemma 10.27 \newline
+$ = \lim_{x \to a} \phi(g(x)) \lim_{x \to a}\frac{g(x) - g(a)}{x-a}$ \newline
+$= \phi(g(a))g'(a) = f'(g(a))g'(a)$.
+\end{proof}
+
+
+We finish this sheet with a discussion of maxima and minima of real-valued functions and 
+the most important theorem in differential calculus, the Mean Value Theorem.
+
+\begin{definition} Let $f \colon A \arr \bbR$ be a function.  If $f(a)$ is the last point of $f(A)$, then $f(a)$ is called the \emph{maximum value} of $f$.  If $f(a)$ is the first point of $f(A)$, then $f(a)$ is the \emph{minimum value} of $f$.  We say that $f(a)$ is a \emph{local maximum value} of $f$ if there exists a region $R$ containing $a$ such that $f(a)$ is the last point of $f(A \cap R)$.  We say that $f(a)$ is a \emph{local minimum value} of $f$ if there exists a region $R$ containing $a$ such that $f(a)$ is the first point of $f(A \cap R)$.
+\end{definition}
+
+\begin{remark}
+Equivalently, $f(a)$ is a \emph{local maximum (resp. minimum) value} of $f$ if there exists $U$ open \emph{in $A$} such that $f(a)$ is the last (resp. first) point of $f(U)$.
+\end{remark}
+
+
+\begin{theorem}  
+Let $f:A \arr \bbR$ be differentiable at $a$.  Suppose that $f(a)$ is the maximum value or minimum value of $f$.  Then $f'(a) = 0$.
+\end{theorem}
+
+\begin{proof}
+Let $f(a)$ be the maximum value of $f$. $f$ is differentiable at $a$, so we know that there exists $x,y \in A$ such that $x < a$ and $a < y$. It follows then that $\frac{f(x)-f(a)}{x-a} \geq 0$ because $f(x) \leq f(a)$ and $x < a$. Similarly, we have that $\frac{f(y)-f(a)}{y-a} \leq 0$ because $f(y) \leq f(a)$ and $y > a$. \newline
+Note that we may take the limit of both sides of the inequality without contradicting the inequality. This can be proven through contradiction by considering a function $F(x)$ such that $F(x) \leq 0$. Suppose $\lim_{x \sarr a} F(x) > 0$, then by the definition of a limit (10.1) we can choose $\epsilon = \lim_{x \sarr a} F(x)$ and we know there exists $\delta > 0$ such that if $0 < \abs{x-a} < \delta$, then $\abs{F(x) - \epsilon} < \epsilon$. It follows then that $F(x) > 0$, which contradicts $F(x) \leq 0$. Thus we know that $\lim_{x \sarr a} F(x) \leq 0$. \newline
+We have shown then that $\frac{f(y) - f(a)}{y-a} \leq 0$ implies that $\lim_{y \sarr a} \frac{f(y)-f(a)}{y-a} \leq 0$ and similarly that $\lim_{x \sarr a} \frac{f(x)-f(a)}{x-a} \geq 0$. It follows then that $f'(a) \leq 0$ and $f'(a) \geq 0$ by Theorem 10.20. We have then that $f'(a) = 0$. \newline
+Without loss of generality we may let $f(a)$ be the minimum value of $f$ and similarly prove that $f'(a) = 0$.
+\end{proof}
+
+\begin{corollary}  Let $f:A \arr \bbR$ be differentiable at $a$.  Suppose that $f(a)$ is a local maximum or local minimum value of $f$.  Then $f'(a) = 0$.
+\end{corollary}
+
+\begin{proof}
+Let $f(a)$ be a local maximum value of $f$. By Definition 10.29 we know that there exists a region $R$ containing $a$ such that $f(a)$ is the last point of $f(A \cap R)$. It follows then that $f(a)$ is the maximum value of $f|_R : A \to \bbR$. Since $\bbR$ is a region containing $a$, we know that $f|_R : A \to \bbR$ is differentiable at $a$. Applying Theorem 10.31 then, we have that $f'(a) = 0$. \newline
+Without loss of generality we may let $f(a)$ be a local minimum value of $f$ and similarly prove that $f'(a) = 0$.
+\end{proof}
+
+\begin{theorem}[Rolle's Theorem] 
+
+Suppose that $f \colon [a, b] \arr \bbR$ is continuous,  differentiable on $(a, b)$ and that $f(a) = f(b) = 0$.  Then there exists a point $c \in (a, b)$ such that $f'(c) = 0$.
+\end{theorem}
+
+\begin{proof}
+We know that $[a,b]$ is non-empty, closed, and bounded, and that $f$ is continuous, so by the Extreme Value Theorem (5.18) we know that $f([a,b]$ has a first and last point. We are given $f(a) = f(b) = 0$, so we have that $f((a,b)) = f([a,b]) \setminus \{0\}$. We now have two cases: \newline
+Case 1: Let $0$ be both the first and last point of $f([a,b])$. Then we know that for all $c \in (a,b)$, $f(c) = 0$ and so $f'(c) = 0$. \newline
+Case 2: Let $0$ be not both the first and last point of $f([a,b])$. Then we know that at least one of the first and last point lies in $(a,b)$. We call this point $c$, so we have that $c \in (a,b)$ and $c$ is the first or last point of $f((a,b))$. It follows then by Corollary 10.31 that $f'(c) = 0$.
+\end{proof}
+
+\begin{corollary}[The Mean Value Theorem]  
+
+Suppose that $f \colon [a, b] \arr \bbR$ is continuous on $[a,b]$ and differentiable on $(a, b)$.  Then there exists a point $c \in (a, b)$ such that:
+\[
+f(b) - f(a) = f'(c) (b - a).
+\]
+\end{corollary}
+\begin{proof}
+Let $g:[a,b] \to \bbR$ such that $g(x) = f(x)(b-a) - x(f(b) - f(a)) + f(b)a - f(a)b$. By Exercise 10.25, we know that $g$ is continuous and differentiable on $(a,b)$, and we can easily verify that $g(a) = g(b) = 0$. Thus we know by Rolle's Theorem (10.33) that there exists a point $c \in (a,b)$ such that $g'(c) = 0$. We know that $g'(c) = f'(c)(b-a) - f(b) + f(a)$ by computing the derivative, so we have that $f'(c)(b-a) - f(b) + f(a) = g'(c) = 0$. It follows then that $f'(c)(b-a) = f(b) - f(a)$ for some $c \in (a,b)$.
+\end{proof}
+
+\begin{corollary} Suppose that $f:[a,b]\sarr \bbR$ and $g:[a,b]\sarr\bbR$  are continuous on $[a,b],$ differentiable on $(a,b), $ and
+$f'(x)=g'(x),$ for all $x\in (a,b).$ Then there is some $c\in\bbR$ such that $f(x)=g(x)+c,\forall x\in  [a,b].$ 
+\end{corollary} 
+
+\begin{proof}
+Let $f:[a,b] \to \bbR$, $g:[a,b] \to \bbR$ be continuous on $[a,b]$ and differentiable on $(a,b)$ such that $f'(x) = g'(x)$ for all $x \in (a,b)$. We define $h:[a,b] \to \bbR$ such that $h(x) = f(x) - g(x)$ and it follows that $h(x)$ is continuous on $[a,b]$ and differentiable on $(a,b)$. \newline
+Let $x \in [a,b]$ be arbitrary. We know $h'(x) = f'(x) - g'(x)$ by Exercise 10.25 and that $f'(x) = g'(x)$ so $h'(x) = 0$. $h$ is continuous on $[a,b]$ and differentiable on $(a,b)$, so we know that $h$ is continuous on $[x,b]$ and differentiable on $(x,b)$ because $x \in [a,b]$. Then it follows by the Mean Value Theorem (Corollary 10.34) that $h(x) - h(b) = h'(c)(x-b)$. We know $h'(c) = 0$ because $h'(x) = 0$ for all $x \in [a,b]$ and $c \in (a,b)$. So we have that $h(x) - h(b) = 0$, so $h(x) = h(b)$. It follows then that $f(x) - g(x) = f(b) - g(b) = c$ for some $c \in \bbR$. Then we have that $f(x) - g(x) = c$, so $f(x) = g(x) + c$ for $c \in \bbR$.
+\end{proof}
+
+\begin{corollary}  Suppose that $f \colon [a, b] \arr \bbR$ is continuous on $[a,b]$ and differentiable on $(a, b).$ Then
+
+\begin{enumerate}
+\item If $f'(x)>0$ for all $x\in (a,b),$ then $f$ is increasing on $[a,b].$
+\item If $f'(x)<0$ for all $x\in (a,b),$ then $f$ is decreasing on $[a,b].$
+\item If $f'(x)=0$ for all $x\in (a,b),$ then $f$ is constant on $[a,b].$
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Suppose that $f:[a,b] \to \bbR$ is continuous on $[a,b]$ and differentiable on $(a,b)$. \newline
+1. Let $f'(x) > 0$ for all $x \in (a,b)$. Let $x_1, x_2 \in (a,b)$ be arbitrarily chosen such that $a \leq x_1 < x_2 \leq b$. Then we know that there exists $x_3$ by Corollary 10.34 such that $a \leq x_1 < x_3 < x_2 \leq b$ and $f'(x_3) = \frac{f(x_2)-f(x_1)}{x_2-x_1}$. We know that $f'(x) > 0$ for all $x \in (a,b)$, so $f(x_3) > 0$. Also, we have that $x_2 > x_1$, so it follows that $f(x_2) > f(x_1)$. Thus we know that $f$ is increasing on $[a,b]$. \newline
+2. Without loss of generality, this follows from a similar proof to the proof for 1. \newline
+3. Let $f'(x) = 0$ for all $x \in (a,b)$. Let $x_1, x_2 \in (a,b)$ be arbitrarily chosen such that $a \leq x_1 < x_2 \leq b$. Then we know that there exists $x_3$ by Corollary 10.34 such that $a \leq x_1 < x_3 < x_2 \leq b$ and $f'(x_3) = \frac{f(x_2)-f(x_1)}{x_2-x_1}$. We know that $f'(x) = 0$ for all $x \in (a,b)$, so $f'(x_3) = 0$ and thus $f(x_2) = f(x_1)$. It follows then that $f$ is constant on $[a,b]$.
+\end{proof}
+
+
+
+\begin{corollary}[The Cauchy Mean Value Theorem] 
+
+Suppose that $f\colon [a,b]\arr\bbR$ and $g\colon[a,b]\arr \bbR$ are continuous on $[a,b]$ and differentiable on $(a,b).$ Then there is a point $c\in (a,b)$ such that:
+\[
+(f(b)-f(a))g'(c)=(g(b)-g(a))f'(c).
+\]
+\end{corollary}
+
+\begin{proof}
+Let $f:[a,b] \to \bbR$ and $g:[a,b] \to \bbR$ continuous on $[a,b]$ and differentiable on $(a,b)$. Define $h:[a,b] \to \bbR$ such that $h(x) = k_1f(x) + k_2g(x)$. Then it follows that: \newline
+$k_1f(a) + k_2g(a) = k_1f(b) + k_2g(b)$ \newline
+$k_2(g(a) - g(b)) = k_1(f(b) - f(a))$ \newline
+$\frac{k_2}{k_1} = \frac{f(b) - f(a)}{g(a)-g(b)}$ \newline
+Let $k_2 = f(b) - f(a)$ and $k_1 = g(a) - g(b)$, then define $i[a,b] \to \bbR$ such that $i(x) = h(x) - h(a)$. It follows then that $i(a) = i(b) = 0$, then applying Rolle's Theorem we get that there exists a point $c \in (a,b)$ such that $f'(c) = 0$. Since $i'(c) = h'(c)$, we have then that there exists $c$ such that $h'(c) = 0$. So it follows for $c$ that $k_1f'(c) + k_2g'(c) = 0$. So we have for $c$ that $\frac{k_2}{k_1} = \frac{-f'(c)}{g'(c)}$. Substituting we get that $\frac{f'(a)}{g'(a)} = \frac{f(b)-f(a)}{g(b) - g(a)}$. Expanding and simplifying we get that there exists $c \in (a,b)$ such that $f'(c)(g(b) - g(a)) = g'(c)(f(b)-f(a))$.
+\end{proof}
+
+
+
+
+
+
+\end{document}

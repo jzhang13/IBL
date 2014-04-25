@@ -1,0 +1,402 @@
+\documentclass[12pt]{article}
+
+%\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\fr}[2]{\frac{\underline{#1}}{#2}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 7: The Field Axioms}
+\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 162, SHEET 7: THE RATIONAL NUMBERS} \\ 
+{Jeffrey Zhang IBL Script 7 Journal}
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{7}   
+
+In this script, we define the rational numbers $\bbQ$
+and show that they form an ordered field.  At the end of this
+script, we show that any ordered field contains a canonical copy of the
+rational numbers.
+
+
+\begin{definition}  
+Let $X=\{(a,b)\mid a,b\in\bbZ, b\neq 0\}$.  We define a relation $\sim$ on $X$ as:
+$$(a,b)\sim (c,d)\hspace{10pt}\mbox{if and only if}\hspace{10pt}ad=bc$$
+\end{definition}
+
+\begin{lemma}  
+\begin{enumerate}
+\item
+The relation $\sim$ is reflexive.  That is, $(a,b)\sim (a,b)$ for every $(a,b)\in X$.
+\item
+The relation $\sim$ is symmetric.  That is, if $(a,b)\sim (c,d)$, then $(c,d)\sim (a,b)$.
+\item
+The relation $\sim$ is transitive.  That is, if $(a,b)\sim (c,d)$ and $(c,d)\sim (e,f)$, then $(a,b)\sim (e,f)$.
+\end{enumerate}
+\end{lemma}  
+
+\begin{proof}
+Let $(a,b) \not= (a,b)$, then by Definition 7.1, $ab \not= ab$ for $a,b \in \bbZ$, which we know to be false. So $(a,b) \sim (a,b)$. \newline
+Let $(a,b) \sim (c,d)$, then $ad = bc$. We know that multiplication is commutative on $\bbZ$, so we have $da = cb$, which by Definition 7.1 gives that $(c,d) \sim (a,b)$. \newline
+Let $(a,b) \sim (c,d)$ and $(c,d) \sim (e,f)$, then we have that $ad = bc$ and $cf = de$.  Multiplying both sides by $ad$ and $bc$ respectively, we get $acdf = bcde$. By the cancellation law on $\bbZ$, we get that $af = be$. Then by Definition 7.1 it follows that $(a,b) \sim (e,f)$.
+\end{proof}
+
+\begin{remark}  
+A relation on any set that is reflexive, symmetric, and transitive is called an {\em equivalence relation}.
+Thus, the preceding lemmas show that $\sim$ is an equivalence relation on $X$.
+\end{remark}  
+
+\begin{remark}  
+A {\em partition} of a set is a collection of non-empty
+disjoint subsets whose union is the original set.  
+Any equivalence relation on a set creates a partition of that set by collecting into subsets all
+of the elements that are equivalent (related) to each other.
+When the partition of a set arises from an equivalence relation in this manner, the subsets
+are referred to as {\em equivalence classes}.
+\end{remark}  
+
+\begin{remark}  
+If we think of the set $X$ as representing the collection of all fractions whose denominators are not
+zero, then the relation $\sim$ may be thought of as representing the equivalence of two fractions.
+\end{remark}  
+
+\begin{definition}
+As a set, the {\em rational numbers}, denoted $\bbQ$, are the equivalence classes in the set $X$ under
+the equivalence relation $\sim$.
+If $(a,b)\in X$, we denote the equivalence class of this element as $\displaystyle \fr{a}{b}$.   So
+$$\fr{a}{b}=\{(x_1,x_2)\in X\mid (x_1,x_2)\sim (a,b)\}=\{(x_1,x_2)\in X\mid x_1 b=x_2 a\}.$$
+Then,
+$$
+\bbQ=\left\{ {\fr{a}{b}} \mid (a,b)\in X\right\}.
+$$
+\end{definition}
+
+\begin{exercise}
+$\displaystyle \fr{a}{b}=\fr{a'}{b'}\Longleftrightarrow (a,b)\sim (a',b').$
+\end{exercise}
+
+\begin{proof}
+Let $\fr{a}{b} = \fr{a'}{b'}$ for $a,b \in \bbZ$ and $\fr{a}{b}, \fr{a'}{b'} \in \bbQ$. We know that $(a',b') \sim (a',b')$ by Lemma 7.2, so $(a',b') \in \fr{a'}{b'}$ by Definition 7.6. Similarly, $(a,b) \in \fr{a}{b}$. $\fr{a}{b} = \fr{a'}{b'}$, so it follows that $(a',b') \in \fr{a}{b}$. $(a,b),(a',b') \in \fr{a}{b}$, so we have by 7.6 that $(a,b) \sim (a',b')$. \newline
+Let $(a,b) \sim (a',b')$ for $a,b \in \bbZ$ and $\fr{a}{b}, \fr{a'}{b'} \in \bbQ$. Let $(x,y) \in \bbQ$ be arbitrary such that $(x,y) \in \fr{a}{b}$. Then we know that $(x,y) \sim (a,b)$ by Definition 7.6, and that $(x,y) \sim (a',b')$ by Lemma 7.2 because $(x,y) \sim (a,b)$ and $(a,b) \sim (a',b')$. So by 7.6 again, we have that $(x,y) \in \fr{a'}{b'}$. It follows then that $\fr{a}{b} \subset \fr{a'}{b'}$. Applying the same logic in reverse, we get that $\fr{a'}{b'} \subset \fr{a}{b}$, so we know that $\fr{a}{b} = \fr{a'}{b'}$.
+\end{proof}
+
+\begin{definition}
+We define addition and multiplication in $\bbQ$ as follows.  If $\displaystyle \fr{a}{b}$ and $\displaystyle \fr{c}{d}$ are in $\bbQ$, then:
+$$
+\fr{a}{b}+_\bbQ \fr{c}{d}=\fr{ad+bc}{bd}
+$$
+$$
+\fr{a}{b}\cdot_\bbQ \fr{c}{d}=\fr{ac}{ bd}.
+$$
+We use the notation $+_\bbQ$ and $\cdot_\bbQ$ to represent addition and multiplication in $\bbQ$
+so as to distinguish these operations from the usual addition ($+$) and multiplication ($\cdot$) in $\bbZ$.
+\end{definition}
+
+\begin{theorem}
+Addition in $\bbQ$ is well-defined.  That is, if $(a,b)\sim (a', b')$ and $(c,d)\sim (c',d')$, then
+$$
+\fr{a}{b}+_\bbQ \fr{c}{d}=\fr{a'}{b'}+_\bbQ \fr{c'}{d'}.
+$$
+\end{theorem}
+
+\begin{proof}
+Let $a,b,c,d,a',b',c',d' \in Z$ such that $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$. We have that:
+$(ad + bc)(b'd') = ab'dd' + bb'cd' \medskip$ (Distributivity on $\bbZ$) \newline
+$= (ab')dd' + bb'(cd') \medskip$ (Associativity of multiplication on $\bbZ$) \newline
+$= (a'b)dd' + bb'(c'd) \medskip$ (Definition 7.1) \newline
+$= (a'd' + b'c')(bd) \medskip$ (Distributivity on $\bbZ$) \newline.
+So we have that $(ad + bc)(b'd') = (a'd' + b'c')(bd)$. Applying 7.1, we get that $(ad + bc, bd) \sim (a'd' + b'c', b'd')$. Then by Exercise 7.7 it follows that $\fr{ad + bc}{bd} = \fr{a'd' + b'c'}{b'd'}$. Then applying Definition 7.8, we get that $\fr{a}{b} +_\bbQ \fr{c}{d} = \fr{a'}{b'} +_\bbQ \fr{c'}{d'}$.
+\end{proof}
+
+\begin{theorem} {(Homework)}
+
+Multiplication in $\bbQ$ is well-defined.  That is, if $(a,b)\sim (a', b')$ and $(c,d)\sim (c',d')$, then
+$$
+\fr{a}{b}\cdot_\bbQ \fr{c}{d}=\fr{a'}{b'}\cdot_\bbQ \fr{c'}{d'}.
+$$
+\end{theorem}
+
+\begin{theorem}
+The rational numbers $\bbQ$ with  $+_\bbQ$ and $\cdot_\bbQ$ are a field. 
+
+In-class Axioms 3,4,7,8,9
+
+{Homework Axioms 1,2,5,6,10}
+\end{theorem}
+
+\begin{proof}
+Axiom 3: Let the additive identity $e = \fr{0}{1}$. We know that $0,1 \in \bbZ$ so $\fr{0}{1} \in \bbQ$ so $e \in \bbQ$. Let $\fr{x}{y} \in \bbQ$ be arbitrary for some $x,y \in \bbZ$. Then $\fr{x}{y} +_{\bbQ} \fr{0}{1} = \fr{x \cdot 1 + 0 \cdot y}{y \cdot 1}$ by the definition of addition on $\bbQ$. It follows then by the properties of the integers that $\fr{x \cdot 1 + 0 \cdot y}{y \cdot 1} = \fr{x \cdot 1}{y \cdot 1} = \fr{x}{y}$. So we have that $e$ is the additive identity on $\bbQ$ because $\fr{x}{y} +_{\bbQ} e = \fr{x}{y}$. \newline
+Axiom 4: Let $\fr{x}{y} \in \bbQ$, so $x,y \in \bbZ$. Let $\fr{-x}{y}$ be the additive inverse. We know that $\fr{-x}{y} \in \bbQ$ because $x \in \bbZ$, so $-x \in \bbZ$. We have $\fr{x}{y} +_{\bbQ} \fr{-x}{y} = \fr{xy + -xy}{yy}$ by the definition of addition on $\bbQ$. It follows then by the properties of the integers that $\fr{xy + -xy}{yy} = \fr{0}{yy}$, and we know that $\fr{0}{yy}$ is in the same equivalence class as $\fr{0}{1}$. \newline
+Axiom 7: Let the multiplicative identity $e = \fr{1}{1}$. We know that $\fr{1}{1} \in \bbQ$ because $1 \in \bbZ$. Let $\fr{x}{y} \in \bbQ$ be arbitrary for some $x,y \in \bbZ$. Then $\fr{x}{y} \cdot_{\bbQ} \fr{1}{1} = \fr{x \cdot 1}{y \cdot 1}$. By the properties of the integers we have then that $\fr{x \cdot 1}{y \cdot 1} = \fr{x}{y}$, so we have that $e = \fr{1}{1}$ is the multiplicative identity on $\bbQ$. \newline
+Axiom 8: Let $\fr{x}{y} \in \bbQ$, with $x,y \in \bbZ$. Then the multiplicative inverse of $\fr{x}{y}$ is $\fr{y}{x}$. We know that $\fr{y}{x} \in \bbQ$ because $x,y \in \bbZ$. We verify that $\fr{y}{x}$ is the multiplicative inverse of $\fr{x}{y}$ by checking that  $\fr{x}{y} \cdot_{\bbQ} \fr{y}{x} = \fr{xy}{yx}$. Using commutativity of multiplication on $Z$, we have that $\fr{xy}{yx} = \fr{xy}{xy}$, which is in the same equivalence class as $\fr{1}{1}$ in $\bbQ$, so $\fr{1}{1} \in \bbQ$, and thus $\fr{y}{x}$ is the multiplicative inverse of $\fr{x}{y}$ in $\bbQ$. \newline
+Axiom 9: Let $\fr{a}{b}, \fr{c}{d}, \fr{e}{f} \in \bbQ$, so $a,b,c,d,e,f \in \bbZ$. Consider \newline $\fr{a}{b} \cdot_{\bbQ} (\fr{c}{d} +_{\bbQ} \fr{e}{f}) = \fr{a}{b} \cdot_{\bbQ} (\fr{cf + de}{df})$ (Definition of Addition on $\bbQ$) \newline
+$= \fr{acf + ade}{bdf}$ (Definition of Addition on $\bbQ$). \newline
+Note that $(acf + ade)(bbdf) = (bdf)(bacf + bade)$ due to the properties of the integers, so we have that $(acf + ade, bdf) \sim (bacf + bade,bbdf)$. By Exercise 7.7 we have then that $\fr{acf + ade}{bdf} = \fr{bacf +bade}{bbdf}$. $\fr{bacf + bade}{bbdf} = \fr{acbf + aebd}{bdbf}$ by the properties of the integers, so it follows that $\fr{bacf+bade}{bbdf} = \fr{acbf+aebd}{bdbf} = \fr{ac}{bd} +_{\bbQ} \fr{ae}{bf}$. We have then that $\fr{ac}{bd} +_{\bbQ} \fr{ae}{bf} = \fr{a}{b} \cdot_{\bbQ} \fr{c}{d} +_{\bbQ} \fr{a}{b} \cdot_{\bbQ} \fr{e}{f}$ by the definition of multiplication on $\bbQ$. Thus we have that $\fr{a}{b} \cdot_{\bbQ} (\fr{c}{d} +_{\bbQ} \fr{e}{f}) = \fr{acf + ade}{bdf} = \fr{a}{b} \cdot_{\bbQ} \fr{c}{d} +_{\bbQ} \fr{a}{b} \cdot_{\bbQ} \fr{e}{f}$, so Axiom 9 (Distributivity) holds on $\bbQ$.
+\end{proof}
+
+Next, we define an ordering on $\bbQ$.
+
+\begin{definition}
+Note that, given an element in $\bbQ$ is is always possible to choose a representative $(a,b)$ with $b>0.$
+If $\displaystyle \fr{a}{b}, \fr{c}{d}\in \bbQ$ and $b,d>0$ in $\bbZ,$ we say that $\displaystyle \fr{a}{b}<_\bbQ \fr{c}{d}$ if and only if $a d<b c$.
+Note that we use the symbol $<_\bbQ$ to denote our ordering relation in $\bbQ$ so as to 
+distinguish it from the usual ordering $<$ in $\bbZ$.
+\end{definition}
+
+\begin{theorem}
+Ordering in $\bbQ$ is well-defined.  That is, if $(a,b)\sim (a', b')$ and $(c,d)\sim (c',d')$, then
+$$
+\fr{a}{b}<_\bbQ \fr{c}{d}\hspace{10pt}\mbox{if and only if}\hspace{10pt}\fr{a'}{b'}<_\bbQ \fr{c'}{d'}.
+$$
+\end{theorem}
+
+\begin{proof}
+Let $a,b,c,d,a',b',c',d' \in \bbZ$ such that $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$. \newline
+We know by Definition that 7.12 that $b,b',d,d'$ can always be represented such that they are positive. Note also that $(a,b) \sim (a',b')$ so $ab' = a'b$. $b,b'$ are positive, so we have that $a$ and $a'$ have the same sign. Similarly, $c$ and $c'$ have the same sign. We then consider two cases: where $a \cdot c, a' \cdot c'$ are negative and where $a\cdot c, a' \cdot c'$ are positive. \newline
+Assume $\fr{a}{b} <_{\bbQ} \fr{c}{d}$. Then we have that $ad < bc$ by Definition 7.12. \newline
+Let $a \cdot c$, $a' \cdot c'$ be positive. Because $a',b',c',d' \in \bbZ$, we know that $ad(a'b'c'd') < bc(a'b'c'd')$. So it follows by the properties of $\bbZ$ that $a'd'(ab')(c'd) < b'c'(a'b)(cd')$. We have that $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$, so $ab' = a'b$ and $cd' = c'd$ by Definition 7.1. It follows then by substituting that $a'd'(ab')(cd') < b'c'(ab')(cd')$. Rearranging using the properties of the integers, we get that $a'd'(ac)(b'd') < b'c'(ac)(b'd')$. We know that $ac, b', d'$ are positive, so by cancelling we get $a'd' < b'c'$. It follows then by Definition 7.12 that $\fr{a'}{b'} <_{\bbQ} \fr{c'}{d'}$. \newline
+Let $a \cdot c$, $a' \cdot c'$ be negative. We have then that $ad(a'b'c'd') > bc(a'b'c'd')$ because we are multiplying both sides by $a' \cdot c'$, which is negative. Similar to the positive case, we substitute and rearrange using the properties of the integers to get $a'd'(ac)(b'd') > b'c'(ac)(b'd')$. Here we have that $a \cdot c$ is negative, so when we cancel we get $a'd' < b'c'$. It follows then by Definition 7.12 that $\fr{a'}{b'} <_{\bbQ} \fr{c'}{d'}$.
+Assume $\fr{a'}{b'} <_{\bbQ} \fr{c'}{d'}$. Then we have that $a'd' < b'c'$ by Definition 7.12. \newline
+Let $a \cdot c$, $a' \cdot c'$ be positive. Because $a,b,c,d \in \bbZ$, we know that $a'd'(abcd) < b'c'(abcd)$. Similarly, substituting and rearranging using the properties of $\bbZ$, we get that $ad(ac)(b'd') < bc(ac)(b'd')$. It follows then by cancelling that $ad < bc$ because $ac, b', d'$ are all positive.Then by applying Definition 7.12, we get that $\fr{a}{b} <_{\bbQ} \fr{c}{d}$. \newline
+Let $a \cdot c$, $a' \cdot c'$ be negative. Because $a,b,c,d \in \bbZ$, we know that $a'd'(abcd) > b'c'(abcd)$ because $a \cdot c$ is negative, and $b,d,$ are positive. Similarly substituting and rearranging using the properties of $\bbZ$, we get that $ad(ac)(b'd') > bc(ac)(b'd')$. It follows then by cancelling that $ad < bc$ because $a \cdot c$ is negative and $b',d'$ are positive. Then by applying Definition 7.12, we get that $\fr{a}{b} <_{\bbQ} \fr{c}{d}$.
+\end{proof}
+
+\begin{theorem} { (Homework)}
+
+The relation $<_\bbQ$ is an ordering on the rational numbers $\bbQ$.
+\end{theorem}
+
+\begin{theorem}
+The rational numbers $\bbQ$ form an ordered field.
+\end{theorem}
+
+\begin{proof}
+We have by Theorem 7.11 that $\bbQ$ is a field. To show that $\bbQ$ is ordered, we show that addition on $\bbQ$ respects the ordering and that multiplication on $\bbQ$ respects the ordering. \newline
+Let $a,b,c,d,e,f \in \bbZ$ and $\fr{a}{b}, \fr{c}{d}, \fr{e}{f} \in \bbQ$. Let $\fr{a}{b} <_{\bbQ} \fr{c}{d}$, then we have by 7.12 that $ad < bc$. We know that $f \in \bbZ$ such that $f$ is positive by 7.12, so we know that $adf < bcf$. We know that addition respects the ordering on $\bbZ$, so $adf + bde < bcf + bde$. We also know that $b,d,f$ are positive, so $\fr{adf + bde}{bdf} <_{\bbQ} \fr{bcf + bde}{bdf}$. Cancelling $d$ on the left and $b$ on the right, we get that $\fr{af + be}{bf} <_{\bbQ} \fr{cf + de}{df}$. Applying the definition of addition on $\bbQ$, we get that $\fr{a}{b} + \fr{e}{f} <_{\bbQ} \fr{c}{d} + \fr{e}{f}$, so it follows then that addition respects the ordering on $\bbQ$ by 6.19. \newline
+Let $a,b,c,d \in \bbZ$ such that $\fr{a}{b}, \fr{c}{d} \in \bbQ$ and $\fr{0}{1} <_{\bbQ} \fr{a}{b}$, $\fr{0}{1} <_{\bbQ} \fr{c}{d}$. It follows then that $0 \cdot b < a \cdot 1$ and $0 \cdot d < c \cdot 1$. Using the properties of the integers, we then get that $0 < c$, $0 < a$. We have that $0 < 1, 0 < a, 0 < c$, so because multiplication respects the ordering on $\bbZ$, we have that $0 < 1 \cdot a \cdot c$. We also know that $0 \cdot b \cdot d = 0$ for $b,d \in \bbZ$, so using the associative property of multiplication on $\bbZ$, we have that $0 \cdot (b \cdot d) < 1 \cdot (a \cdot c)$. Applying 7.12 then, we get that $\fr{0}{1} <_{\bbQ} \fr{ac}{bd}$. Using the definition of multiplication on $\bbQ$ then, it follows that $\fr{0}{1} <_{\bbQ} (\fr{a}{b} \cdot_{\bbQ} \fr{c}{d})$. So then by 6.19 we know that multiplication respects the ordering on $\bbQ$.
+\end{proof}
+
+There is an important sense in which every ordered field contains a ``copy" of the rational 
+numbers.  Let $F$ be an ordered field with additive identity $0_F$ and multiplicative identity
+$1_F$.  To prevent ambiguity, denote the additive identity in the rational numbers by $0_\bbQ$
+and the multiplicative identity in the rational numbers by $1_\bbQ$.
+
+\begin{theorem}  Any ordered field $F$ contains  a copy of the rational numbers $\bbQ$ in 
+the following sense.  There exists an injective map $i:\bbQ\arr F$ that respects all of the axioms
+for an ordered field.  In particular:
+\begin{itemize}
+\item $i(0_\bbQ)=0_F$
+
+\item $i(1_\bbQ)=1_F$
+
+\item If $a, b\in \bbQ$, then $i(a+b)=i(a)+i(b)$.
+
+\item If $a, b\in \bbQ$, then $i(a\cdot b)=i(a)\cdot i(b)$.
+
+\item If $a, b\in \bbQ$ and $a<b$, then $i(a)< i(b)$.
+\end{itemize}
+\end{theorem}
+
+\noindent Since we know that $\bbQ$ is an ordered field, this result says that $\bbQ$ is the ``minimal'' ordered field.
+
+\begin{proof}
+We define $a_F$ for $a > 0$ such that $a_F = 1_{F_0} + \dotsm + 1_{F_a}$. Then for $a < 0$ we define $a_F$ such that $a_F$ is the additive inverse of $(-a)_F$. So we can then define $i : \bbQ \to F$ such that $i(\fr{a}{b}) = a_Fb_F^{-1}$. Note that $(ad)_F = a_Fd_F$ because $(ad)_F = i(ad)$, and we have that $i(a \cdot d) = 1_{F_0} + \dotsm + 1_{F_{a \cdot d}}$ which is equal to $a_F \cdot d_F$. \newline
+
+We begin by showing that $i$ respects the axioms of an ordered field. First we consider $i(\fr{0}{1})$. By definition of $i$, we have that $i(\fr{0}{1}) = 0_F \cdot 1^{-1}_F = 0_F \cdot 1_F = 0_F$. So we have that $i(0_\bbQ)=0_F$. \newline
+
+We then consider $i(\fr{1}{1})$. We have that $i(\fr{1}{1}) = 1_F \cdot 1^{-1}_F = 1_F \cdot 1_F = 1_F$. So we have that $i(1_\bbQ) = 1_F$.
+\newline
+
+We then consider $i(\fr{a}{b} +_\bbQ \fr{c}{d})$ for $\fr{a}{b}, \fr{c}{d} \in \bbQ$. We have then that this equals $i(\fr{ad + bc}{bd})$ by the definition of addition on $\bbQ$. \newline
+$= (ad + bc)_F(bd)^{-1}_F$ \newline
+$= (ad)_F(bd)^{-1}_F + (bc)_F(bd)_F^{-1}$ Distributivity \newline
+$= (a_Fd_Fb^{-1}_Fd^{-1}_F) + (b_Fc_Fb_F^{-1}d_F^{-1})$ Associativity \newline
+$= (a_Fb^{-1}_F)(d_Fd_F^{-1})+c_Fd_F^{-1}(b_Fb_F^{-1})$ Commutativity and Associativity \newline
+$= a_Fb_F^{-1}(1) + c_Fd_F^{-1}(1)$ Multiplicative Inverse \newline
+$= a_Fb_F^{-1} + c_Fd_F^{-1}$ Multiplicative Identity \newline 
+Then we use the definition of $i$ to get that $a_Fb_F^{-1} + c_Fd_F^{-1} = i(\fr{a}{b}) + i(\fr{c}{d})$. So we have that $i(\fr{a}{b} +_\bbQ \fr{c}{d}) =  i(\fr{a}{b}) + i(\fr{c}{d})$. \newline
+
+Consider $i(\fr{a}{b} \cdot_\bbQ \fr{c}{d})$. We have that this is equal to $i(\fr{ac}{bd})$ by the definition of multiplication on $\bbQ$. $i(\fr{ac}{bd}) = (ac)_F(bd)^{-1}_F = a_Fc_Fb_F^{-1}d_F^{-1}$. We have that $i(\fr{a}{b}) \cdot i(\fr{c}{d}) = a_Fb_F^{-1}c_Fd_F^{-1}$, so by commutativity we have that $i(\fr{a}{b}) \cdot i(\fr{c}{d}) = a_Fc_Fb_F^{-1}d_F^{-1}$. It follows then that $i(\fr{a}{b} \cdot_\bbQ \fr{c}{d}) = i(\fr{a}{b}) \cdot i(\fr{c}{d})$. \newline
+
+Let $\fr{a}{b} < \fr{c}{d}$, so we have that $ad < bc$. It follows then that $a_Fd_F < b_Fc_F$. So \newline
+$a_Fd_F(1_F) < b_Fc_F(1_F)$ Multiplicative Identity \newline
+$a_Fd_F(b_F^{-1}b_F) < c_Fb_F(d_F^{-1}d_F)$ Multiplicative Inverse \newline
+$a_Fb_F^{-1}b_Fd_F < c_Fd_F^{-1}b_Fd_F$ Associativity and Commutativity \newline
+$a_Fb_F^{-1} < c_Fd_F^{-1}$ (Note that $b_F,d_F > 0$ because $b,d > 0$) \newline
+$i(\fr{a}{b}) < i(\fr{c}{d})$ \newline. 
+So we have shown that if $\fr{a}{b} < \fr{c}{d}$, then $i(\fr{a}{b}) < i(\fr{c}{d})$. \newline
+
+%To show that $i$ is well-defined, we let $(a,b) \sim (c,d)$, so $ad = bc$. Then it follows that $(ad)_F = (bc)_F$. 
+
+To show that $i$ is injective, we let $i(\fr{a}{b}) = i(\fr{c}{d})$. Then we have that \newline
+$a_Fb_F^{-1} = c_Fd_F^{-1}$ \newline
+$a_Fb_F^{-1}(b_Fd_F) = c_Fd_F^{-1}(b_Fd_F)$ \newline
+$a_Fd_F(b_F^{-1}b_F) = c_Fb_F(d_Fd_F^{-1})$ Associative and Commutative laws of multiplication \newline
+$a_Fd_F(1_F) = c_Fb_F(1_F)$ Multiplicative inverse \newline
+$a_Fd_F = c_Fb_F$ Multiplicative identity. \newline
+$a_Fd_F = c_Fb_F$, so we have that $ad = bc$. Then by 7.1 we know that $(a,b) \sim (c,d)$. Finally by 7.7 we have that $\fr{a}{b} = \fr{c}{d}$.
+\end{proof}
+
+
+
+
+\end{document}

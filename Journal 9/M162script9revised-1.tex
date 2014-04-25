@@ -1,0 +1,389 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+%\title{Sheet 5: ContinuOUS FUNCTIONS}
+%\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large SHEET 9: SEQUENCES and LIMITS} \\ 
+\vspace{.2in}  
+Jeffrey Zhang
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{9}   
+
+
+We will now work with the real numbers $\bbR$ instead of an arbitrary continuum $C$.  
+Accordingly, let us now use the standard notation $(a, b)$ for the region 
+$\_{ab} = \{ x \in \bbR : a < x < b \}$.  Even though the notation is the same, this is \emph{not} the same object as the ordered pair $(a, b)$.
+
+
+\begin{definition}  A \emph{sequence} (of real numbers) is a function $a \colon \bbN \arr \bbR$.
+\end{definition}
+
+\noindent By setting $a_n = a(n)$, we can think of a sequence $a$ as a list $a_1, a_2, a_3, \dotsc$ of real numbers.  We use the notation $(a_n)_{n=1}^{\infty}$ for such a sequence, or if there is no possibility of confusion, we sometimes abbreviate this and write simply $(a_n)$.  %More generally, we also use the term sequence to refer to a function defined on $\{n\in \bbN: n\geq n_0\}$ for any fixed $n_0\in \bbN$.  We write $(a_n)_{n = n_{0}}^{\infty}$ for such a sequence.
+
+\begin{definition}  
+We say that a sequence $(a_n)$ \emph{converges} to a point $p \in \bbR$ if, for every region~$R$ containing $p$, there exists $N\in \bbN$ such that if $n\geq N$, then $a_n\in R$.
+If $(a_n)$ does not converge to any point, we say
+that the sequence \emph{diverges}.
+\end{definition}
+
+\begin{exercise}
+Show that if a sequence $(a_n)$ converges to $p$, then any region containing $p$ contains all
+but finitely many terms in the sequence.
+\end{exercise}
+
+\begin{proof}
+Let $(a_n)$ converge to $p$, and $R$ be an arbitrary region such that $p \in R$. Then we know by 9.2 that there exists $N \in \bbN$ such that if $n \geq N$, $a_n \in R$. $R$ contains all $a_n \in R$ such that $n \geq N$, so $R$ contains at all but at most $N - 1$ terms in the sequence. $N - 1$ is finite, so $R$ contains all but finitely many terms in the sequence.
+\end{proof}
+
+\begin{exercise}  Which of the following sequences converge?  Which diverge?
+If one converges, what does it converge to?  If one diverges, what can you say about the 
+nature of its divergence?
+
+\centerline{
+\vbox{\hbox{(a)\quad $a_n = 5$}
+\hbox{(b)\quad $a_n = n$}}\hfil
+\vbox{\hbox{(c)\quad  $a_n = 1/n$}
+\hbox{(d)\quad  $a_n = (-1)^n$}}\hfil
+\vbox{\hbox{(e)\quad  $a_n = (-1)^n\cdot n$}
+\hbox{(f)\quad  $a_n = (-1)^n\cdot\frac{1}{n}$}}}
+\end{exercise}
+
+\begin{proof}
+(a) $a_n = 5$ converges to $5$. \newline
+(b) $a_n = n$ diverges to infinity. \newline
+(c) $a_n = \frac{1}{n}$ converges to $0$. \newline
+(d) $a_n = (-1)^n$ diverges, alternating between -1 and 1. \newline
+(e) $a_n = (-1)^n \cdot n$ diverges. \newline
+(f) $a_n = (-1)^n \cdot \frac{1}{n}$ converges to $0$.
+\end{proof}
+
+\begin{theorem}  Suppose that $(a_n)$ converges both to $p$ and to $p'$.
+Then $p = p'$.
+\end{theorem}
+
+\begin{proof}
+Let $(a_n)$ converge to $p$ and $p'$ such that $p \not = p'$. Then we know that we can choose two regions $R, R'$ around $p,p'$ respectively such that $R \cap R' = \emptyset$. Then we know by Exercise 9.3 that $R, R'$ each contain all but finitely many terms of the sequence. So it follows then that because $R$ and $R'$ are disjoint, $R$ and $R'$ can each contain only finitely many terms in the sequence. This is a contradiction, because it means that $a_n$ has finitely many terms, and by Definition 9.1 we have that $a_n$ has infinitely many terms. So we have a contradiction, and $p$ must be equal to $p'$. 
+\end{proof}
+
+\begin{definition}
+If a sequence $(a_n)$ converges to $p\in\bbR$, we call $p$ the \emph{limit} of $(a_n)$ and write
+\[
+\lim_{n \rightarrow \infty} a_n = p.
+\]
+\end{definition}
+
+
+
+\begin{definition}
+Let $A$ and $B$ be ordered sets. A function $f:A\to B$ is said to be \emph{increasing} if $a<a'$ implies $f(a)<f(a')$, and \emph{decreasing} if $a<a'$ implies $f(a)>f(a')$.
+\end{definition}
+
+\begin{definition}  Let $(a_n)$ be a sequence.  A \emph{subsequence} of $(a_n)$ is a sequence 
+$b\colon \bbN \rightarrow \bbR$ defined by the composition $b = a \circ i$, where 
+$i \colon \bbN \rightarrow \bbN$ is an increasing function.  
+If $(a_n)$ has a subsequence with limit $p$, we call $p$ a \emph{subsequential limit} of $(a_n)$.
+\end{definition}
+
+\noindent  If we let $n_k = i(k) \in \bbN$, we can write $b_k = a_{n_k}$, so that $(b_k)$ is the 
+sequence $b_1, b_2, b_3, \dotsc$, which is equal to the sequence
+$a_{n_1}, a_{n_2}, a_{n_3}, \dotsc, $ where $n_1 < n_2 < n_3 < \dotsm$.
+
+\begin{theorem}  If $(a_n)$ converges to $p$, then so do all of its subsequences.
+\end{theorem}
+
+\begin{proof}
+Let $b_n$ be a subsequence of $a_n$ such that $b_k = a_{i(k)}$ for $i$ an increasing function. Suppose $a_n$ converges to $p \in \bbR$, then by 9.2 we know that for any region $R$ such that $p \in R$, there exists $N \in \bbN$ such that for all $n \geq N$, $a_n \in R$. Then choose $m > N$ such that $m = i(k_0)$ for $k_0 \in \bbN$. Then for all $k \geq k_0$, we know that $i(k) \geq i(k_0)$ as $i$ is increasing. It follows then that $k \geq k_0$, so we know that $i(k) \geq m > N$. $a_{i(k)} = b_k$ and $b_k \in R$ for all $k \geq k_0$, so we have by 9.2 that $b_n$ converges to $p$ .
+\end{proof}
+
+\begin{exercise}  Construct a sequence with two subsequential limits.  Construct a sequence with infinitely many subsequential limits.
+\end{exercise}
+
+\begin{proof}
+The sequence $a_n = (-1)^n$ has two subsequential limits, as we have the subsequence defined by $b_n = 1$ and the subsequence defined by $c_n = -1$. $b_n$ converges to $1$ and $c_n$ converges to $-1$. \newline
+The sequence $a_n = 1,1,2,1,2,3,1,2,3,4,1,2,3,4,5, \dotsm, n$. Then we can find a subsequence $b_n$ such that $b_n = 1, b_n = 2, b_n = 3, \dotsm, b_n = n$. These subsequences then converge to $1,2,3,\dotsm,n$ respectively, so we have infinitely many subsequential limits.
+\end{proof}
+
+Let $p \in \bbR$ and for each natural number $k \geq 1$, define $R_{k}$ to be the region $(p - \tfrac{1}{k}, p + \tfrac{1}{k})$.  
+
+\begin{lemma}\label{lemma1}
+The $R_k$ form a descending collection of regions $R_1 \supset R_2 \supset R_3 \supset \dotsm$ whose intersection is the point $p$:
+\[
+\bigcap_{k \geq 1} R_k = \{ p \}.
+\]
+\end{lemma}
+
+\begin{proof}
+We know that $p - \frac{1}{k} < p - \frac{1}{k+1}$ and that $p + \frac{1}{k+1} < p + \frac{1}{k}$ so it folllows that $(p - \frac{1}{k}, p + \frac{1}{k}) \supset (p - \frac{1}{k+1}, p + \frac{1}{k+1})$. It follows then that $R_1 \supset R_2 \supset R_3 \dotsm$. \newline
+We know that $p \in \bigcap_{k \geq 1} R_k$, so we now show that $\bigcap_{k \geq 1} R_k = \{ p \}$. Let $q \in \bigcap_{k \geq 1} R_k$ such that $q \not = p$. Then we know that $q > p$ or $q < p$. If $q > p$, then we have that $q - p \in \bbR$ and $q - p > 0$ so we have by 8.25 that $q - p > \frac{1}{k} > 0$ for some $k \in \bbN$. Then it follows that $q > p + \frac{1}{k}$ for $k \in \bbN$, so $q \not \in (p - \frac{1}{k}, p + \frac{1}{k})$. This is a contradiction as we now have that $q \not \in \bigcap_{k \geq 1} R_k$. The same result can be shown for the case of $q < p$ without loss of generality. So we have that $\bigcap_{k \geq 1} R_k = \{ p \}$.
+\end{proof}
+
+\begin{lemma}\label{lemma2}  
+Let $R$ be a region containing $p$.  Then there exists a natural number $N$ such that $R_k \subset R$ for all $k \geq N$.
+\end{lemma}
+
+\begin{proof}
+Let $S = (a,b)$ be a region containing $p$ for $a,b \in \bbR$. Then we have that $a < p$, so $p - a > 0$ and we now that $p - a \in \bbR$. It follows then by 8.25 that there exists $M$ such that $p - a > \frac{1}{M}$ for $M \in \bbN$. Note then that we have $a < p - \frac{1}{M}$ for $M \in \bbN$. We now consider $p + \frac{1}{M}$ and take two cases, where $p + \frac{1}{M} \geq b$ and where $p + \frac{1}{M} < b$. \newline 
+Consider $p + \frac{1}{M} \geq b$. $b > p$, so we know there exists $N \in \bbN$ such that $b - p > \frac{1}{N}$ by 8.25. So it follows then that $b > p + \frac{1}{N}$. Then we have $p + \frac{1}{M} \geq b > p + \frac{1}{N}$. It follows then that $p + \frac{1}{M} > p + \frac{1}{N}$, so $p - \frac{1}{M} < p - \frac{1}{N}$. Recall $p - \frac{1}{M} > a$, so then we have $a < p - \frac{1}{N}$ and that $p + \frac{1}{N} < b$, so we know that $R_N \subset S$ and by 9.11 we know that the collection of regions is descending, so we have that $R_k \subset S$ for all $k \geq N$. \newline
+Consider $p + \frac{1}{M} < b$, then we have that $a < p - \frac{1}{M}$ and that $p + \frac{1}{M} < b$, so we have that $R_M \subset S$ and similarly then that $R_k \subset S$ for all $k \geq M$.
+\end{proof}
+
+\begin{theorem}  Let $A \subset \bbR$.  Then $p \in \overline{A}$ if and only if there exists a sequence $(a_n)$, with each $a_n \in A$, that converges to $p$.
+\end{theorem}
+
+\begin{proof} 
+Let $A \subset \bbR$ and suppose $p \in \overline{A}$. Then we know that for all regions $R$ such that $p \in R$, $R \cap A \not = \emptyset$. We also know that for a region $R$ such that $p \in R$, by 9.12 there exists $N \in \bbN$ such that $R_k \subset R$ for all $k \geq N$. So we choose $a_k \in R_k$, then we have that $a_k \in R_k \subset R$, so we know then by 9.2 that $a_k$ converges to $p$. \newline
+Suppose there exists a sequence $a_n$ such that for $a_n \in A$, $a_n$ converges to $p$. By 9.3, we know that for any $p \in R$ for a region $R$, $R$ contains all but finitely many terms in the sequence. So we have that for any $R$ such that $p \in R$, $R \cap A \not = \emptyset$. It follows then that $p \in \overline{A}$.
+\end{proof}
+
+\begin{definition}  A sequence $(a_n)$ is \emph{bounded} if its range $\{a_n\mid n\in\bbN\}$ is bounded.
+\end{definition}
+
+\begin{theorem}  Every convergent sequence is bounded.
+\end{theorem}
+
+\begin{proof}
+Let $a_n$ be a convergent sequence such that $a_n$ converges to $p$ for $p \in \bbR$. Let $R = (a,b)$ for $a,b \in \bbR$ be a region, then we know there exists $N \in \bbN$ such that for all $n \geq N$, $a_n \in (a,b)$. Thus, we have that for all $n \geq N$, $a_n < b$. We have for $\{a_1, a_2, \dotsm, a_(n-1)\}$ that there exists a greatest element $a_k$. If $b > a_k$, then $b$ is an upper bound of $a_n$ and we have that $a_n$ is bounded. If $a_k > b$, then $a_k \geq a_n$ and we have that $\max(a_k, b)$ is an upper bound of $a_n$. So we know that $a_n$ is bounded above. Without loss of generality an analogous proof may be used to show that convergent sequences are bounded below.
+\end{proof}
+
+The converse is not true, but there are two important partial converses.
+
+\begin{theorem}[Monotone Bounded Sequence Theorem]
+Every bounded increasing sequence converges to its range's supremum.
+Every bounded decreasing sequence converges to its range's infimum.
+\end{theorem}
+
+\begin{proof}
+Let $a_n$ be a bounded increasing sequence. Then by 8.22, we know that $s = \sup(a_n)$ exists. Note that by definition of $\sup(a_n)$, we know that for $\epsilon > 0$, $s - \epsilon < a_M$ for some $a_M \in a_n$. We know that $a_n$ is increasing, so for $m > M$, $a_m > a_M$. It follows then that $s - a_m < s - a_M$, so $s - a_m < s - a_M < \epsilon$ (recall that $s - \epsilon < a_M$) and so we have that for all $n \geq M$, $a_n \in R$. Thus we know that for a region $S$ such that $s = \sup(a_n) \in S$, we have that some $a_n \in S$ so $a_n$ converges to $s = \sup(a_n)$. Similarly, it can be shown that a bounded decreasing sequence converges to its range's infimum.
+\end{proof}
+
+\begin{theorem}  Every bounded sequence has a convergent subsequence. 
+\emph{Hint: sometimes this is called the Bolzano--Weierstrass theorem.} 
+\end{theorem}
+
+\begin{proof}
+Let $a_n$ be bounded, then we know that the range of $a_n$ is bounded. Let $A$ be the range of $a_n$. Then we know that $A$ is bounded and we consider two cases, where $A$ is finite and where $A$ is infinite. \newline
+We consider the case where $A$ is finite, then we know that for any $n \in bbN$, $a_n$ has finitely many possible values. Let $t$ be the finite number of possible values. Then the set $\{a_n, \dotsm, a_{n+t}\}$ has $t + 1$ values in it so there must be at least one repeated value. We know that the sequence is infinite, so the cycles of $\{a_n, \dotsm, a_{n+t}\}$ are repeated infinitely. Thus, some number $p$ must be repeated infinitely many times, so we take the subsequence $\{p, \dotsm, p\}$ which we know is convergent. \newline
+Now consider the case where $A$ is infinite, then we know by Bolzano-Weierstrauss that a limit point $p$ of $A$ exists. So for all regions $R$ containing $p$, we know that $R \cap (A \setminus \{p\}) \not = \emptyset$. Then we know that for a region $R_k = (p - \frac{1}{k}, p + \frac{1}{k})$, there exists some $a_{n_k} \in R_k$. Let $R$ be an arbitrary region containing $p$, then by 9.12, we know that there exists $N \in \bbN$ such  that $R_k \subset R$ for all $k \geq \bbN$. Thus we know  that there exists some $k \geq N$ such that $a_{n_k} \in R_k \subset R$, so we have that there exists some $a_{n_k} \in R$. So by 9.2, we know there exists a convergent subsequence.
+\end{proof}
+
+Mathematicians often use the letters $\delta$ and $\epsilon$ to denote small positive numbers.
+
+\begin{lemma}  Let $R$ be a region containing the point $a$.  Then there exists a number $\delta > 0$ such that $(a - \delta, a + \delta) \subset R$.
+\end{lemma}
+
+\begin{proof}
+Let $R$ be a region containing $a$. We write $R = (m,n)$ for $m,n \in \bbR$. Then we let $\delta = \min(|a - m|, |a-n|)$. It follows then that $\delta \leq |a-m|$ and $\delta \leq |a-n|$, so we know that $a - \delta \geq m$ and that $a + \delta \leq n$. Then we have that $(a - \delta, a + \delta) \subset R$. 
+\end{proof}
+
+\begin{definition}
+The {\em absolute value} of a real number $x$ is the non-negative number $\abs{x}$ defined by:
+\[
+\abs{x} = \begin{cases}
+x \quad &\text{if $x \geq 0$,} \\
+-x \quad &\text{if $x < 0$.} 
+\end{cases}
+\]
+\end{definition}
+
+\begin{exercise}  Prove that:
+\[
+(a - \delta, a + \delta) = \{ x \in \mathbb{R} : \abs{x - a} < \delta \}.
+\]
+\end{exercise}
+
+\begin{proof}
+Let $p \in (a - \delta, a + \delta)$. Then we have $a - \delta < p < a + \delta$, and so $|p - a| < \delta$, so $p \in \{ x \in \mathbb{R} : \abs{x - a} < \delta \}$. \newline
+Let $p \in \{ x \in \mathbb{R} : \abs{x - a} < \delta \}$, then we know $a - \delta < p < a + \delta$ so $p \in (a - \delta, a +\delta)$. \newline
+So we have $(a - \delta, a + \delta) = \{ x \in \mathbb{R} : \abs{x - a} < \delta \}$.
+\end{proof}
+We deduce a more concrete characterization of continuity at a point (Definition~5.11).
+
+\begin{theorem}
+Let $A\subset\bbR$, $f:A\to\bbR$ and $a\in A$.
+Then $f$ is continuous at $a$ if and only if the following condition holds: for every $\epsilon > 0$, there exists $\delta > 0$ such that
+\[
+\text{ if\quad $x\in A$\quad and\quad $\abs{x - a} < \delta$,\qquad then\quad $\abs{f(x) - f(a)} < \epsilon$.}
+\]
+\end{theorem}
+
+\begin{proof}
+We first show the forward direction. \newline
+ Let $\epsilon > 0$, then let a region $R = (f(a) - \epsilon, f(a) + \epsilon)$. We are given $f$ is continuous at $a$, so we know by 5.11 that there exists a region $S$ such that for $a \in S$, $f(S \cap A) \subset R$. $a \in S$, so it follows then by 9.18 that there exists $\delta  > 0$ such that $(a - \delta, a + \delta) \subset S$. Let $x \in A$ and $x \in (a - \delta, a + \delta)$, then it follows that $|x - a| < \delta$ by 9.20. $x \in (S \cap A)$, so $f(x) \in f(S \cap A)$. Then we have that $f(x) \in f(S \cap A) \subset (f(a) - \epsilon, f(a) + \epsilon)$, so it follows again by 9.20 that $|f(x) - f(a)| < \epsilon$. So we have that the forward direction holds. \newline
+We now show the reverse direction. \newline
+Let $R$ be a region such that $f(a) \in R$. We express $R = (m,n)$ for $m,n \in \bbR$. Then we define $\epsilon = \min(|f(a) - m|, |f(a) - n|)$. Note that $(f(a) - \epsilon, f(a) + \epsilon) \subset R$. $\epsilon > 0$, so we are given that there exists $\delta > 0$ such that $|x - a| < \delta$ for all $x \in A$. Then we let the region $S = (a - \delta, a + \delta)$. Let $x \in S \cap A$, then we know that $|x - a| < \delta$ and $x \in A$ so $|f(x) - f(a)| < \epsilon$. It follows then by 9.20 that $f(x) \in (f(a) - \epsilon, f(a) + \epsilon)$, so $f(x) \in R$ because $(f(a) - \epsilon, f(a) + \epsilon) \subset R$. So we have that $f(S \cap A) \subset R$, and thus $f$ is continuous at $a$ by 5.11. So we have that the reverse direction holds. \newline
+\end{proof}
+
+\begin{exercise}
+\begin{enumerate}
+\item Let $a,b\in \bbR$ and let $f:\bbR\longrightarrow \bbR$ be given by $f(x)=ax+b.$ Show that $f$ is continuous at every $x\in\bbR.$
+\item Let $f:\bbR\longrightarrow\bbR$ be given by $f(x)=\begin{cases} 1 & \text{if  }x\neq 0\\ 0 & \text{if }x=0.\end{cases}$ Show that $f$ is not continuous at $0.$
+\end{enumerate}
+\end{exercise}
+
+\begin{proof}
+1. Let $\epsilon > 0$ be arbitrary. Let $x \in \bbR$ be arbitrary. Then we have $f(x) = ax + b$ for $a,b \in \bbR$. Let $p \in \bbR$, and let $\delta = \frac{\epsilon}{|a|}$ such that $|x - p| < \delta$. It follows then that $|a(x-p)| < \epsilon$. Note that $|f(x) - f(a)| = |ax + b - ap - b| = |ax - ap| = |a(x-p)|$, so we have that $|f(x) - f(a)| < \epsilon$. So we know then that $f$ is continuous at $p$ for every $p \in \bbR$. \newline
+
+2. Assume that $f$ is continuous at 0. Let $\epsilon = 0.5$ and $a = 0$. Then we have that there exists $\delta$ such that $|x - a| < \delta$. So we have $|x - 0| < \delta$. We choose $x \in \bbR$ such that $x \not = 0$. We assume $f$ is continuous at $0$, so we know that $|x - 0| < \delta$ implies that $|f(x) - f(0)| < \epsilon$. However, we have $x \not = 0$ so $f(x) = 1$ and thus $|f(x) - f(0)| = |1 - 0| = 1 \not < 0.5$, so we have a contradiction. Thus, $f$ must not be continuous at $0$.
+\end{proof}
+
+\end{document}

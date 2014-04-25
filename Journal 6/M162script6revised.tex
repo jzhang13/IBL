@@ -1,0 +1,507 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 6: The Field Axioms}
+\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 162, SHEET 6: THE FIELD AXIOMS} \\ 
+{Jeffrey Zhang IBL Script 6 Journal}
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{6}   
+
+
+We will formalize the notions of addition and multiplication in structures
+called fields.  A field with a compatible order is called an ordered field.  
+We will see that $\bbQ$ and $\bbR$ are both examples of ordered fields.
+
+
+\begin{definition}  A \emph{binary operation} on a set $X$ is a function 
+\[
+f \colon X \times X \arr X.
+\]
+We say that $f$ is \emph{associative} if:
+\[
+f(f(x, y), z) = f(x, f(y, z)) \qquad \text{for all $x, y, z \in X$.}
+\]
+We say that $f$ is \emph{commutative} if:
+\[
+f(x, y) = f(y, x) \qquad \text{for all $x, y \in X$.}
+\]
+An \emph{identity element} of a binary operation $f$ is an element $e \in X$ such that:
+\[
+f(x, e) = f(e, x) = x \qquad \text{for all $x \in X$.}
+\]
+\end{definition}
+
+\begin{remark}
+Frequently, we denote a binary operation differently.  If $*:X\times X\arr X$ is the binary
+operation, we often write $a*b$ in place of $*(a,b)$.  We sometimes indicate this same
+operation by writing $(a,b)\mapsto a*b$.
+\end{remark}
+
+\begin{exercise} Rewrite Definition 6.1 using the notation of Remark 6.2.
+\end{exercise}
+
+\begin{proof}
+A binary operation on a set $X$ is a function $f : X \times X \to X$. We say that $f$ is associative if $(x * y) * z = x * (y * z)$ for all $x,y,z \in X$. We say that $f$ is commutative if $(x * y) = (y * x)$ for $x,y \in X$. An identity element of a binary operation $f$ is an element $e \in X$ such that $x * e = e * x = x$ for all $x \in X$.
+\end{proof}
+
+\begin{examples}  \hspace{1in}
+\begin{enumerate}
+\item  The function $+ \colon \bbZ \times \bbZ \arr \bbZ$ which sends a pair of integers $(m, n)$ to $+(m, n) = m + n$ is a binary operation on the integers, called addition.  Addition is associative, commutative and has identity element $0$.
+
+\item  The maximum of $m$ and $n$, denoted $\max(m, n)$, is an associative and commutative binary operation on $\bbZ$.  Is there an identity element for $\max$?
+
+\item  Let $P(Y)$ be the power set of a set $Y$.  Recall that the power set consists of all subsets of $Y$.  Then the intersection of sets, $(A, B) \mapsto A \cap B$, defines an associative and commutative binary operation on $P(Y)$.  Is there an identity element for $\cap$?
+\end{enumerate}
+\end{examples}
+
+\begin{proof}
+2. There is no identity element for $\max(m, n)$ on $\bbZ$. Suppose there exists an identity element $e$ such that $\max(x, e) = x$ for all $x,e \in \bbZ$. Then $e - 1 \in Z$, $\max(e, e-1) = e$, so $e$ is not the identity element. \newline
+3. Let $P(Y)$ be the power set of a set $Y$. The identity element then is $Y$ itself, because for all sets $X$ such that $X \in P(Y)$, $X \subset Y$ so $X \cap Y = Y$.
+\end{proof}
+
+\begin{exercise}  
+Find a binary operation on a set that is not commutative.  
+Find a binary operation on a set that is not associative.
+\end{exercise}
+
+\begin{proof}
+Let $f : \bbR \times \bbR \to \bbR$ be defined such that $f(x, y) = x - y$. We know that $1,2,3 \in \bbR$. $f(2, 1) = 2 - 1 = 1$, while $f(1, 2) = 1 - 2 = -1$. $1 \not = -1$ so $f$ is not commutative. Similarly, we have that $f(f(3,2),1) = (3 - 2) - 1 = 0$, $f(3, f(2,1)) = 3 - (2 - 1) = 2$. $0 \not = 2$, so $f$ is also not associative.
+\end{proof}
+
+\begin{exercise}
+Let $X$ be a finite set, and let $Y=\{f:X\arr X\mid \mbox{$f$ is bijective}\}$.  Consider the
+binary operation of composition of functions, denoted $\circ:Y\times Y\arr Y$ and defined by 
+$(f\circ g)(x)=f(g(x))$.  Decide whether or not composition is commutative and/or associative
+and whether or not it has an identity.
+\end{exercise}
+
+\begin{proof}
+Let $X$ be a finite set and $Y = \{f : X \to X \mid \text{f is bijective}\}$. Let $f,g \in Y$, $X = \{a,b,c\}$ such that $f(a) = b$, $f(b) = a$, $f(c) = c$, $g(a) = a$, $g(b) = c$, $g(c) = b$ and $a \not = b$, $b \not = c$, $a \not = c$. Through inspection it can be seen that $f,g$ are injective and surjective and thus bijective by Definition 1.20. So we have that $(f \circ g)(a) = f(g(a)) = b$ and $(g \circ f)(a) = g(f(a)) = c$. $b \not = c$, so we know that composition is not commutative. \newline
+Let $p,q,r \in Y$ be arbitrary. Then we have that $((p \circ q) \circ r)(a) = p(q(r(a)))$. Similarly, $(p \circ (q \circ r))(a) = p(q(r(a)))$. $p,q,r$ are arbitrary, so we have that composition is associative. \newline
+The identity element for composition is the function $f$ defined such that $f(x) = x$.
+\end{proof}
+
+\begin{theorem}  Identity elements are unique.  That is, suppose that $f$ is a binary operation on a set $X$ that has two identity elements $e$ and $e'$.  Then $e = e'$.
+\end{theorem}
+
+\begin{proof}
+Let $f$ have two identity elements $e, e'$. Then by 6.1, $f(e,e') = f(e',e) = e$. Similarly, $f(e',e) = f(e,e') = e$. So $e = e'$.
+\end{proof}
+
+\pagebreak
+
+
+\begin{definition}  A \emph{field} is a set $F$ with two binary operations  on $F$ called addition,
+denoted $+$, and multiplication, denoted $\cdot$\;, satisfying the following \emph{field axioms}:
+\begin{itemize}
+\item[FA1]  (Commutativity of Addition)  For all $x,y\in F$, $x + y = y + x$.
+\item[FA2]  (Associativity of Addition)  For all $x,y,z\in F$, $(x + y) + z = x + (y + z)$.
+\item[FA3]  (Additive Identity)  There exists an element $0 \in F$ such that $x + 0 = 0 + x = x$ for all $x \in F$.
+\item[FA4]  (Additive Inverses)  For any $x \in F$, there exists $y \in F$ such that $x + y = y + x = 0$.
+\item[FA5]  (Commutativity of Multiplication)  For all $x,y\in F$, $x \cdot y = y \cdot x$.
+\item[FA6]  (Associativity of Multiplication)  For all $x, y, z \in F$, $(x \cdot y) \cdot z = x \cdot (y \cdot z)$.
+\item[FA7]  (Multiplicative Identity)  There exists an element $1 \in F$ such that $x \cdot 1 = 1 \cdot x = x$ for all $x \in F$.
+\item[FA8]  (Multiplicative Inverses)  For any $x \in F$ such that $x \neq 0$, there exists $y \in F$ such that $x \cdot y = y \cdot x = 1$.
+\item[FA9]  (Distributivity of Multiplication over Addition)  For all $x, y, z \in F$,
+$x \cdot(y + z) = x \cdot y + x \cdot z$. 
+\item[FA10]  (Distinct Additive and Multiplicative Identities)  $1 \neq 0$.
+\end{itemize}
+%We call FA1 -- FA10 the \emph{field axioms}.
+\end{definition}
+
+\begin{exercise}  Consider the set $\bbF_{2} = \{0, 1\}$, and define binary operations $+$ and $\cdot$ on $\bbF_{2}$ by:
+
+\begin{center}
+$
+\begin{array}{ccccccc}
+0 + 0 = 0 & \phantom{MM} & 0 + 1 = 1 & \phantom{MM} & 1 + 0 = 1 & \phantom{MM} &1 + 1 = 0 \\
+0 \cdot 0 = 0 & \phantom{MM} & 0 \cdot 1 = 0 & \phantom{MM}  & 1\cdot 0 =0 & \phantom{MM} &1 \cdot 1 = 1 
+\end{array}
+$
+\end{center}
+
+Show that $\bbF_{2}$ is a field.  
+\end{exercise}
+
+\begin{proof}
+Axiom 1: $\bbF_2$ only has two elements, so $x = 1, y = 0$. Then $0 + 1 = 1 + 0 = 1$, so Axiom 1 holds. \newline
+Axiom 2: There are two cases, $x = 1, y = 0, z = 1$ and $x = 1, y = 0, z = 0$ (the other cases are covered by commutativity of addition. $(1 + 0) + 1 = 1 + (0 + 1) = 1 + 1 = 0$. $(1 + 0) + 0 = 1 + (0 + 0) = 1 + 0 = 1$. So Axiom 2 holds. \newline
+Axiom 3: $0 \in \bbF_2$ , $0$ is the additive identity. $1 + 0 = 1$ and $0 + 0 = 0$ so for all $x \in \bbF_2$, $x + 0 = x$. Axiom 3 holds. \newline
+Axiom 4: The additive inverse of $x \in \bbF_2$ is $x$. $1 + 1 = 0, 0 + 0 = 0$ so Axiom 4 holds. \newline
+Axiom 5: $\bbF_2$ has two elements. Let $x = 1, y = 0$ then $1 \cdot 0 = 0 \cdot 1 = 0$. So Axiom 5 holds. \newline
+Axiom 6: Similarly to Axiom 2 there are two cases. Let $x = 1, y = 0, z = 1$, then $(1 \cdot 0) \cdot 1 = 1 \cdot (0 \cdot 1) = 0$. $(1 \cdot 0) \cdot 0 = 1 \cdot (0 \cdot 0) = 0$. So Axiom 6 holds. \newline
+Axiom 7: The multiplicative identity is $1$. $0 \cdot 1 = 0$, $1 \cdot 1 = 1$, so $x \cdot 1 = x$ for all $x \in \bbF_2$. So Axiom 7 holds. \newline
+Axiom 8: The multiplicative inverse of $x \in \bbF_2$ is $x$. $1 \cdot 1 = 1$, so Axiom 8 holds. \newline
+Axiom 9: For $x,y,z$, if $x = 1$, then Axiom 9 obviously holds because $1 \cdot (y + z) = y + z$ and $1 \cdot y + 1 \cdot z = y + z$. If $x = 0$, then $0 \cdot y = 0$ for any $y \in \bbF_2$. (Note: $1 \cdot 0 = 0$, $0 \cdot 0 = 0$). So $0 \cdot (y + z) = 0$ and $0 \cdot y = 0$ and $0 \cdot z = 0$, so $0 = 0 + 0$, so Axiom 9 holds. \newline
+Axiom 10: The definition of $\bbF_2$ implies that $1 \not = 0$, so Axiom 10 holds.
+\end{proof}
+
+%\begin{exercise}  Suppose that we did not include axiom FA10, and that $F$ is a field with $0 = 1$.  Prove that $F$ consists of a single element $0$.  Some people call this ``the field with one element'', but it behaves in such a strange way that we will not consider it to be a field.
+%\end{exercise}
+
+
+\begin{theorem}  Suppose that $F$ is a field.  Then additive and multiplicative inverses are unique.  This means:
+\begin{enumerate}
+\item Let $x \in F$.  If $y, y' \in F$ satisfy $x + y = 0$ and $x + y' = 0$, then $y = y'$.
+\begin{proof}
+$x + y = x + y'$ \newline
+$(x + y) + (-x) = (x + y') + (-x)$ Axiom 4 \newline
+$0 + y = 0 + y'$ Axiom 1, 2, 4 \newline
+$y = y'$ Axiom 3
+
+\end{proof}
+\item Let $x \in F$.  If $y, y' \in F$ satisfy $x \cdot y = 1$ and $x \cdot y' = 1$, then $y = y'$.
+\begin{proof}
+$x \cdot y = x \cdot y'$ \newline
+$x^{-1} \cdot (x \cdot y) = x^{-1} \cdot (x \cdot y')$ Axiom 8 \newline
+$1 \cdot y = 1 \cdot y'$ Axiom 6, 8 \newline
+$y = y'$ Axiom 7
+\end{proof}
+\end{enumerate}
+\end{theorem}
+
+
+
+\noindent  We usually write $-x$ for the additive inverse of $x$ and $x^{-1}$ or $\frac{1}{x}$ for the multiplicative inverse of $x$.
+
+\begin{corollary}  If $x\in F$, then $-(-x)=x$.
+\end{corollary}
+
+\begin{proof}
+Let $x \in F$, then $(-x) \in F$ and $(-(-x)) \in F$. $(-x) + (-(-x)) = 0$, so $(-x)$ is the additive inverse of both $x$ and $(-(-x))$. By Theorem 6.10 then, $x = (-(-x))$.
+\end{proof}
+
+\begin{corollary}  If $x\in F$ and $x\neq 0$, then $(x^{-1})^{-1}=x$.
+\end{corollary}
+
+\begin{proof}
+Let $x \in F$ such that $x \not = 0$. Then $x^{-1}$ exists and $(x^{-1})^{-1}$ exists. So $x^{-1}$ is the multiplicative inverse of both $x$ and $(x^{-1})^{-1}$, so $x = (x^{-1})^{-1}$.
+\end{proof}
+
+\begin{theorem}
+Let $F$ be a field, and let $a,b,c\in F$.  If $a+b=a+c$, then $b=c$.
+\end{theorem}
+
+\begin{proof}
+Let $F$ be a field, $a,b,c \in F$ such that $a + b = a + c$. Then we have \newline
+$a + b = a + c$ \newline
+$(a + b) + (-a) = (a + c) + (-a)$ Axiom 4 \newline 
+$0 + b = 0 + c$ Axiom 1,2,4 \newline 
+$b = c$ Axiom 3
+\end{proof}
+
+\begin{theorem}
+Let $F$ be a field, and let $a,b,c\in F$.  If $a\cdot b=a\cdot c$ and $a\neq 0$, then $b=c$.
+\end{theorem}
+
+\begin{proof}
+$a \cdot b = a \cdot c$ \newline
+$a^{-1} \cdot (a \cdot b) = a^{-1} \cdot (a \cdot c)$ Axiom 8 \newline
+$1 \cdot b = 1 \cdot c$ Axiom 6,8 \newline
+$b = c$ Axiom 7
+\end{proof}
+
+\begin{theorem}
+Let $F$ be a field.  If $a\in F$, then $a\cdot 0 =0$.
+\end{theorem}
+
+\begin{proof}
+$a \cdot 0 = a \cdot (0 + 0)$ Axiom 3 \newline
+$a \cdot 0 = (a \cdot 0) + (a \cdot 0)$ Axiom 9 \newline
+$(a \cdot 0) + (-(a \cdot 0)) = ((a \cdot 0) + (a \cdot 0)) + (-(a \cdot 0))$ Axiom 2,4 \newline
+$0 = (a \cdot 0) + 0$ Axiom 4 \newline
+$a \cdot 0 = 0$ Axiom 3
+\end{proof}
+
+\begin{theorem}
+Let $F$ be a field, and let $a, b\in F$.  If $a\cdot b=0$, then $a=0$ or $b=0$.
+\end{theorem}
+
+\begin{proof}
+Let $a \cdot b = 0$. If $a = 0$, then we are done. So let $a \not = 0$, then $a^{-1}$ exists (Multiplicative identity) \newline
+$a \cdot b = 0$ \newline
+$a \cdot b = a \cdot 0$ Theorem 6.15 \newline
+$a^{-1} \cdot (a \cdot b) = a^{-1} \cdot (a \cdot 0)$ Axiom 8 \newline
+$1 \cdot b = 1 \cdot 0$ Axiom 6,8 \newline
+$b = 0$ Axiom 7 \newline
+So we have that if $a \not = 0$, then $b = 0$. So $a = 0$ or $b = 0$.
+\end{proof}
+
+\begin{lemma}  If $a, b\in F$, then $a\cdot (-b)=-(a\cdot b)=(-a)\cdot b$.
+\end{lemma}
+
+\begin{proof}
+$a \cdot 0 = 0$ Theorem 6.15 \newline
+$a \cdot (1 + (-1)) = 0$ Axiom 4, 7 \newline
+$(a \cdot 1) + (a \cdot (-1)) = 0$ Axiom 9 \newline
+$a + (a \cdot (-1)) = 0$ Axiom 7 \newline
+$(-a) + (a + (a \cdot (-1))) = (-a) + 0$ Axiom 4 \newline
+$0 + (a \cdot (-1)) = (-a) + 0$ Axiom 2,4 \newline
+$a \cdot (-1) = (-a)$ Axiom 3. \newline
+We now have Lemma 1 that $a \cdot (-1) = (-a)$. \newline
+$a \cdot (-b) = a \cdot (b \cdot (-1))$ Lemma 1 \newline
+$a \cdot (-b) = (a \cdot b) \cdot (-1)$ Axiom 6 \newline
+$a \cdot (-b) = -(a \cdot b)$ Lemma 1 \newline
+Similarly from: \newline
+$a \cdot (-b) = (a \cdot b) \cdot (-1)$ \newline
+$a \cdot (-b) = (a \cdot (-1)) \cdot b$ Axiom 5,6 \newline
+$a \cdot (-b) = (-a) \cdot b$ Lemma 1 \newline
+So we have that $a \cdot (-b) = -(a \cdot b) = (-a) \cdot b$.
+\end{proof}
+
+\begin{lemma}  If $a, b\in F$, then $a\cdot b=(-a)\cdot (-b)$.
+\end{lemma}
+
+\begin{proof}
+$a,b \in F$, so $a \cdot b \in F$ and $-(a \cdot b) \in F$. \newline
+$(a \cdot b) + (-(a \cdot b)) = 0$ Axiom 4 \newline
+$(a \cdot b) = -(-(a \cdot b))$ Corollary 6.11 \newline
+$(a \cdot b) = -((-a) \cdot b)$ Lemma 6.17 \newline
+$(a \cdot b) = (-a) \cdot (-b)$ Lemma 6.17
+\end{proof}
+
+
+Next, we discuss the notion of an ordered field.
+
+\begin{definition}  An \emph{ordered field} is a field $F$ equipped with an ordering $<$ such that:
+\begin{itemize}
+\item  Addition respects the ordering: if $x < y$, then $x + z < y + z$ for all $z \in F$.
+\item  Multiplication respects the ordering: if $0 < x$ and $0 < y$, then $0 < x \cdot y$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+Suppose $F$ is an ordered field and $x\in F$.  If $0 < x$, we say that $x$ is 
+\emph{positive}.  If $x < 0$, we say that $x$ is \emph{negative}.
+\end{definition}
+
+For the remaining theorems, assume $F$ is an ordered field.
+
+\begin{lemma}  If $0 < x$, then $-x < 0$.  Similarly, if $x < 0$, then $0 < -x$.
+\end{lemma}
+
+\begin{proof}
+Let $0 < x$. \newline
+$(-x) + 0 < (-x) + x$ Axiom 4 \newline
+$(-x) < 0$ Axiom 3,4. \newline
+Let $x < 0$. \newline
+$x + (-x) < 0 + (-x)$ Axiom 4 \newline
+$0 < (-x)$ Axiom 3,4
+\end{proof}
+
+\begin{lemma} Let $x,y,z\in F.$ 
+\begin{enumerate}
+\item If $ x>0$ and $y<z,$ then $xy<xz.$
+
+\begin{proof}
+Let $x > 0, y < z$. Let $z + (-y) = a$ for $a \in F$ such that $0 < a$. It follows then that $z = y + a$ and $y = y + 0$. Then we have $x > 0$, $a > 0$, so $xa > 0$. \newline
+$0 < xa$ \newline
+$xy + 0 < xy + xa$ \newline
+$xy < x(y + a)$ Axiom 3,9 \newline
+$xy < xz$ (Substituting $z = y + a$) 
+\end{proof}
+
+\item If $x<0$ and $y<z$ then $xz<xy.$
+
+\begin{proof}
+Let $x < 0, y < z$. Let $z + (-y) = a$ for $a \in F$ such that $0 < a$. So we have that $z = y + a$. $x < 0$, so by Lemma 6.21 we have that $0 < -x$. $0 < a$ and $0 < (-x)$ so we have $0 < (-x)a$. \newline
+$0 < (-x)a$ \newline
+$0 < -(xa)$ Lemma 6.17.
+We have $0 < -(xa)$, so by Lemma 6.21 again, we have $xa < 0$. \newline
+$xa < 0$ \newline
+$xa + xy < 0 + xy$ \newline
+$x(y + a) < xy$ Axiom 1,3,9 \newline
+$xz < xy$ (Substituting $z = y + a$)
+\end{proof}
+
+\end{enumerate}
+\end{lemma}
+
+\begin{lemma}  If $x\in F$, then $0 \leq x^2$.  Moreover, if $x\neq 0,$ then $0<x^2.$
+\end{lemma}
+
+\begin{proof}
+Let $x \in F$. We have three cases, $x < 0, x = 0, x >0$. \newline
+If $x < 0$, then by Lemma 6.21, $0 < (-x)$. Then $0 < (-x) \cdot (-x)$ by Definition 6.19, so $0 \leq x^2$. \newline
+If $x = 0$, then by Theorem 6.16, $x \cdot x = 0$, so $0 \leq x^2$. \newline
+If $x > 0$, then by Definition 6.19, $x \cdot x > 0$ so $x^2 \leq 0$. \newline
+So we have that $x^2 \leq 0$ for $x \in F$.
+\end{proof}
+
+\begin{corollary}  $0 < 1$.
+\end{corollary}
+
+\begin{proof}
+We know that $1 \in F$ and that $1 \not = 0$ by Axiom 10, so we have that $0 < 1^2$ by Lemma 6.23. $1^2 = 1 \cdot 1 = 1$, so $0 < 1$.
+\end{proof}
+
+\begin{theorem}  If $F$ is an ordered field, then $F$ has no first or last point.  
+%Thus $F$ satisfies axioms 1 -- 3 of the continuum.
+\end{theorem}
+
+\begin{proof}
+Assume that $F$ has a first point $a \in F$. Then $\forall x \in F$, $a < x$. We have that $0 < 1$ from Corollary 6.24, so $-1 < 0$ by Lemma 6.21. It follows then that $(-1) + a < 0 + a$. By Axiom 3, we have then that $(-1) + a < a$, and we know $((-1) + a) \in F$, so this is a contradiction to $a$ being the first point of $F$. So $F$ has no first point. \newline
+Assume that $F$ has a last point $b \in F$. By Corollary 6.24, $0 < 1$, so $0 + b < 1 + b$. It follows then by Axiom 3 that $b < 1 + b$, and we know $(1 + b) \in F$ so this is a contradiction to $b$ being the last point of $F$. So $F$ has no last point.
+\end{proof}
+\end{document}

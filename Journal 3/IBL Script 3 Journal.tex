@@ -1,0 +1,364 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 3: The Topology of the Continuum}
+\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 161, SHEET 3: THE TOPOLOGY OF THE CONTINUUM} \\ 
+\vspace{.2in}  
+%John Boller, Daniele Rosso \quad $\bullet$ \quad October 22, 2010
+Jeffrey Zhang IBL Journal 3 11/15/2013
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{3}   
+
+
+In this sheet we give the continuum $C$ a topology.  Roughly speaking, this is a way to describe how the points of $C$ are `glued together'.  
+
+\medskip
+
+
+
+
+\begin{definition}
+A subset of the continuum is \emph{closed} if it contains all of its limit points.
+\end{definition}
+
+\begin{theorem}  The sets $\emptyset$ and $C$ are closed.
+\end{theorem}
+
+\begin{proof}
+We know that the set $\emptyset$ is a finite subset of $C$, so by Theorem 2.25 it has no limit points. The set $\emptyset$ then vacuously satisfies Definition 3.1, so it is closed.
+We know that by Definition 2.8, for all regions $R$, $R \subset C$. It follows then that if $p$ is a limit point of $C$, then for all regions $S$ such that $p \in S$, $p \in C$ as well, so $C$ contains all of its limit points.
+\end{proof}
+
+\begin{theorem}  A subset of $C$ containing a finite number of points is closed.
+\end{theorem}
+
+\begin{proof}
+We know that a finite subset $A \subset C$ has no limit points by Theorem 2.25. Therefore $A$ vacuously satisfies Definition 3.1, as it has no limit points, so $A$ is closed.
+\end{proof}
+
+\begin{definition}
+Let $X$ be a subset of $C$.  The \emph{closure} of $X$ is the subset $\overline{X}$ of $C$ defined by:
+\[
+\overline{X} = X \cup \{x \in C \mid \text{$x$ is a limit point of $X$}\}.
+\]
+\end{definition}
+
+\begin{theorem}  $X \subset C$ is closed if and only if $X = \overline{X}$.
+\end{theorem}
+
+\begin{proof}
+We let $X \subset C$.
+Assume that $X$ is closed. Then we know that $X$ contains all of its limit points, so $\{x \in C \mid \text{$x$ is a limit point of $X$}\} \subset X$, so $X \cup \{x \in C \mid \text{$x$ is a limit point of $X$}\} = X$. Then it follows by Definition 3.4 that $\overline{X} = X$.
+We now assume $X = \overline{X}$. Then it follows that $X = X \cup \{x \in C \mid \text{$x$ is a limit point of $X$}\}$. By properties of sets, we know then that $\{x \in C \mid \text{$x$ is a limit point of $X$}\} \subset X$, so $X$ contains all of its limit points. Then by Definition 3.1, $X$ is closed.
+We have now shown both directions, so we know that $X \subset C$ is closed if and only if $X = \overline{X}$.
+\end{proof}
+
+\begin{theorem}  The closure of $X \subset C$ satisfies $\overline{X} = \overline{\overline{X}}$.
+\end{theorem}
+\begin{proof}
+We know that $\overline{X} = X \cup \{x \in C \mid \text{$x$ is a limit point of $X$}\}$ and that if $x \in \overline{X}$, then $x \in \overline{\overline{X}}$ because by Definition 3.4 $\overline{X} \subset \overline{\overline{X}}$. We now assume that $x \in \overline{\overline{X}}$, so $\overline{\overline{X}} = \overline{X} \cup \{x \in C \mid \text{$x$ is a limit point of $\overline{X}$}\}$. If $x \in \overline{X}$, then it follows that $\overline{\overline{X}} \subset \overline{X}$. So we let $x$ be a limit point of $\overline{X}$ such that $x \not \in \overline{X}$. Then we know that for a region R, $\forall R, x \in R, R \cap \overline{X} \not = \emptyset$. So $\exists y$ such that $y \in R \cap \overline{X}$. It follows from the definition of $\overline{X}$ that for a region $S$, $\overline{X} = \{ x \mid \forall S, x \in S, S \cap X \not = \emptyset\}$ because if $x \in X$ then $x \in S \cap X$, and if $x \not \in X$ and $x$ is a limit point of $X$ then $S \cap X \not = \emptyset$. Because $y \in \overline{X}, \forall S, y \in S, S \cap X \not = \emptyset$. So we know that $\exists z$ such that $z \in S \cap X$. Because $y \in R$, we choose $R$ as $S$, so we know that $z \in R \cap X$. So $\forall R, x \in R, R \cap X \not = \emptyset$. This means that $x$ is a limit point of $X$, so it follows that $x \in \overline{X}$. Thus, we have shown that $\overline{X} \subset \overline{\overline{X}}$ and that $\overline{\overline{X}} \subset \overline{X}$, so $\overline{X} = \overline{\overline{X}}$.
+\end{proof}
+
+\begin{corollary}  Given any subset $X \subset C$, the closure $\overline{X}$ is closed.
+\end{corollary}
+
+\begin{proof}
+We know by Theorem 3.6 that for any subset $X \subset C$, $\overline{X} = \overline{\overline{X}}$. By Theorem 3.5 then it follows that $\overline{X}$ is closed. 
+\end{proof}
+
+\begin{definition}  A subset $U$ of the continuum is \emph{open} if its complement $C \setminus U$ is closed.
+\end{definition}
+
+\begin{theorem}\label{fortop1}  The sets $\emptyset$ and $C$ are open.
+\end{theorem}
+
+\begin{proof}
+By Theorem 3.2 we know that $\emptyset$ and $C$ are both closed. $\emptyset$ is the complement of $C$, so $C$ is open by Definition 3.8. $C$ is the complement of $\emptyset$, so $\emptyset$ is similarly open.
+\end{proof}
+
+The following is a very useful criterion to determine whether a set of points is open.
+
+\begin{theorem}  Let $U \subset C$.  Then $U$ is open if and only if for all $x \in U$, there exists a region $R$ such that $x \in R \subset U$.
+\end{theorem}
+
+\begin{proof}
+Let $U^c = C \setminus U$.
+We first assume that $U$ is open, and thus we know that $U^c$ is closed. Because $U^c$ is closed, it follows that $\forall x \in U, x$ is not a limit point of $U^c$. So we know that for a region $R$, $\forall x \in U, \exists R$ such that $x \in R, R \cap (U^c \setminus \{x\})= \emptyset$. But we know that $U$ and $U^c$ are disjoint, so $x \not \in U^c$. So $R \cap U^c = \emptyset$, and thus $R \subset U$. So if $U$ is open, $\forall x$, there exists a region $R$ such that $x \in R \subset U$. 
+We now assume that $\forall x \in U$, there exists a region $R$ such that $x \in R \subset U$ and thus $R \cap U^c = \emptyset$. This means that $\forall x \in U$, $x$ is not a limit point of $U^c$, so $U^c$ is closed. It follows then that $U$ must be open. 
+\end{proof}
+
+\begin{corollary}  Every region $R$ is open.  Every complement of a region $C \setminus R$ is closed.
+\end{corollary}
+
+\begin{proof}
+Let $R$ be a region. Then it is clear that $\forall x \in R$, $x \in R \subset R$. Thus by Theorem 3.10 we know that $R$ is open.
+\end{proof}
+
+\begin{corollary}  Let $a \in C$.  Then the sets $\{ x \mid x < a\}$ and $\{x \mid a < x \}$ are open.
+\end{corollary}
+
+\begin{proof}
+We first consider the set $\{ x \mid x < a\}$. We know that $\forall x$ such that $x < a$, there exists $b$ such that $b < x$ by Axiom 3. Thus we know that $x \in \underline{ba}$, so $\forall x \in \{ x \mid x < a\}$, there exists a region $\underline{ba}$ such that $x \in \underline{ba}$. So by Theorem 3.10, $\{ x \mid x < a\}$ is open.
+Similarly, for the set $\{ x \mid a < x\}$, we know that $\forall x$ such that $a < x$ there exists $c$ such that $x < c$ by Axiom 3. So it follows that $x \in \underline{ac}$, so $\forall x \in \{ x \mid a < x\}$, there exists a region $\underline{ac}$ such that $x \in \underline{ac}$. So by Theorem 3.10, $\{ x \mid a < x\}$ is open.
+\end{proof}
+
+\begin{theorem}\label{union}  Let $U$ be a nonempty open set.  Then $U$ is the union of a collection of regions.  
+\end{theorem}
+
+\begin{proof}
+We know by Theorem 3.10 that for all $x$ such that $x \in U$, there exists a region $R_x$ such that $x \in R_x \subset U$. If $x \in U$, then $x \in \bigcup_{x \in U} R_x$ because there exists an $R_x$ such that $x \in R_x \subset U$ for all $x$. If $x \in \bigcup_{x \in U} R_x$, then we know that $x \in U$ because for all $R_x$, $R_x \subset U$. So it follows that $U = \bigcup_{x \in U} R_x$, so $U$ is the union of a collection of regions.
+\end{proof}
+
+\begin{exercise}  Do there exist subsets $X \subset C$ that are neither open nor closed?
+\end{exercise}
+
+\begin{proof}
+It depends on the realization of $C$, as all subsets on $\mathbb Z$ are both open and closed, so on $\mathbb Z$ there exist no $X \subset \mathbb Z$ such that $X$ is neither open nor closed.
+\end{proof}
+
+\begin{theorem}  Let $\{X_{\lambda} \}$ be an arbitrary collection of closed subsets of the continuum.  Then the intersection $\bigcap_{\lambda} X_{\lambda}$ is closed.
+\end{theorem}
+
+\begin{proof}
+We know by DeMorgan's Laws that $C \setminus \bigcap_{\lambda} X_{\lambda} = \bigcup_{\lambda} (C \setminus X_{\lambda}).$ By Definition 3.8, we know that $C \setminus X_{\lambda}$ is open because $X_{\lambda}$ is closed. We let $A_{\lambda} = (C \setminus X_{\lambda})$. So for $\{A_{\lambda}\}$, if $x \in \bigcup_{\lambda} A_{\lambda}$, $x \in A_{\lambda}$ for some $\lambda$. Since $A_{\lambda}$ is open, $x \in A_{\lambda}$, by Theorem 3.10 there exists a region $R$ such that $x \in R \subset A_{\lambda}$. So it follows that $R \subset \bigcup_{\lambda} A_{\lambda}$, so $ \bigcup_{\lambda} A_{\lambda}$ is open. This means that $\bigcup_{\lambda} (C \setminus X_{\lambda})$ is open, so $C \setminus \bigcap_{\lambda} X_{\lambda}$ is open, so by Definition 3.8, $\bigcap_{\lambda} X_{\lambda}$ is closed. 
+\end{proof}
+
+\begin{theorem}  Let $U_1, \dotsc, U_n$ be a finite collection of open subsets of the continuum.  Then the intersection $U_1 \cap \dotsm \cap U_n$ is open.
+\end{theorem}
+\begin{proof}
+If $U_1 \cap \dotsm \cap U_n = \emptyset$ then we know that $U_1 \cap \dotsm \cap U_n$ is open by Theorem 3.9. Assume $U_1 \cap \dotsm \cap U_n \not = \emptyset$. Then we choose an arbitrary $x \in U_1 \cap \dotsm \cap U_n$. It follows then by Theorem 3.10 that there exist regions $R_1, \dotsc, R_n$ such that $x \in R_1, \dotsc, R_n$. So we know that $x \in R_1 \cap \dotsm \cap R_n$. We let $S = R_1 \cap \dotsm \cap R_n$. By Corollary 2.18, we know that $S$ is a region, and we know that $x \in S$. We also know that $S \subset U_1 \cap \dotsm \cap U_n$ because $R_1 \subset U_1, \dotsm, R_n \subset U_n$. Thus for an arbitrary $x \in U_1 \cap \dotsm \cap U_n$ we know that $x \in S \subset U_1 \cap \dotsm \cap U_n$, so by Theorem 3.10 we have shown that $U_1 \cap \dotsm \cap U_n$ is open.
+\end{proof}
+
+\begin{exercise}  Is it necessarily the case that the intersection of an infinite number of open sets is open?
+\end{exercise}
+ 
+\begin{proof}
+It is not necessarily the case. We let $R_n$ be defined as the region $\underline{\frac{-1}{n} \frac{1}{n}}$ over $\mathbb R$ for $n \in \mathbb N$. We know that $R_n$ is open because it is a region (Corollary 3.11). It follows that $\bigcap R_n = \{0\}$. We know that $\{0\}$ is a closed set on $\mathbb R$ because we cannot construct a region $S$ around $\{0\}$ such that $S \subset \{0\}$ in $\mathbb R$. 
+\end{proof}
+
+\begin{corollary}\label{fortop2}  Let $\{U_{\lambda} \}$ be an arbitrary collection of open subsets of the continuum.  Then the union $\bigcup_{\lambda} U_{\lambda}$ is open.  Let $X_1, \dotsc, X_n$ be a finite collection of closed subsets of the continuum.  Then the union $X_1 \cup \dotsm \cup X_n$ is closed.
+\end{corollary}
+
+\begin{proof}
+Let $x \in \bigcup_{\lambda} U_{\lambda}$, then $x \in U_{\lambda}$ for some $U_{\lambda}$. We know that $U_{\lambda}$ is open, so by Theorem 3.10 there exists a region $R$ such that $x \in R \subset U_{\lambda}$. So it follows that $R \subset \bigcup_{\lambda} U_{\lambda}$. Thus $\forall x \in \bigcup_{\lambda} U_{\lambda}$, there exists a region $R$ such that $x \in R \subset \bigcup_{\lambda} U_{\lambda}$ so by Theorem 3.10 $\bigcup_{\lambda} U_{\lambda}$ is open.
+We let $X_1, ..., X_n$ be finite closed subsets of $C$. For each $X_i$, we define $U_i = C \setminus X_i$ is open by Definition 3.8. We know by DeMorgan's Laws that $C \setminus \bigcap_i U_i = \bigcup_i X_i$. By Theorem 3.16 we have that the intersection of a finite number of open sets is open, so $\bigcap_i U_i$ is open. By Definition 3.8, we know $C \setminus \bigcap_i U_i$ is closed so $\bigcup_i X_i$ is closed.
+\end{proof}
+
+
+
+
+Theorem \ref{fortop1} and Corollary \ref{fortop2} say that the collection $\mathscr{T}$ of open subsets of the continuum is a topology on $C$, in the following sense:
+
+\begin{definition}  Let $X$ be any set.  A \emph{topology} on $X$ is a collection $\mathscr{T}$ of subsets of $X$ that satisfy the following properties:
+\begin{enumerate}
+\item  $X$ and $\emptyset$ are elements of $\mathscr{T}$.
+\item  The union of an arbitrary collection of sets in $\mathscr{T}$ is also in $\mathscr{T}$.
+\item  The intersection of a finite number of sets in $\mathscr{T}$ is also in $\mathscr{T}$.
+\end{enumerate}
+The elements of $\mathscr{T}$ are called the \emph{open sets} of $X$.  The set $X$ with the structure of the topology $\mathscr{T}$ is called a \emph{topological space}\footnote{The word \emph{topology} comes from the Greek word \emph{topos} ($\tau \acute{o} \pi o \zeta$), which means ``place''.}.
+\end{definition} 
+
+
+
+Theorem \ref{union} says that every nonempty open set is the union of a collection of regions.  This necessary condition for open sets is also sufficient:
+
+\begin{theorem}  Let $U \subset C$ be nonempty.  Then $U$ is open if and only if $U$ is the union of a collection of regions.
+\end{theorem}
+
+\begin{proof}
+We first assume that $U \subset C$ is nonempty and open. We know then by Theorem 3.13 that $U$ is the union of a collection of regions. 
+We now assume that $U \subset C$ is the union of a collection of regions. By Corollary 3.11 we know that all regions are open, so by applying Theorem 3.18 we get that $U$ is open. 
+\end{proof}
+
+\begin{definition}  A topological space $X$ is \emph{discrete} if every subset of $X$ is open.
+\end{definition}
+
+\begin{exercise}  Find a realization of the continuum that is discrete.  Must every realization be discrete?
+\end{exercise}
+
+\begin{proof}
+We know that every subset of $\mathbb Z$ is both open and closed, so $\mathbb Z$ is a discrete realization of the continuum. It is not a necessary condition that a realization of the continuum be discrete, as $\mathbb R$ is a non-discrete realization of the continuum (the set $\{0\}$ on $\mathbb R$ is not open because no region can be constructed such that the region is contained within the set $\{0\}$).
+\end{proof}
+
+\begin{definition}  Let $A$ and $B$ be nonempty disjoint subsets of a topological space $X$.  We say that $A$ and $B$ are \emph{separated} if each contains no point of the closure of the other, i.e. $A \cap \overline{B} = \emptyset$ and $\overline{A} \cap B = \emptyset$.
+\end{definition}
+
+\begin{theorem}  Let $\_{ab}$ be a region in $C$.  Then the sets $\_{ab}$ and $\ext{ab}$ are separated.
+\end{theorem}
+
+\begin{proof}
+We know that no limit points of $\_{ab}$ are in $\ext{ab}$ and that no limit points of $\ext{ab}$ are in $\_{ab}$ by Lemma 2.16. We also know that $\_{ab}$ and $\ext{ab}$ are disjoint, so it follows that $\_{ab}$ and $\ext{ab}$ are separated.
+\end{proof}
+
+\begin{definition}  Let $X$ be a topological space.  $X$ is \emph{disconnected} if it may be written as the union $X = A \cup B$ of two separated sets.  $X$ is \emph{connected} if it is not disconnected.
+\end{definition}
+
+\begin{exercise} Is the continuum connected?
+\end{exercise}
+
+\begin{proof}
+As defined thus far, the continuum is not necessarily connected. We know that $\mathbb Z$ is a realization of the continuum as defined thus far, and $\mathbb Z$ can be written as $\mathbb Z = \{x \in \mathbb Z \mid \text{x is even}\} \cup \{x \in \mathbb Z \mid \text{x is odd}\}$. Any subset of $\mathbb Z$ has no limit points, so we know that  the set of even integers and the set of odd integers are separated.
+\end{proof}
+
+
+
+
+
+\end{document}

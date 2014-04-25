@@ -1,0 +1,511 @@
+\documentclass[12pt]{article}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 1: Basics}
+\author{John Lind}
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\begin{center}
+{\large MATH 161, SHEET 1: SETS, FUNCTIONS and CARDINALITY} \\ 
+\vspace{.2in}  
+%John Boller, Diane Herrmann, Paul Sally, September 1, 2012
+Jeffrey Zhang IBL Journal 10/23/2013
+\end{center}
+
+\bigskip \bigskip
+
+\medskip
+
+Sets and functions are among the most fundamental objects in mathematics.  A formal treatment
+of set theory was first undertaken at the end of the 19th Century and was finally codified
+in the form of the Zermelo-Fraenkel axioms.  While fascinating in its own right, pursuit of these
+formalisms at this point would distract us from our main purpose of studying Calculus.  Thus, we
+present a simplified version that will suffice for our immediate purposes.
+
+%It is assumed that you know about the natural numbers $\mathbb{N} = \{0, 1, 2, 3, 4, \dotsc \}$ and the integers $\mathbb{Z} = \{ \dotsc, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dotsc \}$.  We will not hesitate to use the concept of equality (=), or identity of objects.  Mathematical thinking is based on the operations of logic.  We list some of them below, with common symbolic representations\footnote{While these symbols can be useful in shorthand, boardwork and scratchwork, it is generally best to write your mathematical reasoning using words and complete sentences, as will be done on these sheets.}:
+%\begin{gather*}
+%\forall: \text{for all} \qquad \exists: \text{there exists} \qquad \wedge: \text{and} \qquad \vee: \text{or} \qquad \neg: \text{not} \\
+% \qquad \Longrightarrow : \text{implies, or ``if ..., then ...''}  \qquad \Longleftrightarrow: \text{if and only if}.
+%\end{gather*}
+
+\subsection*{Sets}
+
+\begin{definition} (Working Definition)
+A {\em set} is an object $S$ with the property that, given any $x$, we have the dichotomy that precisely
+one of the two conditions $x\in S$ or $x\not\in S$ is true.  In the former case, we say that $x$ is an 
+{\em element} of $S$, and in the latter, we say that $x$ is not an element of $S$.
+\end{definition}
+
+%\begin{definition} (Working Definition)
+%Let $S$ be a set.  The \emph{cardinality} of $S$ is the number of elements in $S$, and it is
+%denoted $|S|$.  A set is \emph{finite}
+%\end{definition}
+
+A set is often presented in one of the following forms:
+\begin{itemize}
+\item
+A complete listing of its elements.
+
+Example:  the set $S=\{1,2,3,4,5\}$ contains precisely the 
+five smallest positive integers.
+%, and $|S|=5$.
+
+\item
+A listing of some of its elements with ellipses to indicate unnamed elements.
+
+Example 1:  the set $S=\{3, 4, 5, \ldots, 100\}$ contains the positive integers from 3 to 100,
+including 6 through 99, even though these latter are not explicitly named.  
+% Here, $|S|=98$.
+
+Example 2:  the set $S=\{2, 4, 6, \ldots, 2n, \ldots \}$ is the set of all positive even integers.
+% The cardinality of $S$ is not finite.
+
+\item
+A two-part indication of the elements of the set by first identifying the source of all elements
+and then giving additional conditions for membership in the set.
+
+Example 1: 
+$S=\{x\in {\mathbb N}\mid \mbox{$x$ is prime}\}$ is the set of primes.  
+%This is an infinite set (see Euclid).
+
+Example 2:
+$S=\{x\in {\mathbb Z}\mid \mbox{$x^2<3$}\}$ is the set of integers whose squares are less than 3.
+\end{itemize}
+
+\begin{definition}  
+Two sets $A$ and $B$ are equal if they contain precisely the same elements, that is, $x\in A$
+if and only if $x\in B$.  When $A$ and $B$ are equal, we denote this by $A=B$.
+\end{definition}
+
+\begin{definition}  
+A set $A$ is a {\em subset} of a set $B$ if every element of $A$ is also an element of $B$, that is,
+if $x\in A$, then $x\in B$.  When $A$ is a subset of $B$, we denote this by $A\subset B$.
+\end{definition}
+
+\begin{theorem}
+$A=B$ if and only if $A\subset B$ and $B\subset A$.
+\end{theorem}
+
+\begin{proof}
+Assume A = B to be true. Then for all x such that $x \in A$, by definition 1.2, $x \in B$ is also true. Since every element $x \in A$ implies that $x \in B$, by definition 1.3 $A \subset B$. By a similar argument, it can be shown that $B \subset A$. We now prove the converse by assuming that $A \subset B$ and $B \subset A$. Then we know that by definition 1.3 that for all $x$, $x \in A \iff x \in B$. So it follows by definition 1.2 that A = B. Thus, because A = B implies that $A \subset B$ and $B \subset A$, and $A \subset B$, $B \subset A$ implies that A = B, it can be concluded that A = B {\it if and only if} $A \subset B$ {\it and} $B \subset A$.
+\end{proof}
+
+\begin{exercise}
+Let $A=\{1, \{2\}\}$.  Is $1\in A$?  Is $2\in A$?  Is $\{1\}\subset A$?  Is $\{2\}\subset A$?  
+Is $1\subset A$?  Is $\{1\}\in A$?  Is $\{2\}\in A$?  Is $\{\{2\}\}\subset A$?  
+Explain.
+\end{exercise}
+$1 \in A$ because 1 is an element of the set A.
+$2 \not\in A$ because 2 is not an element of the set A.
+$\{1\} \subset A$ because the set containing 1 is a subset of the set A.
+$\{2\} \not\subset A$ because the set containing 2 is not a subset of the set A.
+$1 \not\subset A$ because 1 is an element, not a set. 
+$\{1\} \not\in A$ because the set containing 1 is not an element of the set A.
+$\{2\} \in A$ because the set containing 2 is an element of the set A.
+$\{\{2\}\}\subset A$ because the set containing 2 is a subset of the set A.
+\begin{definition}  Let $A$ and $B$ be two sets. 
+The \emph{union} of $A$ and $B$ is the set
+\[
+A \cup B = \{x \mid \text{$x \in A$ or $x \in B$} \}.
+\]
+\end{definition}
+
+\begin{definition}  Let $A$ and $B$ be two sets. 
+The \emph{intersection} of $A$ and $B$ is the set
+\[
+A \cap B = \{ x \mid \text{$x \in A$ and $x \in B$} \}.
+\]
+\end{definition}
+
+\begin{theorem}  
+Let $A$ and $B$ be two sets.  Then:
+\begin{enumerate}
+\item
+$A\subset A\cup B$.
+\begin{proof}
+$A \cup B$ is defined as the set of all $x$ such that $x \in A$ or $x \in B$ (Definition 1.6). $A$ is the set of all $x$ such that $x \in A$ so $\forall x \in A, x \in (A \cup B)$. Thus $A \subset A \cup B$ by Definition 1.3.
+\end{proof}
+\item
+$A\cap B\subset A$.
+\begin{proof}
+$A \cap B$ is defined as the set of all $x$ such that $x \in A$ and $x \in B$ (Definition 1.7). $A$ is the set of all $x$ such that $x \in A$. It follows then that $\forall x \in (A \cap B), x \in A$. So by definition 1.3, $(A \cap B) \subset A$.
+\end{proof}
+\end{enumerate}
+\end{theorem}
+
+A special example of the intersection of two sets is when the two sets have no elements in common.
+This motivates the following definition.
+
+\begin{definition}  
+The \emph{empty set} is the set with no elements, and it is denoted $\emptyset$.  That is,
+no matter what $x$ is, we have $x\not\in \emptyset$.
+\end{definition}  
+
+\begin{definition}  
+Two sets $A$ and $B$ are \emph{disjoint} if $A\cap B=\emptyset$.
+\end{definition}  
+
+\begin{exercise}  
+Show that if $A$ is any set, then $\emptyset\subset A$.
+\end{exercise}
+\begin{proof}
+We know that $\nexists x$ such that $x \in \emptyset$.  Thus it is true that $\forall x \in \emptyset, x\in A$ for any set $A$. It follows by Definition 1.3 that $\emptyset \subset A$.
+\end{proof}
+
+\begin{definition}  
+Let $A$ and $B$ be two sets. 
+The \emph{difference} of $B$ from $A$ is the set
+\[
+A \setminus B = \{ x \in A \mid x \notin B \}.
+\]
+\end{definition}
+
+The set $A \setminus B$ is also called the \emph{complement} of $B$ relative to $A$.
+When the set $A$ is clear from the context, this set is sometimes denoted $B^{c}$, but we will 
+try to avoid this imprecise formulation and use it only with warning.
+
+\begin{theorem}  (DeMorgan's Laws)
+Let $X$ be a set, and let $A, B\subset X$.  Then:
+\begin{enumerate}
+\item
+$X\setminus (A\cup B)=(X\setminus A)\cap (X\setminus B)$
+\begin{proof}
+We know that $X \setminus (A \cup B)$ is the set of all $x \in X, x \not \in A, x\not \in B$ (Definitions 1.6, 1.12). This can be rewritten as the intersection of the set of all $x \in X, x \not \in A$ with the set of all $x \in X, x \not \in B$. By Definition 1.12, the set of all $x \in X, x \not \in A$ is equal to the set $(X \setminus A)$ and the set of all $x \in X, x \not \in B$ is equal to the set $(X \setminus B)$. So $X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$
+\end{proof}
+\item
+$X\setminus (A\cap B)=(X\setminus A)\cup (X\setminus B)$
+\begin{proof}
+We know that $X \setminus (A \cap B)$ is the set of all $x \in X$, $x \not \in A$ or $x \not \in B$ (Definitions 1.7, 1.12). This can be rewritten as the union of the set of all $x \in X, x \not \in A$ and the set of all $x \in X, x \not \in B$. The set of all $x \in X, x \not \in A$ is the set $(X \setminus A)$ and similarly the set of all $x \in X, x \not in B$ is the set $(X \setminus B)$ so by definition 1.12, $X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)$.
+\end{proof}
+\end{enumerate}
+\end{theorem}
+
+
+
+\begin{definition}  Let $A$ and $B$ be two nonempty sets. 
+The \emph{Cartesian product} of $A$ and $B$ is the set of ordered pairs
+\[
+A \times B = \{ (a, b) \mid \text{$a \in A$ and $b \in B$} \}.
+\]
+\end{definition}
+
+\begin{definition}  Let $A$ be a set. 
+The \emph{power set} of $A$ is the sets of all subsets of $A$ and is denoted $\wp(A)$.
+That is, $\wp(A)=\{B\mid B\subset A\}$.
+\end{definition}
+
+\begin{exercise}
+Let $A=\{1,2,3\}$.  Identify $\wp(A)$ by explicitly listing its elements.
+\end{exercise}
+$\wp(A) = $ \{{$\emptyset$, \{{1\}},\{{2\}},\{{3\}},\{{1,2\}},\{{2,3\}},\{{1,3\}},\{{1,2,3\}}\}
+
+\subsection*{Functions}
+
+\begin{definition} Let $A$ and $B$ be two nonempty sets.  
+A \emph{function} $f$ from $A$ to $B$ is a subset $f \subset A \times B$ such that for all $a \in A$ there exists a unique $b \in B$ satisfying $(a, b) \in f$.  To express the idea that $(a, b) \in f$, we most
+often write $f(a) = b$.  To express that $f$ is a function from $A$ to $B$ in symbols we write $f \colon A \rightarrow B$.  
+\end{definition}
+
+\begin{exercise}  
+Let the function $f \colon \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by
+$f(n)=2n$.  Describe $f$ as a subset of $\mathbb{Z} \times \mathbb{Z}$.  
+\end{exercise}
+$f = \{(x,y) \in \mathbb Z | y = 2x\}$
+\begin{definition}  Let $f \colon A \rightarrow B$ be a function.  The \emph{domain} of $f$ is $A$.  \\
+If $X \subset A$, then the \emph{image of $X$ under $f$} is the set
+\[
+f(X) = \{ b \in B \mid \text{$f(x) = b$ for some $x \in X$} \}.
+\]
+If $Y \subset B$, then the \emph{preimage of $Y$ under $f$} is the set
+\[
+f^{-1}(Y) = \{ a \in A \mid f(a) \in Y \}.
+\]
+\end{definition}
+
+\begin{definition}  A function $f \colon A \rightarrow B$ is \emph{surjective} (also known as `onto') if, 
+for every $b\in B$, there is some $a\in A$ such that $f(a) = b$.  The function $f$ is \emph{injective} (also known as `one-to-one') if for all $a, a' \in A$, if $f(a) = f(a')$, then $a = a'$.  The function $f$ is \emph{bijective}, (also known as a bijection or a `one-to-one' correspondence) if it is surjective and injective.
+\end{definition}
+
+\begin{exercise}
+Let $f:{\mathbb N}\rightarrow {\mathbb N}$ be defined by $f(n)=n^2$.  Is $f$ injective?  Is $f$ surjective?
+\end{exercise}
+\begin {proof}
+Let $f(n) = f(m)$, then it follows that $n^2 = m^2$. $f :$ $\mathbb N \to \mathbb N$, so $n, m > 0$ thus $n = m$. Then $f$ is injective by Definition 1.20. $f$ is not surjective because $\nexists n \in \mathbb N$ such that $f(n) = 2$.
+\end {proof}
+\begin{exercise}
+Let $f:{\mathbb N}\rightarrow {\mathbb N}$ be defined by $f(n)=n+2$.  Is $f$ injective?  Is $f$ surjective?
+\end{exercise}
+\begin {proof}
+Let $f(n) = f(m)$, then it follows that $n + 2= m + 2$. $f :$ $\mathbb N \to \mathbb N$, so $n = m$. Then $f$ is injective by Definition 1.20. $f$ is not surjective because $\nexists n \in \mathbb N$ such that $f(n) = 0$.
+\end {proof}
+\begin{exercise}
+Let $f:{\mathbb Z}\rightarrow {\mathbb Z}$ be defined by $f(x)=x^2$.  Is $f$ injective?  Is $f$ surjective?
+\end{exercise}
+\begin {proof}
+Let $f(n) = f(m)$, then it follows that $n^2= m^2$. $f :$ $\mathbb Z \to \mathbb Z$, so $\pm n = \pm m$. Then $f$ is not injective by Definition 1.20. $f$ is not surjective because $\nexists n \in \mathbb Z$ such that $f(n) = 2$.
+\end {proof}
+\begin{exercise}
+Let $f:{\mathbb Z}\rightarrow {\mathbb Z}$ be defined by $f(x)=x+2$.  Is $f$ injective?  Is $f$ surjective?
+\end{exercise}
+\begin {proof}
+Let $f(n) = f(m)$, then it follows that $n+2= m+2$. $f :$ $\mathbb Z \to \mathbb Z$, so $n = m$. Then $f$ is injective by Definition 1.20. Let $f(a) = b$, then $f(a) = a +2$ so $a = b - 2$. $a,b \in \mathbb Z$, so by definition 1.20 $f$ is surjective.
+\end {proof}
+\begin{lemma} 
+Suppose that $f \colon A \rightarrow B$ is bijective.  
+Then there exists a bijection $g \colon B \rightarrow A$.
+\end{lemma}
+\begin {proof}
+We define $g(B) = \{a \in A \mid f(a) \in B\}$. We know that $f$ is bijective, so $f$ is injective and it follows by Definition 1.20 that for every $a \in A$ there exists a unique $b \in B$ such that $f(a) = b$. Thus, we know that $g$ satisfies the definition of a function (Definition 1.17). Let $x, x' \in X$ such that $g(x) = g(x')$. Let $g(x) = a$ for some $a \in A$, then $f(a) = x$. $g(x) = g(x')$ so it follows that $g(x') = a$, $f(a) = x'$. Then $x = x'$, so $g$ is injective (Definition 1.20). Let $a \in A$ and $f(a) = b$. We have shown that $f$ is injective, so we know that there exists a unique $b \in B$ such that $f(a) = b$. It follows then that $\exists g(b) = a$ for some $b \in B$. So we can say that $\forall a \in A$ such that $f(a) = b$, $\exists b \in B$ such that $g(b) = a$. Then by definition 1.20, $g$ is surjective.
+\end {proof}
+
+%Because of this lemma we can make the following definition:
+
+\begin{definition}
+We say that two sets $A$ and $B$ are in \emph{bijective correspondence} when there exists a bijection from $A$ to $B$ or, equivalently, from $B$ to $A$.
+\end{definition}
+
+
+
+\subsection*{Cardinality}
+
+\begin{definition}  
+Let $n \in \mathbb{N}$ be a natural number.  We define $[n]$ to be the set $\{1, 2, \dotsc, n \}$.  
+Additionally, we define $[0]=\emptyset$.
+\end{definition}
+
+\begin{definition}  
+A set $A$ if \emph{finite} if $A=\emptyset$ or if there exists a natural number $n$ and a bijective correspondence between $A$ and the set $[n]$.  If $A$ is not finite, we say that $A$ is \emph{infinite}.
+\end{definition}
+
+\begin{lemma}  Let $A$, $B$, and $C$ be sets and suppose that there is a bijective correspondence between $A$ and $B$ and a bijective correspondence between $B$ and $C$.  Then there is a bijective correspondence between $A$ and $C$.
+\end{lemma}
+\begin{proof}
+Let $f: $ $A \to B$, $g: $ $B \to C$. We know $f$ and $g$ are bijections. Suppose $c \in C$, then $\exists b \in B$ such that $g(b) = c$ by Definition 1.20. By the same definition we also know that $\forall b  \in B$ $\exists a \in A$ such that $f(a) = b$. It follows then that for $c \in C$, $\exists a \in A$ such that $g(f(a)) = c$. We define a function $h$ such that $h = g \circ f$, so $h: $ $A \to C$ and $h$ is surjective.
+Suppose $a, a' \in A$ and $h(a) = h(a')$. It follows then that $g(f(a)) = g(f(a'))$. We know by Definition 1.20 that $\forall b, b' \in B$, if $g(b) = g(b')$ then $b = b'$. So we know that $f(a) = f(a')$. By the same definition, we know that $\forall a, a' \in A$, if $f(a) = f(a')$ then $a = a'$. Thus, if $h(a) = h(a')$ then $a = a'$, so h is injective. Because $h$ is injective and surjective, $h$ is bijective.
+\end{proof}
+
+\begin{theorem} (The Pigeonhole Principle)
+Let $n, m\in {\mathbb N}$ with $n<m$.  \\ Then there does not exist an injective function
+$f:[m]\rightarrow [n]$.
+\end{theorem}
+\begin{proof}
+First we prove that there is no injective function $a:$ $[n+1] \to [n]$ for $n \in \mathbb N$. Using induction, let the base case be n = 1, then $a:$ $[2]\to[1]$, so $a:$ ${1,2} \to {1}$. This is obviously not injective, because $a$ maps two elements to one element. Using induction, we assume that any $a:$ $[n+1] \to [n]$ is not injective for $n \in \mathbb N$. We will also assume that any $f:$ $[n+2] \to [n+1]$ is injective for $n \in \mathbb N$ in order to show a contradiction. Let $x \in [n+1]$ such that $f(n+2) = x$. It can be concluded that either $x = n+1$ or $x \not= n+1$. Consider the case where $x = n+1$, then a function $m$ can be defined as $m(x) = f(x) \forall x \in [n+1]$. Thus, $m:$ $[n+1]\to[n]$, so $m$ is not injective by the inductive hypothesis. Thus $f$ is not injective, and a contradiction is reached.
+$g:$ $[n+1] \to [n+1]$ can be defined where $g(n+1) = x$, $g(x) = n + 1$, for all other $y \in g$, $g(y) = y$. Let $h$ be a function such that $h = g \circ f$. $f$ is injective and $g$ is bijective so using the proof of Lemma 1.29, it can be shown that $h$ is injective. Because $h = g \circ f$, $h$ maps $[n+2] \to [n+1]$. So $h(n+2) = n+1$ and $h$ is injective, so $h:$ $[n+1] \to [n]$ is injective, which is a contradiction to the inductive hypothesis. 
+We have shown that any $f:$ $[n+1] \to [n]$ is not injective for all $n \in \mathbb N$. Let this be the base case for induction on $k$, where we assume $f: $ $[n+k] \to [n]$ is not injective for $n,k$ $ \in \mathbb N$. Consider $f: $ $[n+k+1] \to [n]$. We know that $[n+k] \subset [n+k+1]$. Let $g(x) = f(x)$ for $x \in [n+1]$. So $g: $ $[n+1] \to [n]$, and $g$ is not injective by the base case. Thus, by induction, $f: $ $[n+k] \to [n]$ is not injective for all $n,k$ $ \in \mathbb N$. For $m > n$ $m$ can be written as $m = n + k$ so $f: $ $[m] \to [n]$ is not injective for $m > n$ and $m,n$ $ \in \mathbb N$.
+\end{proof}
+
+\begin{theorem}  \label{bij}
+Let $A$ be a finite set. Suppose that $A$ is in bijective correspondence both with $[m]$ and with $[n]$.  Then $m = n$.
+\end{theorem}
+\begin{proof}
+We know that there exists a bijection $f: $ $[m] \to A$ by definition 1.25. We also know that there exists a bijection $g: $ $A \to [n]$. So by Lemma 1.29, we know that there exists a bijection $h: $ $[m] \to [n]$. By Theorem 1.30, $m$ cannot be greater than $n$. We also know that by definition 1.25, there exists a bijection $i: $ $[n] \to [m]$. Similarly, by Theorem 1.30, $n$ cannot be greater than $m$. So $m = n$ must hold.
+\end{proof}
+The preceding result allows us to make the following important definition.
+
+\begin{definition*}[Cardinality of a finite set]
+ If $A$ is a finite set that is in bijective correspondence with $[n]$, then we say that the \emph{cardinality} of $A$ is $n$, and we write $\abs{A} = n$.  (By Theorem~\ref{bij}, there is exactly one such natural number $n$.) 
+\end{definition*}
+
+(As an aside, the cardinality of an infinite set is defined as its ``equivalence class under bijective correspondence''. The notion of equivalence classes will be explored in a future script.)
+
+\begin{exercise}
+Let $A$ and $B$ be finite sets. 
+If $A\subset B$, then $|A|\leq |B|$.
+\end{exercise}
+\begin{proof}
+Let $f: $ $A \to B$ such that $f(x) = x$. So if $f(x) = f(x')$ then $x=x'$. Thus, $f$ is injective. Let $|A| = m$ and $|B| = n$ for some $m,n$ $\in \mathbb N$. We know by Definition 1.28 that there exist injective functions $g: $ $[m] \to A$ and $h: $ $B \to [n]$. So by the argument used in Lemma 1.29, there exists an injective mapping $i: $ $m \to n$ because $g: $ $[m] \to A$, $f: $ $A \to B$, $h: $ $B \to [n]$. Using Theorem 1.30, we know that $m \not < n$ because $i$ is injective. So $n \leq m$, so $|A| \leq |B|$.
+\end{proof}
+\begin{exercise}
+(The Inclusion/Exclusion Principle)
+Let $A$ and $B$ be two finite sets.  Then:
+$$|A\cup B|+|A\cap B|=|A|+|B|$$
+\end{exercise}
+\begin{proof}
+Let two arbitrary sets $X,Y$ be disjoint such that $X \cap Y = \emptyset$. Then we know that $X $= $\left\{x_1,...,x_n\right\}$ and $Y = \left\{y_1,...,y_n\right\}$. Then $X \cup Y = \left\{x_1,y_1,...,x_n,y_n\right\}$. We know $|X|$ is equal to the number of elements in the set $X$, so it is obvious that $|X \cup Y|$ = $|X|$ + $|Y|$ if $X \cap Y = \emptyset$.
+We know that $A \cup B$ $= A \cup (B \setminus A)$ is a disjoint union and that $B = (B \setminus A) \cup (B \cap A)$ is a disjoint union. It follows then that $|A \cup B| = |A| + |(B \setminus A)|$ and that $|B| = |(B \setminus A)| + |(B \cap A)|$. So $|A \cup B| = |A| + |B| - |B \cap A|$. We know that $|B \cup A|$ = $|A \cup B|$ so it follows that $|A \cup B| + |A \cap B| = |A| + |B|$.
+\end{proof}
+
+\begin{exercise}
+Let $A$ and $B$ be two finite sets.  Then $|A\times B|=|A|\cdot |B|$.
+\end{exercise}
+\begin{proof}
+Let $|A| = m, |B| = n$.
+We let the proposition $P(n): |A \times B| = |A| \cdot |B|$. To prove the base case, we let $n = 1$. It follows then that $|A| = m$, $|B| = 1$, so $|A \times B| = m$, which is obviously true.
+Let the inductive hypothesis be that $|A \times B|  = |A| \cdot |B|$ for two sets $A,B$. We define two sets $A, B$ such that $|A| = m$ and $|B| = n + 1$. It follows then that $|A| \cdot |B| = m(n+1)$. Let $B = C \cup D$ for two disjoint sets $C,D$ such that $|C| = n$ and $|D| = 1$. We know that the set $|A \times B| = \{(a,b)|a \in A,b \in B\}$, and we know that $|A| + |(C \cup A)| + |C| = |A| \cdot |C| = m * n$ using the inductive hypothesis. It follows then that $|A \times B| = m * (n + 1)$. Thus, using induction we know that $|A \times B| = |A| \cdot |B|$ for two finite sets $A, B$.
+\end{proof}
+
+\begin{exercise}  
+How many subsets does the empty set have?
+\end{exercise}
+The empty set has one subset, the empty set itself.
+
+\begin{exercise}
+How many subsets does $[n]$ have?  
+\end{exercise}
+\begin{proof}
+We know $|\mathcal P \left({[n]}\right)|$ is equal to the number of subsets of the set [n]. Let the inductive hypothesis be that $|\mathcal P \left({[n]}\right)| = 2^n$. To show the base case, let $n = 0$ then $[n] = \emptyset$. We know that $|\mathcal P \left({\emptyset}\right)| = 1 = 2^0$.  Thus, the base case $n = 0$ is true.
+We assume that $|\mathcal P \left({[n]}\right)| = 2^n$. Let $x = n + 1$, then $[n] \cup \left\{x\right\} = [n +1]$. It follows then that $\forall S$ such that $S \subset \mathcal P \left({[n]}\right)$, $(S \cup \left\{x\right\}) \subset \mathcal P \left({[n + 1]}\right)$. So $\forall S \subset \mathcal P \left({[n]}\right)$, $\exists R$ such that $R = S \cup \left\{x\right\}$, $R \subset \mathcal P \left({[n+1]}\right)$,  $R \not \subset \mathcal P \left({[n]}\right)$. We also know that there $\nexists Q$ such that $Q \not = S \cup \left\{x\right\}$ for some $S \subset \mathcal P \left({[n]}\right)$. Thus we know that $|\mathcal P \left({[n+1]}\right)| = |\mathcal P \left({[n]}\right)| + |\mathcal P \left({[n]}\right)|$. $|\mathcal P \left({[n]}\right)| = 2^n$ by the inductive hypothesis, so it follows that $|\mathcal P \left({[n+1]}\right)| = 2^{n+1}$. Thus, using induction we know that $|\mathcal P \left({[n]}\right)| = 2^n$ is true for all $n \in \mathbb N_0$.
+\end{proof}
+\begin{exercise}  
+Show that if $A$ is a finite set, then $|\wp(A)|=2^{|A|}$.
+\end{exercise}  \bigskip
+\begin{proof}
+Let $|A| = n$ with $f: $ $A \to [n]$ being a bijection (Definition 1.28). We know by Exercise 1.36 that $|\wp([n])| = 2^n$. Because $f: $ is bijective, it follows then that there exists a bijective pre-image $g: $ $\wp(A) \to \wp([n])$. So we know that $|\wp(A)| = |\wp([n])| = 2^n$. Then it becomes clear that $|\wp(A)|=2^{|A|}$.
+\end{proof}
+
+Important Note:  In future scripts you may assume basic properties of finite sets and methods of counting elements without having to refer back to the notions presented in this script.
+
+
+\end{document}

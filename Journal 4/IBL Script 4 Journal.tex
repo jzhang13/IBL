@@ -1,0 +1,528 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[mathcal]{eucal}
+\usepackage[all]{xy}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 4: The Topology of the Continuum}
+\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 161, SHEET 4: CONNECTEDNESS, BOUNDEDNESS, COMPACTNESS} \\ 
+\vspace{.2in}  
+Jeffrey Zhang 12/4/2013
+%John Boller, Daniele Rosso \quad $\bullet$ \quad November 9, 2010 
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{4}   
+
+
+At the end of script 3, we defined what it means for a topological space to be connected, using separated sets (Definition 3.25).
+The following definition is equivalent and is much easier to work with. 
+
+\begin{definition}
+Let $X$ be a topological space. $X$ is {\it disconnected} if it may be written as $X=A\cup B,$ where $A$ and $B$ are disjoint, non-empty open sets in $X.$  $X$ is {\it connected} if it is not disconnected.
+\end{definition}
+
+\begin{exercise}
+Prove that this definition is equivalent to Definition 3.25.
+\end{exercise}
+
+\begin{proof}
+We will first show that Definition 4.1 implies Definition 3.25. Assume that some point $p \in C$ is a limit point of $A$ but $p \not \in A, p \in B$. $B$ is open, so we know that there exists a region $R$ such that $p \in R \subset B$ (Theorem 3.10). $A$ and $B$ are disjoint, so $R \cap A = \emptyset$. However, we know that $p$ is a limit point of $A$ and $p \not \in A$, so $R \cap A \not = \emptyset$. This is a contradiction, so $\overline{A} \cap B = \emptyset$ and by a similar argument we see that $\overline{B} \cap A = \emptyset$.
+We will now show that Definition 3.25 implies Definition 4.1. Let $\overline{A} \cap B = \emptyset$ and $\overline{B} \cap A = \emptyset$. Let $p$ be a limit point of $A$, then we know that $p \in A$ because $X = A \cup B$ for disjoint $A$ and $B$ and $\overline{A} \cap B = \emptyset$. Thus we know that $A$ is closed and similarly that $B$ is closed. Thus $A$ and $B$ are both open as well, because $X \setminus A = B$ and $X \setminus B = A$. So we know that $A$ and $B$ are both disjoint nonempty open sets.
+\end{proof}
+
+
+We will introduce a new axiom for the continuum $C$ and derive many interesting properties from it.  From now on, we will always assume axiom 4.
+
+\medskip
+
+\begin{axiom4}
+The continuum is connected.
+\end{axiom4}
+
+\begin{theorem}
+The only subsets of the continuum that are both open and closed are $\emptyset$ and~$C$.
+\end{theorem}
+
+\begin{proof}
+
+Let $A$ be a nonempty set such that $A \subset C$ and $A$ is both open and closed. Let a set $A^c = C \setminus A$, so it follows that $A^c$ is both open and closed. $A \cap A^c = \emptyset$ and $A \not = \emptyset$, $A^c \not = \emptyset$, $C = A \cup A^c$ so $C$ is disconnected by Definition 4.1. This is a contradiction to Axiom 4. Note that $A$ and $A^c$ must both be nonempty for Definition 4.1, so $\emptyset$ and $C$ are the only subsets of the continuum that are both open and closed.
+\end{proof}
+
+\begin{theorem}
+For all $x, y \in C$, if $x < y$, then there exists $z \in C$ such that $z$ is in between $x$ and $y$.
+\end{theorem}
+
+\begin{proof}
+Assume that there does not exist $z \in C$ such that $z$ is in between $x$ and $y$. Then $\_{xy}$ is empty. Let $A = \{a \in C \mid x < a\}$, $B = \{b \in C \mid b < y\}$. It follows that $A \cap B = \emptyset$. We know by Theorem 3.12 that $A$ and $B$ are open. We also know that $A$ and $B$ are nonempty and $A \cup B = C$, so by Definition 4.1 $C$ is disconnected, which contradicts Axiom 4. So there must exist $z \in C$ such that $z$ is in between $x$ and $y$.
+\end{proof}
+
+\begin{corollary}  Every region is infinite.
+\end{corollary}
+
+\begin{proof}
+Let $\_{ab}$ be an arbitrary region. Assume $\_{ab}$ is finite, then $\_{ab}$ has a first point $x$. However, by Theorem 4.4 we know that there exists a point $x'$ such that $x'$ is between $a$ and $x$, so $x$ is not a first point of $\_{ab}$. This is a contradiction, so $\_{ab}$ must be infinite.
+\end{proof}
+
+\begin{corollary}  Every point of $C$ is a limit point of $C$.  
+\end{corollary}
+
+\begin{proof}
+Let $p$ be an arbitrary point in $C$. Let $\_{ab}$ be any region with $p \in \_{ab}$. We know by Theorem 4.4 that there exists $x \in C$ such that $x$ is between $a$ and $p$, so $x \in \_{ab}$. $x \in C, x \in \_{ab}$, so it follows that $\_{ab} \cap (C \setminus \{p\}) \not = \emptyset$. Thus $p$ is a limit point of $C$, and thus every point of $C$ is a limit point of $C$.
+\end{proof}
+
+\begin{corollary}  Every point of the region $\_{ab}$ is a limit point of $\_{ab}$.
+\end{corollary}
+
+\begin{proof}
+Let a point $p$ be in $\_{ab}$ and let $S$ be a region containing $p$. Then by Theorem 2.17, $\_{ab} \cap S= R$ where $R$ is some region containing $p$, and we know by Theorem 4.5 that $R$ is infinite. It follows then that $S \cap (\_{ab} \setminus \{p\}) \not = \emptyset$, so $p$ is a limit point of $\_{ab}$ and thus every point in $\_{ab}$ is a limit point of $\_{ab}$.
+\end{proof}
+
+
+\begin{exercise}  Construct an infinite collection of open sets whose intersection is not open.  Equivalently, construct an infinite collection of closed sets whose union is not closed.
+\end{exercise}
+
+\begin{proof}
+Let $A$ be the collection of regions $(\frac{-1}{n}, \frac{1}{n})$ where $n \in \mathbb N$. Note that all regions are open. Then the intersection of $A$ is the set $\{0\}$. $\{0\}$ is not open because all regions are infinite by Theorem 4.5, so no region $R$ can be drawn around $\{0\}$ such that $R \subset \{0\}$. 
+Let $\_{ab}$ be an arbitrary region. Let $x$ be a point in $\_{ab}$. We know that $\{x\}$ is a closed set because all finite sets have no limit points, so $\{x\}$ contains all of its zero limit points. Let $B$ be the collection of closed sets $\{x\}$ such that $x \in \_{ab}$. Then the union of $B$ is the region $\_{ab}$, which is open.
+\end{proof}
+
+We will now introduce boundedness.   The first definition should be intuitively clear.  The second is subtle and powerful.  Just to be clear, by $x \leq y$, we mean $x < y$ or $x = y$ and similarly for $x \geq y$.
+
+\begin{definition}  Let $X$ be a subset of $C$.  A point $u$ is called an \emph{upper bound} of $X$ if for all $x \in X$, $x \leq u$.  A point $l$ is called a \emph{lower bound} of $X$ if for all $x \in X$, $l \leq x$.  If there exists an upper bound of $X$, then we say that $X$ is \emph{bounded above}.  If there exists a lower bound of $X$, then we say that $X$ is \emph{bounded below}.  If $X$ is bounded above and below, then we simply say that $X$ is \emph{bounded}.
+\end{definition}
+
+
+\begin{definition}  Let $X$ be a subset of $C$.  We say that $u$ is the \emph{least upper bound} of $X$ and write $u = \sup X$ if:
+\begin{enumerate}
+\item  $u$ is an upper bound of $X$, and
+\item  if $u'$ is an upper bound of $X$, then $u \leq u'$.
+\end{enumerate}
+We say that $l$ is the \emph{greatest lower bound} and write $l = \inf X$ if:
+\begin{enumerate}
+\item $l$ is a lower bound of $X$, and
+\item if $l'$ is a lower bound of $X$, then $l' \leq l$.
+\end{enumerate}
+\end{definition}
+
+\noindent The notation $\sup$ comes from the word \emph{supremum}, which is another name for least upper bound.  The notation $\inf$ comes from the word \emph{infimum}, which is another name for greatest lower bound.
+
+\begin{exercise}  If $\sup X$ exists, then it is unique, and similarly for $\inf X$.
+\end{exercise}
+
+\begin{proof}
+Let $\sup X$ exist. Assume that $\sup X$ is not unique, so there exist points $u, u'$ such that $u =\sup X$ and $u' = \sup X$. Then we know by Definition 4.10 that $u$ and $u'$ are both upper bounds of $X$. It follows then that $u \leq u'$ and $u' \leq u$, so $u =u'$. Thus $\sup X$ is unique. A similar proof can be constructed for $\inf X$ without loss of generality.
+\end{proof}
+
+\begin{exercise} For this exercise, we assume that $C=\bbR.$ Find $\sup X$ and $\inf X$ for each of the following subsets
+of $\bbR,$ or state that they do not exist. You need not give proofs.
+\begin{enumerate}
+\item $X=\bbN$
+\item $X=\bbQ$
+\item $X=\{\frac1n\mid n\in\bbN\}$
+\item $X=\{x\in\bbR\mid 0<x<1\}$
+\item $X=\{3\}\cup [-7,-5]$
+\end{enumerate}
+\end{exercise}
+
+\begin{enumerate}
+\item $\inf X = 1$, $\sup X$ does not exist.
+\item $\inf X$ does not exist, $\sup X$ does not exist.
+\item $\inf X = 0$, $\sup X = 1$
+\item $\inf X = $0, $\sup X = 1$
+\item $\inf X = -7$, $\sup X = 3$
+\end{enumerate}
+
+
+\begin{theorem}  Let $a < b$.  The least upper bound and greatest lower bound of the region $\_{ab}$ are:
+\[
+\sup \_{ab} = b \quad \text{and} \quad \inf \_{ab} = a.
+\]
+\end{theorem}
+
+\begin{proof}
+We know that $b$ is an upper bound of $\_{ab}$. Let $c$ be a point such that $c$ is an upper bound of $\_{ab}$. If $c < b$, then $c \in \_{ab}$, and so we know that there exists $p \in \_{ab}$ such that $c < p < b$ (Theorem 4.4). It follows then that $c$ is not an upper bond of $\_{ab}$, which is a contradiction. So $c \geq b$, then it follows that $\sup \_{ab} = b$. It can be shown similarly without loss of generality that $\inf \_{ab} = a$.
+\end{proof}
+
+\begin{theorem}  
+Let $X$ be a subset of $C$.
+Suppose that $\sup X$ exists and $\sup X \notin X$.  Then $\sup X$ is a limit point of $X$.  The same holds for $\inf X$.
+\end{theorem}
+
+\begin{proof}
+Let $u = \sup X$, so $u \not \in X$. Let $\_{ab}$ be any region containing $u$. Then $a < u < b$. Assume that there does not exist $x$ such that $a < x < u$, then $a = \sup X$, which is a contradiction. So it follows that there must exist $x \in X$ such that $a < x < u$. Then we know $x \in \_{ab}$ and $x \in X$. So $\_{ab} \cap (X \setminus \{u\}) \not = \emptyset$. It follows then that $\sup X$ is a limit point of $X$. It can be shown similarly without loss of generality that $\inf X$ is a limit point of $X$.
+\end{proof}
+
+\begin{corollary}  Both $a$ and $b$ are limit points of the region $\underline{ab}$.
+\end{corollary}
+
+\begin{proof}
+We know by Theorem 4.13 that $\sup \_{ab} = b$. $b \not \in \_{ab}$, so by Theorem 4.14, $b$ is a limit point of $\_{ab}$. It can be shown similarly without loss of generality that $a$ is a limit point of $\_{ab}$.
+\end{proof}
+
+Let $[a, b]$ denote the closure $\overline{\_{ab}}$ of the region $\_{ab}$.  
+
+\begin{corollary}  $[a, b] = \{x \in C \mid a \leq x \leq b  \}$.
+\end{corollary}
+
+\begin{proof}
+We know that no limit points of a region are in the exterior of that region (Lemma 2.16). We know that all points in a region are limit points of that region (Corollary 4.7). We know that both $a$ and $b$ are limit points of the region $\_{ab}$. It follows then that $[a,b] = \{x \in C \mid a \leq x \leq b\}$.
+\end{proof}
+
+\begin{lemma}  Let $X \subset C$ and define:
+\[
+\Psi(X) = \{ x \in C \mid \text{$x$ is not an upper bound of $X$} \}.
+\]
+Then $\Psi(X)$ is open.
+Define:
+\[
+\Omega(X) = \{ x \in C \mid \text{$x$ is not a lower bound of $X$} \}.
+\]
+Then $\Omega(X)$ is open.
+\end{lemma}
+
+\begin{proof}
+Let $x \in \Psi(X)$. Then we know that $x$ is not an upper bound of $X$, so there must exist $y$ such that $y \in X$ and $x < y$. We know by Theorem 4.4 then that there exists $b$ such that $x < b < y$ and by Axiom 3 that there exists $a$ such that $a < x < b < y$. It follows then that $a,b$ are not upper bounds of $X$ because $y \in X$, so $a,b \in \Psi(X)$. We also know that for any $c$ such that $a < c < b$, $c < y$ so $c \in \Psi(X)$. It follows that $x \in \_{ab} \subset \Psi(X)$, so by Theorem 3.10 $\Psi(X)$ is open. It can be shown similarly without loss of generality that $\Omega(X)$ is open.
+\end{proof}
+
+\begin{theorem}  Suppose that $X$ is nonempty and bounded.  Then $\sup X$ and $\inf X$ both exist.
+\end{theorem}
+
+\begin{proof}
+Assume that $\sup X$ does not exist. Let $x$ be an upper bound of $X$, then $x \in C \setminus \Psi(X)$. $\sup X$ does not exist, so there must exist $a$ such that $a < x$ and $a$ is an upper bound of $X$. We also know that there must exist $b$ such that $x < b$ by Axiom 3. Note that for all $y$ such that $y \in \_{ab}$, $y$ is an upper bound of $X$ because $a < y$ and $a$ is an upper bound of $X$. So we have that $\_{ab} \subset (C \setminus \Psi(X)$. $x \in \_{ab} \subset (C \setminus \Psi(X))$, so by Theorem 3.10 $(C \setminus \Psi(X))$ is open. This means that $\Psi(X)$ is closed. We know that $\Psi(X) \not = C$ because $X$ is nonempty, and we know that $\Psi(X) \not = \emptyset$ beacuse $X$ is bounded. Because $\emptyset$ and $C$ are the only sets that are both open and closed and $\Psi(X)$ is closed, then it follows that $\Psi(X)$ is not open. This is a contradiction to Lemma 4.17, which states that $\Psi(X)$ is open, so $\sup X$ must exist. It can be shown similarly without loss of generality that $\inf X$ must exist. 
+\end{proof}
+
+\begin{corollary}  Every nonempty closed and bounded set has a first point and a last point.
+\end{corollary}
+
+\begin{proof}
+Let $X$ be nonempty, closed, and bounded. By Theorem 4.18, we have that $\sup X$ exists. By Theorem 4.14 we know that if $\sup X \not \in X$, then $\sup X$ is a limit point of $X$. This is a contradiction to $X$ being closed, so $\sup X \in X$. Then we know that $\sup X$ is the last point of $X$. It can be similarly shown without loss of generality that $\inf X$ exists and that $\inf X$ is the first point of $X$.
+\end{proof}
+
+\begin{exercise}  Is this true for $\mathbb{Q}$?
+\end{exercise}
+
+\begin{proof} %CHECK THIS ONE
+No. Let $X = \{x \in \mathbb{Q} \mid 0 \leq x^2 < 2\}$. $X$ is obviously nonempty and bounded. To show that $X$ is closed, we will show that $C \setminus X$ is open. Let $q \in (C \setminus X)$, then we know that $q^2 > 2$ or $q^2 < 0$. We first consider $q^2 > 2$, then we know that there exists $r$ such that $q < r$ because $\mathbb{Q}$ has no first or last point, and it is clear that $r \not \in X$. We define a point $p$ as $p = q + \delta$ for $0 < \delta < \frac{q^2 - 2}{2q}$. By simplifying the equation, we see that $2 < p^2 < q^2$, so $p < q$ and $p \not \in X$. Thus we can draw a region $\_{pr}$ such that $q \in \_{pr} \subset (C \setminus X)$. So it follows by Theorem 3.10 that $C \setminus X$ is open, and so $X$ is closed.
+We will not show that $X$ has no last point. Assume that $X$ has a last point, then we let a point $q$ be the last point of $X$. Then we define another point $r$ such that $r = q + \delta$, where $0 < \delta < \frac{2 - q^2}{2q + 1}$. Through inspection we can see that $q^2 < r^2 < 2$. It follows that $q < r$ and $r \in X$, which contradicts our assumption that $X$ has a last point. Thus, we know that $X$ has no last point, so Corollary 4.19 does not hold for $\mathbb{Q}$.
+\end{proof}
+
+
+
+The next new concept is compactness; the definition can be intimidating at first.  
+
+
+\begin{definition}  Let $X$ be a subset of $C$ and let $\mathcal{U} = \{ U_{\lambda} \}_{\lambda \in \Lambda}$ be a collection of subsets of~$C$.  We say that $\mathcal{U}$ is a \emph{cover} of $X$ if every point of $X$ is in some $U_{\lambda}$, or in other words:
+\[
+X \subset \bigcup_{\lambda \in \Lambda} U_{\lambda}.
+\]
+We say that the collection $\mathcal{U}$ is an \emph{open cover} if each $U_{\lambda}$ is open.
+\end{definition}
+
+\begin{definition}  Let $X$ be a subset of $C$.  $X$ is \emph{compact} if for every open cover $\mathcal{U}$ of $X$, there exists a finite subset $\mathcal{U}' \subset \mathcal{U}$ that is also an open cover.
+\end{definition}
+
+\noindent  A good summary of the definition of compactness is ``every open cover contains a finite subcover''.
+
+\begin{lemma}
+No finite collection of regions covers $C$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal{U}$ be a finite collection of regions, then there must exist $a \in C$ such that no point in $\mathcal{U}$ is less than $a$ and there must exist $b \in C$ such that no point in $\mathcal{U}$ is greater than $b$. $C$ has no first and last point, so $\mathcal{U}$ cannot cover $C$.
+\end{proof}
+
+\begin{theorem}  
+$C$ is not compact.
+%(Hint:
+%Let $\mathcal{U}$ be the collection of all regions.  
+%Prove that no finite subset of $\mathcal{U}$ covers $C$.)
+\end{theorem}
+
+\begin{proof}
+Let $\mathcal{U}$ be the set of all regions, then $\mathcal{U}$ covers $C$ because $C$ is open. We know by Lemma 4.23 that no finite collection of regions covers $C$, so there does not exist a finite subset of $\mathcal{U}$ that covers $C$, so it follows that $C$ is not compact.
+\end{proof}
+
+\begin{theorem}  If $X$ is compact, then $X$ is bounded.
+\end{theorem}
+
+\begin{proof}
+Let $X$ be compact, then there exists $\mathcal{U}$ such that $\mathcal{U}$ is a finite open cover of $X$. Because $\mathcal{U}$ is finite, $X$ must have an upper bound and a lower bound, so $X$ is bounded.
+\end{proof}
+
+\noindent This is a direct consequence of our work from sheet 3, but let's record it here explicitly:
+
+\begin{lemma}  The exterior $\ext(\_{ab})$ of a region $\_{ab}$ is open.
+\end{lemma}
+
+\begin{proof}
+We know that $\ext(\_{ab}) = \{x \in C \mid x < a\} \cup \{x \in C \mid b < x\}$. These two sets are both open by Corollary 3.12, and we know that the union of two open sets is an open set (Corollary 3.18). Thus it follows that $\ext(\_{ab})$ is open.
+\end{proof}
+
+\begin{lemma}  Let $p \in C$ and consider the set:
+\[
+\mathcal{U} = \{ \ext(\_{ab}) \mid p \in \_{ab} \}.
+\]
+No finite subset of $\mathcal{U}$ covers $C \setminus \{p \}$.
+\end{lemma}
+
+\begin{proof}
+Let there exist some $a,b \in C$ such that $p \in \_{ab}$. Then we know there exists a region $\_{cd}$ with $c,d \in C$ such that $a < c  < p < d < b$ (Theorem 4.4). It follows then that for every set $\ext(\_{ab}) \in \mathcal{U}$, there exists a set $\_{cd}$ such that $\ext(\_{cd}) = \ext(\_{ab}) \cup S$ where $S$ is some nonempty set and $\_{cd} \subset (C \setminus \{p\})$. Let $\mathcal{U'}$ be a finite subset of $\mathcal{U}$ that covers $C \setminus \{p\}$. Then we choose $\ext(\_{a_0b'}) \in \mathcal{U'}$ such that $a_0$ is the last $a$ in $\mathcal{U}$ and $b'$ is its corresponding $b$. We similarly choose $\ext(\_{a'b_0}) \in \mathcal{U'}$ such that $b_0$ is the first $b$ in $\mathcal{U'}$. Then we know that for any set $S$ such that $S \in \mathcal{U'}$, $S \subset \ext(\_{a_0b_0})$. However, we also know that there exist $c,d \in C$ such that $\ext(\_{cd}) = \ext(\_{a_0b_0}) \cup S'$ for disjoint sets  $\ext(\_{a_0b_0})$ and $S'$, and $S' \subset (C \setminus \{p\})$ nonempty. Then it follows that $S' \not \subset \bigcup_{i=1}^nU_i$ for $\mathcal{U'} = \{U_0, U_1, ... , U_n\}$ and finite $n$. So $\mathcal{U'}$ is not a finite subcover of $(C \setminus \{p\})$, thus there is no finite subset of $\mathcal{U}$ that covers $(C \setminus \{p\})$.
+\end{proof}
+
+\begin{theorem}  If $X$ is compact, then $X$ is closed.
+\end{theorem}
+
+\begin{proof}
+Assume that $X$ is compact and $X$ is not closed. Then there exists a limit point $p$ of $X$ such that $p \not \in X$. It follows that $p \not \in X$, so $X \subset \mathcal{U}$ where $|mathcal{U} = \{ \ext(\_{ab}) \mid p \in \_{ab} \}$. Let $x \in X$, then there exists $a_1,b_1 \in C$ such that $x < a_1 < p < b_1$ (Theorem 4.4, Axiom 3). We know that 
+$\mathcal{U}$ is an open cover of $X$, so there exists a finite subcover $\mathcal{U'} = \{\ext(\_{a_0b_0}), \ext(\_{a_1b_1}), ... , \ext(\_{a_nb_n})\}$ such that $X \subset \bigcup_{i=0}^n\ext(\_{ab})$ for some finite $n$. We choose $a',b'$ such that $a'$ is the last $a$ in $\mathcal{U'}$ and $b'$ is the first $b$ in $\mathcal{U'}$. Then $p \in \_{a'b'}$, and $\_{a'b'} \cap X = \emptyset$ which contradicts $p$ being a limit point of $X$. So if $p$ is a limit point of $X$, then $p \in X$, so $X$ is closed.
+\end{proof}
+
+It will turn out that the two properties of compactness in 4.21 and 4.24 characterize compact sets completely, meaning that every bounded closed set is compact.  The rest of the sheet is concerned with proving this fact.
+
+\begin{lemma}
+\label{lem1}
+Suppose that $X \subset C$ and $s = \sup X$.
+If $p<s$, then there exists an $x\in X$ such that $p < x \le s$.
+\end{lemma}
+
+\begin{proof}
+Assume that there does not exist $x \in X$ such that $p < x \leq s$. We know $X$ is nonempty because $\sup X$ exists. If there exist any $x \in X$ such that $p \leq s < x$, then $s$ is not an upper bound of $X$, so $s \not = \sup X$. So we consider the case where for all $x \in X$, $x \leq p < s$. Then $p$ is an upper bound of $X$ and $p < s$, so $s \not = \sup X$. It folows then that we have a contradiction, so there must exist $x \in X$ such that $p < x \leq s$.
+\end{proof}
+
+\newcommand\cU{\mathcal U}
+
+For the next three results, fix points $a,b\in C$ and suppose $\cU$ is an open cover of $[a,b]$.
+
+\begin{lemma}
+\label{lem2}
+For all $s\in[a,b]$, there exist $U\in\cU$ and $p,q\in C$ such that $p<s<q$ and $[p,q]\subset U$.
+\end{lemma}
+
+\begin{proof}
+Let $s \in [a,b]$ be arbitrary, and let $U \in \mathcal{U}$ be any open set such that $s \in U$. We know that there must exist $U \in \mathcal{U}$ such that $s \in U$ because $\mathcal{U}$ is an open cover of $[a,b]$. $U$ is open, so by Theorem 3.10 we know that there exists a region $\_{cd}$ such that $s \in \_{cd} \subset U$. We know by Theorem 4.4 that there exist $p,q \in C$ such that $c < p < s < q < d$. It follows then that $s \in [p,q] \subset \_{cd} \subset U$, so we have shown that there exists $U \in \mathcal{U}$, and $p,s,q \in C$ such that $p < s < q$, and $[p,q] \subset U$ for any $s \in [a,b]$.
+\end{proof}
+
+\begin{theorem}
+Let $X$ be the set of all $x\in C$ that are \emph{reachable from $a$}, by which we mean the following: there exist $n\in\bbN_0$, $x_0,\ldots,x_n\in C$ and $U_1,\ldots,U_n\in\cU$ such that $a=x_0<x_1<\ldots<x_{n-1}<x_n=x$ and $[x_{i-1},x_i]\subset U_i$ for $i=1,\ldots,n$.
+
+(Note in particular that $a\in X$, by choosing $n=0$.)
+Then the point $b$ is not an upper bound for $X$.
+
+(Hint: suppose $b$ is an upper bound, and apply Lemmas~\ref{lem2} and~\ref{lem1} to $s=\sup X$.)
+\end{theorem}
+
+\begin{proof}
+We assume that $b$ is an upper bound of $X$. Then we know $X$ is nonempty and bounded ($x_0$ is a lower bound of $X$, $b$ is an upper bound). So there exists $s \in C$ such that $s = \sup X$. Then we know $s \leq b$, $s \in [a,b]$, so by Lemma 4.30 there exist $p,q \in C$ such that $p < s < q$ and $[p,q] \subset U$ for some $U \in \mathcal{U}$. We then know by Lemma 4.29 that there exists $x \in X$ such that $p < x \leq s$, so $[x,q] \subset [p,q] \subset U$. We know $x \in X$, so $x$ is reachable and there exists $\{x_0,x_1,...,x_n\}$ such that $a = x_0 < x_1 < \dotsm < x_n = x$ with $[x_{i-1},x_i] \subset U_i$ for $1 \leq i \leq n$ where $U_i \in \mathcal{U}$. It follows then that $a = x_0 < x_1 < \dotsm < x_n < x_{n+1} = q$ with $[x_{i-1},x_i] \subset U_i$ for $1 \leq i \leq (n + 1)$ because we know $[x,q] \subset U$ for some $U \in \mathcal{U}$. So we know that $q \in X$, but $s < q$, so $s \not = \sup X$. This is a contradiction, so $b$ cannot be an upper bound of $X$.
+\end{proof}
+
+\begin{corollary}
+There is a finite subset $\cU'\subset\cU$ that is a cover of $[a,b]$.
+\end{corollary}
+
+\begin{proof}
+We know by Theorem 4.31 that $b$ is not an upper bound of $X$, so there exists $p \in X$ such that $b < p$. So we know that $a = x_0 < x_1 < \dotsm < x_n = p$ with $[x_i, x_{i+1}] \subset U_i$ for some $U_i \in \mathcal{U}$, $1 \leq i \leq n$. Then it follows that because $b < p$, $[a,b] \subset \bigcup_{i = 0}^{n} [x_{i-1},x_i]$. But we know that each $[x_{i-1},x_i] \subset U_i$ for some $U_i \in \mathcal{U}$, so we know $[a,b] \subset \bigcup_{i = 0}^{n} [x_{i-1},x_i] \subset \bigcup_{i = 0}^{n}U_i$. Thus, we have a finite subset $\mathcal{U'} = \{U_0, U_1, \dotsm, U_n\}$ that is a cover of $[a,b]$
+\end{proof}
+
+\begin{corollary}
+The set $[a, b]$ is compact.
+\end{corollary}
+
+\begin{proof}
+By Corollary 4.32 we know that for every open cover $\mathcal{U}$ of a set $[a,b]$, there exists a finite subcover $\mathcal{U'}$ that also covers $[a,b]$, so we know that the set $[a,b]$ is compact.
+\end{proof}
+
+This last corollary is the main ingredient for the proof of the Heine-Borel theorem.
+
+\begin{lemma}
+A closed subset $Y$ of a compact set $X \subset C$ is compact.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal{U}_y$ be an open cover of $Y$. Then $X \subset (\bigcup_{\alpha}U) \cup (C \setminus Y)$ for $\mathcal{U} = \{U_{\alpha}\}$. We know $(C \setminus Y)$ is open because $Y$ is closed. It follows then that $\mathcal{U}_y \cup (C\setminus Y)$ is an open cover of $X$. We know that $X$ is compact, so there exists a finite subcover $\mathcal{U'}$ of $X$ such that $\mathcal{U'} = \{U_1, U_2,..., U_n\}$ for some finite $n$. So we know that $X \subset \bigcup_{i = 1}^nU_i$. We then also know that $X \subset(\bigcup_{i = 1}^nU_i \cup (C \setminus Y))$. $Y \subset X$ and $Y \cap (C \setminus Y) = \emptyset$, so it follows that $Y \subset \bigcup_{i = 1}^nU_i \subset \mathcal{U}_y$, so there exists a finite subcover for every open cover $\mathcal{U}_y$ that covers $Y$. We know then that $Y$ is compact.
+\end{proof}
+
+\begin{theorem}[Heine-Borel]  Let $X \subset C$.  $X$ is compact if and only if $X$ is closed and bounded.
+\end{theorem}
+
+\begin{proof}
+If $X$ is compact, then $X$ is closed and bounded by Theorems 4.25 and 4.28.
+Let $X$ be closed and bounded. Then let $a \in C$ be a lower bound of $X$ and $b \in C$ be an upper bound of $X$. It follows that $X \subset [a,b]$, so by Corollary 4.33 and Lemma 4.34, we know that $X$ is compact.
+\end{proof}
+
+As a consequence we obtain a version of a theorem dating back to Bolzano in 1817 (though our proof is very different).  First, though, a lemma which can be proved straight from the definition of compactness.
+
+\begin{lemma}
+A compact set $X \subset C$ with no limit points must be finite.
+\end{lemma}
+
+\begin{proof}
+Let a compact set $X \subset C$ have no limit points. Then for all $p \in X$, there exists a region $R_p$ such that $p \in R_p$ and $R_p \cap X = \{p\}$. It follows then that $X \subset \bigcup_{p \in X} R_p$. So $X \subset \bigcup_{p \in X} R_p$ is an open cover of $X$. $X$ is compact, so there must exist a finite subcover $\bigcup_{i = 1}^n R_{p_i}$ for some finite $n$ such that $X \subset \bigcup_{i = 1}^n R_{p_i}$. Each $R_{p_i} \cap X = \{p_i\}$, so $X$ can be written as $X = \{p_1, p_2,..., p_n\}$ for $1 \leq i \leq n$. It follows then that $X$ must be finite.
+\end{proof}
+
+\begin{theorem}[Bolzano-Weierstrass]  Every bounded infinite subset of $C$ has at least one limit point.
+\end{theorem}
+
+\begin{proof}
+Assume that there exists $X \subset C$ where $X$ is an infinite bounded subset of $C$ with no limit points. Then $X$ contains all of its zero limit points, so $X$ is closed. $X$ is closed and bounded, so $X$ is compact by Theorem 4.35. It follows then by Lemma 4.36 that $X$ is finite, which contradicts $X$ being infinite. Thus, every bounded infinite subset of $C$ must have at least one limit point.
+\end{proof}
+
+
+
+
+
+
+\end{document}

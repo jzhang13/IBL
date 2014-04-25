@@ -1,0 +1,541 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+\setcounter{axiom}{4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 2: Introducing the Continuum}
+\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 162, SHEET 8: THE REAL NUMBERS} \\ 
+\vspace{.2in}  
+
+\end{center}
+
+\bigskip \bigskip
+
+This sheet is concerned with proving that the continuum $\bbR$ is an ordered field. Addition and multiplication on $\bbR$ are defined in terms of addition and multiplication on $\bbQ$, so we will use $\oplus  $ and $\otimes  $ for addition and multiplication of real numbers, to make sure that there is no confusion with $+$ and $\cdot$ on $\bbQ.$
+
+%%---  sheet number for theorem counter
+\setcounter{section}{8}   
+
+\subsection*{8A. \ Construction of the real numbers as Dedekind cuts}
+
+\begin{definition} 
+A subset $A$ of $\bbQ$ is said to be a {\it cut} (or Dedekind cut) if it satisfies the following:
+\begin{itemize}
+\item[(a)] $A\neq \emptyset\;\mbox{and}\; A\neq {\mathbb Q}$
+\item[(b)] If $r\in A$ and $s\in\bbQ$ satisfies $s<r,$ then $s\in A$
+\item[(c)] If $r\in A$ then there is some $s\in\bbQ$ with $s>r, s\in A.$ 
+\end{itemize}
+We denote the collection of all cuts by $\bbR$.
+\end{definition}
+
+\begin{definition}
+We define $\oplus $ on $\bbR$ as follows. Let $A,B\in\bbR$ be Dedekind cuts. Define
+\begin{eqnarray*}
+A \oplus B & = & \{a+b\mid a\in A\text{ and }b\in B\}\\
+{\bf 0} & = & \{x\in\bbQ\mid x<0\}\\
+{\bf 1} & = & \{x\in\bbQ\mid x<1\}.
+\end{eqnarray*}
+\end{definition}
+
+\begin{exercise}
+\begin{itemize}
+\item[(a)] Prove that $A\oplus  B,{\bf 0},$ and ${\bf 1}$ are all Dedekind cuts.
+\item[(b)] Prove that $\{x\in\bbQ\mid x\leq 0\}$ is not a Dedekind cut.
+\item[(c)] Prove that $\{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$ is a Dedekind cut.
+
+Hint: In Exercise 4.20 last quarter we showed that if $x\in\bbQ, x\geq 0,$ and $x^2<2,$ then there is some $\delta\in\bbQ, \delta>0$ such that $(x+\delta)^2<2.$
+\end{itemize}
+\end{exercise}
+
+\begin{proof}
+a) 1. We have that $A,B \in \bbR$ so by Def. 8.1, we know that $A \not = \emptyset$ and $B \not = \emptyset$. It follows then that $A \oplus B \not = \emptyset$. We also know that $A,B$ are bounded above. Let $U_a$ bound $A$ above and $U_b$ bound $B$ above. Then $U_a + U_b$ bounds $A \oplus B$, so we can find a point $p \in \bbQ$ such that $p > U_a + U_b$. Then $p \not \in A \oplus B$, so $A \oplus B \not = \bbQ$. \newline
+Let $r \in A \oplus B$ and $s \in \bbQ$ such that $s < r$. $s < r$ so $r - s = d$ for some $d > 0$. We also know that $r = a + b$ for $a \in A$ and $b \in B$, so substituting we get $d = a + b - s$. Then we have that $s = a + (b - d)$. $b - d < b$, so we know that $b - d \in B$ because $B$ is closed downward. So we have $a \in A$ and $b - d \in B$ so $s \in A \oplus B$. \newline
+Let $r \in A \oplus B$ be arbitrary. We have $r = a + b$ for $a \in A$ and $b \in B$. But we know that $A,B \in \bbR$ so there exists $a' \in A, b' \in B$ such that $a' > a, b' > b$. Let $s = a' + b'$, then $s > r$ and $s \in A \oplus B$, so for any $r \in A \oplus B$ there exists $s \in A \oplus B$ such that $s > r$. /newline
+So we have that $A \oplus B \in \bbR$. \newline
+2. Let $x \in \bbQ$ such that $x < 0$. Then $x \in {\bf 0}$. Then ${\bf 0} \not = \emptyset$. Let $y \in \bbQ$ such that $y > 0$, then $y \not \in {\bf 0}$ and so ${\bf 0} \not = \bbQ$. \newline
+We know if $r < 0$ and $s < r$, then $s < 0$. So it follows that $s \in {\bf 0}$. \newline
+Let $r \in {\bf 0}$. Then we have that $r < 0$, so $0 > \frac{r}{2} > r$. So $\frac{r}{2} \in {\bf 0}$ and $\frac{r}{2} > r$. \newline
+So ${\bf 0} \in \bbR$. \newline
+3. Similarly to the case of ${\bf 0}$, we can show that ${\bf 1} \in \bbR$. \newline
+
+b) $\{x\in\bbQ\mid x\leq 0\}$ is not a Dedekind cut because $0 \in \{x\in\bbQ\mid x\leq 0\}$ but there does not exist $s \in \{x\in\bbQ\mid x\leq 0\}$ such that $s > 0$. \newline
+
+c) $\{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$ is nonempty and is not $\bbQ$ by the same logic as for ${\bf 0}$. Similarly, ${\bf 0} \subset \{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$ so we know that $\{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$ is closed downward. \newline
+We now show that if $r \in \{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$, there exists $s \in \{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$ such that $s > r$. \newline
+Let $r \in \{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$, then $r \in {\bf 0}$ or $r \in \{x \in \bbQ \mid x^2 < 2\}$. If $r \in {\bf 0}$, then we are done as we know ${\bf 0} \in \bbR$. \newline
+So let $r \in \{x \in \bbQ \mid x^2 < 2\}$. Then $r^2 < 2$, and using the proof for Exercise 4.20, we know that there exists $d \in \bbQ$ such that $d > 0$ and $(x + d)^2 < 2$. So we have shown that for $r \in \{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$, there exists $r + d > r$ such that $r + d \in \{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$. \newline
+So we have that $\{x\in\bbQ\mid x<0\}\cup\{x\in\bbQ\mid x^2<2\}$ is a Dedekind cut.
+\end{proof}
+
+\begin{exercise} {\bf (Homework)}
+Prove that if $A\in \bbR$ then $A={\bf 0}\oplus A.$
+\end{exercise}
+
+\begin{definition}
+If $A,B\in \bbR,$ we say that $A<B$ if $A$ is a proper subset of $B,$ i.e. $A\subset B$ but $A\neq B.$ 
+\end{definition}
+
+\begin{exercise}
+Show that $<$ satisfies
+\begin{itemize}
+\item[(a)] If $A,B\in \bbR$ then exactly one of the following holds:
+$$A<B,\ A=B,\  B<A.$$ {\it (trichotomy)}
+\item[(b)] If $A,B,C\in \bbR$ with $A<B$ and $B<C$ then $A<C.$ {\it (transitivity)}
+\item[(c)] If $A,B,C\in\bbR$ with $A<B$ then $A\oplus C<B\oplus C.$ {\it (additivity)}
+
+Note: to prove part c) you may assume Theorem 8.11 and associativity of addition.
+\end{itemize}
+\end{exercise}
+
+\begin{proof}
+a) Let $A,B \in \bbR$. Let $a \in A$ such that $a \not in B$. Then since $B$ is closed downward, for all $b \in B$, $b < a$. $A$ is also closed downward, so $B < A$. Assume that $\not \exists a \in A$ such that $a \in B$, then $A \subset B$ or $A = B$. If $A < B$, then there exists $b \in B$ such that $b \not \in A$. Then $A \not = B$. If $A = B$, then there does not exist $b \in B$ such that $b \not \in A$, so $A \not < B$. So exactly one of the following must hold: $A < B, A = B, A > B$. \newline
+b) Let $A,B,C \in \bbR$ such that $A < B, B < C$. $A,B,C$ are closed downward, so we know that there exists $b \in B$ such that $b \not \in A$ so $b > a$ for all $a \in A$. We also know that there exists $c \in C$ such that $c \not \in B$, so $c > b$ for all $b \in B$. Then we know that $c > a$ for all $a \in A$, so $A < C$. \newline
+c) Let $A,B,C \in \bbR$ such that $A < B$. Then there exists $b \in B$ such that $b > a$ for all $a \in A$. Then for all $a \in A, c \in C$, $b + c > a + c$. So we have that $b + c \not \in A \oplus C$. But $b + c \in B \oplus C$, and $B \oplus C, A \oplus C$ are closed downward, so $A \oplus C \subset B \oplus C$ and $A \oplus C \not = B \oplus C$. It follows then that $A \oplus C < B \oplus C$.
+\end{proof}
+
+\begin{exercise} {\bf (Homework)}
+Show that if $A\in\bbR$ and ${\bf 0}<A,$ then $ 0\in A.$
+\end{exercise}
+
+\begin{lemma}
+Let $A\in\bbR.$ Then define
+$$-A=\{r\in\bbQ\mid -r\not\in A\text{ but } -r \text{ is not the least element of }\bbQ\setminus A\}.$$
+Then
+\begin{itemize}
+\item[(a)] $-A=\{r\in\bbQ\mid\exists \epsilon>0, \epsilon\in\bbQ\text{ such that } -r-\epsilon\not\in A\}$
+\item[(b)] $-A\in\bbR$
+\item[(c)] $ -(-A)=A$
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+a) Let $r \in -A$, then we have that there exists $s \in \bbQ$ such that $s < -r$, $s \not \in A$. Since $s < -r$, we have that $-r - s > 0$. So there exists $\epsilon \in \bbQ$ such that $-r - \epsilon = s$. Note $s \not \in A$, so we have that $r \in \{r \in \bbQ \mid \exists \epsilon \in \bbQ \text{such that} -r - \epsilon \not \in A\}$. So we have $-A \subset \{r \in \bbQ \mid \exists \epsilon \in \bbQ \text{such that} -r - \epsilon \not \in A\}$ \newline
+Let $r \in  \{r \in \bbQ \mid \exists \epsilon \in \bbQ \text{such that} -r - \epsilon \not \in A\}$. Let $s = -r -\epsilon$. We know that $s \not \in A$, so $s \in \bbQ \setminus A$. We also have that $s < -r$. If $-r \in A$, then we have that $A$ is closed downward so $s \in A$, which is a contradiction. So we have that $-r \not \in A$. Then $r \in \{r \in \bbQ \mid -r \not \in A\}$. We also have that $-r$ is not the last element of $\bbQ \setminus A$ because $-r - \epsilon \not \in A$, so we have $r \in -A$. So $\{r\in\bbQ\mid\exists \epsilon>0, \epsilon\in\bbQ\text{ such that } -r-\epsilon\not\in A\} \subset -A$. \newline
+So we have that $-A = \{r\in\bbQ\mid\exists \epsilon>0, \epsilon\in\bbQ\text{ such that } -r-\epsilon\not\in A\}$.
+
+b) Let $A \in \bbR$, then we have by 8.1(a) that $A$ is non-empty. So $r \in A$ for some $r \in \bbQ$, and it follows then that $-r \not \in -A$, and so $-A \not = \bbQ$. \newline
+We also know that $\bbQ \setminus A$ contains at least two points because $\bbQ$ has no last point, so there exists $x \in \bbQ \setminus A$ such that $x$ is not the least element of $\bbQ \setminus A$. Then it follows that $-x \in -A$, so $-A \not = \emptyset$. \newline
+Let $r \in -A$ and let $s \in \bbQ$ such that $s < r$. Then we have that $-r < -s$, and we know $-r \not \in A$, so $-r$ is an upper bound of $A$. $-s > -r$, so we have that $-s \not \in A$. Also, we know that $-r \in \bbQ \setminus A$, so we have that $-s$ is not the least element of $\bbQ \setminus A$ because $-s > -r$. So it follows then that $s \in -A$. \newline
+Let $r \in -A$. Since $-r$ is not the least element of $\bbQ \setminus A$, we know that there exists $x$ such that $x \in \bbQ \setminus A$ and $x < -r$. Then we have $x < -r$ it follows then that $x < \frac{x - r}{2} < -r$. Let $s = \frac{r - x}{2}$, then we have $x < -s < -r$ and $-s \not \in A$. $-s$ is not the least element of $\bbQ \setminus A$ because $x < -s$ and $x \in \bbQ \setminus A$. So we have that $s \in -A$ and $-s < -r$ so it follows that $s > r$. So for $r \in -A$, there exists $s \in -A$ such that $s > r$. \newline
+So we have shown by Definition 8.1 that $-A \in \bbR$.
+
+c) Let $A \in \bbR$. Then we have that $A$ is bounded above. We know that $A \not = \bbQ$, so we know there exists $p \in \bbQ \setminus A$. $p \not \in A$, so $p$ must be an upper bound of $A$. We also have that $A \not = \emptyset$ because $A \in \bbR$. So we have that $\sup(A)$ exists (Lemma 8.22, which is proven independently). So we have two cases: $\sup(A) \in \bbQ$ and $\sup(A) \not \in \bbQ$. \newline
+Let $\sup(A) \in \bbQ$. We know that $\sup(A) \not \in A$ because $A$ has no greatest element. We now show that $A = \{r \in \bbQ \mid r < \sup(A)\}$. Let $r \in \bbQ$ such that $r < \sup(A)$, then by 4.29 we know that there exists $y \in A$ such that $r < y < \sup(A)$. $y \in A$ and $A$ is closed downward, so $r \in A$. So we have that $\{r \in \bbQ \mid r < \sup(A)\} \subset A$. We also have that $-r$ is not the least element of $\bbQ \setminus A$ because $\sup(A) \not \in A$, so $\sup(A)$ is the least element of $\bbQ \setminus A$. We have then that $-A = \{r \in \bbQ \mid -r > \sup(A)\}$. This is equivalent to $-A = \{r \in \bbQ \mid r < -\sup(A)\}$. So it follows that $-(-A) = \{r \in \bbQ \mid -r \geq -\sup(A) \text{and } -r \text{ not the least element of } \bbQ \setminus (-A)\}$. We then get that $-(-A) = \{r \in \bbQ \mid -r > -\sup(A)\}$, and it follows that $-(-A) = \{r \in \bbQ \mid r < \sup(A)\} = A$. So we have that $-(-A) = A$. \newline
+Let $\sup(A) \not \in \bbQ$. If $\bbQ \setminus A$ has a least element $L$, then $L$ is an upper bound of $A$. $\sup(A)$ is the least upper bond, so $L = \sup(A)$. However, $L \in \bbQ$ but $\sup(A) \not \in \bbQ$ so this is a contradiction, and $\bbQ \setminus A$ does not have a least element. \newline
+Then we have $-A = \{r \in \bbQ \mid -r \not \in A\}$. So $-(-A) = \{r \in \bbQ \mid -r \not \in (-A) \text{but -r not least element of } \bbQ \setminus A\} = \{r \in \bbQ \mid r \in A, r\text{ not least element of } A\}$. So we have that $-(-A) = \{r \in \bbQ \mid r \in A\} = A\}$.
+\end{proof}
+
+\begin{exercise}{\bf (Homework)}
+Show that if $p\in\bbQ$ and $A=\{x\in\bbQ\mid x<p\},$ then $-A=\{x\in\bbQ\mid x<-p\}.$
+\end{exercise}
+
+\begin{lemma}
+If $A\in\bbR, r\in\bbQ, r>0,$ then there exist $s\in A\;\mbox{and}\;t\in\bbQ\setminus A$ such that 
+$t-s=r.$
+\end{lemma}
+
+\begin{proof}
+Let there exist some $r > 0$ such that for all $s \in A$, $t \in \bbQ \setminus A$, $t - s \not = r$. Then there does not exist $s \in A$ such that $s + r = t$ for all $t \in \bbQ \setminus A$ or for $s + r \in A$. However, if $s + r \in A$, then we know there exists $p \in A$ such that $p > s + r$. $p \in A$, so $p + r \in A$ because for all $s \in A$, $s + r \in A$. Assume that there exists $x$ such that $x \in \bbQ \setminus A$, then we let $a = x - qr$ for $q \in \bbN$, $q > (x - p_i)/r$. Note that $p_i \in A$. We also know that $r > 0$. Since $r > 0$, we have that $a < p_i$ and it follows that $a \in A$. So we have that for $a \in A$, $x = a + qr$ for $q \in \bbN, x \in A$. This is a contradiction however, as we have $x \in \bbQ \setminus A$, so for $r > 0$ there must exist some $s \in A$ such that $s + r \not \in A$. So we know that there always exists some $s \in A$ such that $t \in \bbQ \setminus A$ and $t - s = r$.
+\end{proof}
+
+\begin{theorem}
+If $A\in\bbR$ then $A\oplus (-A)={\bf 0}.$ 
+\end{theorem}
+
+\begin{proof}
+We have three cases. Let $x \in -A$. \newline
+Consider $x < 0$. Note that if $x \not \in A$, then $-x \in -A$. We have that $-x > x$, so $x \in -A$. Let $a$ be the least point of $\bbQ \setminus A$. Then $-(a + \epsilon) \in -A$ for $-x > \epsilon > 0$ because $a$ is the least point of $\bbQ \setminus A$. $-x > \epsilon$, so we have that $x + (a + \epsilon) \in A$ and $-(a + \epsilon) \in -A$. So we know there exists $x + (a + e) \in A$ and $-(a + e) \in -A$, and it follows then that $x + (a + e) + (-(a + e)) \in (A \oplus -A)$. So we have then that $x \in (A \oplus -A)$ for all $x < 0$, so $(A \oplus -A) = {\bf 0}$. \newline
+Let $x = 0$. Then $\forall q \in A$, $q + (-q) = 0$. But we know $-q \not \in -A$ so there does not exist $a \in A$, $b \in (-A)$ such that $a + b = x$ where $x = 0$. So we have that $0 \not \in A \oplus (-A)$ so no $y > 0$ exists such that $y \in A \oplus (-A)$. Then it follows that $A \oplus (-A) = {\bf 0}$. \newline
+Let $x > 0$. Using the same logic from the case where $x < 0$, we get that $(A \oplus -A) = {\bf 0}$. 
+\end{proof}
+
+\begin{corollary}
+$A<{\bf 0}\Longleftrightarrow {\bf 0}<-A.$
+\end{corollary}
+\begin{proof}
+Let $A<{\bf 0}$, then we have by Lemma 8.6 that $A \oplus (-A) < {\bf 0} \oplus (-A)$. It follows by 8.4 then that $A \oplus (-A) < (-A)$ So by Theorem 8.11, we know ${\bf 0} < (-A)$. \newline
+Let ${\bf 0} < (-A)$. Then by Lemma 8.6 we have that ${\bf 0} \oplus A < (-A) \oplus A$. So similarly, by 8.4, we have that $A < (-A) \oplus A$. So by Theorem 8.11, we have $A <{\bf 0}$. 
+\end{proof}
+
+\subsection*{8B. \ The real numbers form an ordered field}
+
+\begin{definition}
+For $A,B\in\bbR,$ ${\bf 0}<A, {\bf 0}<B,$ we define
+$$A\otimes B =\{ab\mid a\in A,b\in B, a>0,b>0\}\cup\{x\in\bbQ\mid x\leq 0\}.$$
+If $A={\bf 0}$ or $B={\bf 0}$ we define $A\otimes B={\bf 0}.$
+If $A<{\bf 0}$ but ${\bf 0}<B$  we replace $A$ with $-A$ and use the definition of multiplication
+of positive elements. Hence, in this case,
+$$A\otimes B=-[(-A)\otimes B].$$
+Similarly, if ${\bf 0}<A$ but $B<{\bf 0},$ then 
+$$A\otimes B=-[A\otimes (-B)]$$
+and 
+if $A<{\bf 0}, B<{\bf 0}$ then
+$$A\otimes B=[(-A)\otimes (-B)]$$
+\end{definition}
+
+\begin{exercise}
+\begin{itemize}
+\item[(a)] Show that if $A,B\in \bbR,$ then $A\otimes B\in\bbR.$
+\item[(b)] Show that if $A,B\in\bbR,$ ${\bf 0}<A,{\bf 0}<B\Longrightarrow {\bf 0}<A\otimes B.$ 
+\item[(c)] Show that if $A\in\bbR,$ then ${\bf 1}\otimes A=A.$
+\end{itemize}
+\end{exercise}
+
+\begin{definition}
+If $A\in\bbR, {\bf 0}<A,$ then define
+$$A^{-1}=\{r\in\bbQ\mid r\leq 0\}\cup\{r\in\bbQ\mid r>0\text{ and }\frac{1}{r}\not\in A, \text{ but } \frac{1}{r} \text{ is not the smallest element of }\bbQ\setminus A\}.$$
+For $A<{\bf 0}$ we have ${\bf 0}<-A$ and so $(-A)^{-1}$ can be defined as above. Then, for $A<{\bf 0},$ we define
+$$A^{-1}=-[(-A)^{-1}].$$
+\end{definition}
+
+\begin{lemma}
+Let $A\in\bbR.$ Then,
+\begin{itemize}
+\item[(a)] If ${\bf 0}<A,$ $$A^{-1}=\{r\in\bbQ\mid r\leq 0\}\cup\{r\in\bbQ\mid r>0\text{ and }\exists\epsilon>0,\epsilon\in\bbQ\text{ such that }\frac{1}{r+\epsilon}\not\in A\}.$$
+\item[(b)] If $A\neq 0, A\in\bbR,$ then $A^{-1} \in\bbR.$
+\end{itemize}
+\end{lemma}
+
+\begin{exercise}
+Show that if $p\in\bbQ$ with $p\neq 0$ and $A=\{x\in\bbQ\mid x<p\},$ then $A^{-1}=\{x\in\bbQ\mid x<\frac{1}{p}\}.$
+\end{exercise}
+
+\begin{lemma} If $A\in\bbR, A>0, r\in\bbQ, r>1, $ then there exist $s\in A, t\in\bbQ\setminus A$ such that $\frac{t}{s}=r.$
+\end{lemma}
+
+\begin{theorem} If $A\in \bbR,$ $A\neq {\bf 0},$  then $A\otimes A^{-1}={\bf 1}.$
+\end{theorem}
+
+\begin{theorem} $\bbR$ is an ordered field.
+\end{theorem}
+
+
+
+\subsection*{8C. \ The Archimedean property of the real numbers}
+
+For every rational number $q\in\bbQ,$ define the corresponding real number as the Dedekind cut
+$$i(q)=\{x\in\bbQ\mid x<q\}.$$
+For example, ${\bf 0}=i(0).$ This gives a well-defined injective function $i:\bbQ\longrightarrow \bbR.$ We identify $\bbQ$ with its image $i(\bbQ)\subset\bbR$ so that the rational numbers $\bbQ$ are a subset of the real numbers $\bbR.$ (Hence $\bbN $ and $\bbZ$ are also subsets of $\bbR$.) Note that in this case, this is the same map $i$ that you identified in Theorem 7.27, so that in fact, $\bbQ$ is a {\it subfield} of $\bbR.$ 
+
+\begin{exercise} Show that $\bbR$ satisfies Axioms 1-3.
+\end{exercise}
+
+\begin{proof}
+${\bf 0} \in \bbR$ so $\bbR \not = \emptyset$. So Axiom 1 is satisfied. By Exercise 8.6(a), we know that exactly one of $A < B, A = B, A > B$ holds. So we know that if $A \not = B$, then $A < B$ or $B > A$.  Similarly, if $A < B$ then $A \not = B$. By Exercise 8.6(b), we have that if $A < B$ and $B < C$, then $A < C$. Thus it follows that $\bbR$ satisfies Axiom 2. Suppose $X \in \bbR$ is the first point of $\bbR$. Then there exist $y,z \in X, \in \bbQ$ such that $y < z$. $z \in X$, and $y < z$ so it follows that $z \not \in i(y)$ so $i(y) \not = X$. So $i(y) < X$, and $i(y) \in \bbR$, which is a contradiction. Suppose $Y \in \bbR$ is the last point of $\bbR$. Then we know there exists $x \in \bbQ$ such that $x \not \in Y$ because $Y \not = \bbQ$ by Definition 8.1. $\bbQ$ has no last point, so choose $z \in \bbQ$ such that $z > x$. Then $x \in i(z)$ and $z > x > y$ for all $y \in Y$. It follows then that $i(z) > Y$. $i(z) \in \bbR$, so this is a contradiction to $Y$ being the last point of $\bbR$. So Axiom 3 is satisfied as $\bbR$ has no first or last points.
+\end{proof}
+
+\begin{lemma}
+A nonempty subset of $\bbR$ that is bounded above has a supremum.
+\end{lemma}
+
+\begin{proof}
+Let $X \subset \bbR$ such that $X \not = \emptyset$ and that $X$ is bounded above by $U$. $X$ is a set of sets, so we can write $X = \{D_{\lambda}\}$ where $D_{\lambda} \in \bbR$. We let $S = \bigcup_{\lambda}D_{\lambda}$. We know that $X$ is nonempty so we have that $S \not = \emptyset$. $X$ is bounded above by $U$, so we have that for all $D_{\lambda} \in X$, $D_{\lambda} < U$. So we have some $u \in U$ such that for all $d \in D_{\lambda}$, $d \in S$ and $d < u$. Since $u \in \bbQ$, we have that $s \not = \bbQ$. \newline
+Let $a \in S$ be arbitrary. By our definition of $S$, we have that $a \in D_x$ for some $x \in \lambda$. Since $D_x \in \bbR$, we have by Definition 8.1 that for any $r \in D_x$, $r \in S$. Similarly, for $a \in S$ we know that $a \in D_x$ for some $x \in \lambda$. $D_x \in \bbR$, so by 8.1(c) we know that there exists $r \in \bbQ$ such that $a , r$ and $r \in D_x$. We have then that $r \in S$. So $S \in \bbR$ by Definition 8.1. We know that for all $x \in \lambda$, $D_x \subset S$ and thus $D_x \leq S$. So we have that $S$ is an upper bound for the set $X$. Assume there exists $Y \in \bbR$ such that $Y < S$ and $Y$ is an upper bound of $X$. $Y < S$, so it follows that $Y \subset S$ and $Y \not = S$. Then we know that there exists $s \in S$ such that $s \not \in Y$ and for all $y \in Y$, $y < s$. But we know that $Y < D_x$ for some $x \in \lambda$ so this contradicts the fact that $Y$ is an upper bound of $X$. So $\sup X = S$. It follows then that any non-empty subset of $\bbR$ that is bounded above has a supremum.
+\end{proof}
+
+\begin{exercise} Show that $\bbR$ satisfies Axiom 4.
+\end{exercise}
+
+\begin{proof}
+Suppose that $\bbR$ is not connected, then $\bbR = X \cup Y$ such that $X,Y$ are nonempty, open, and disjoint. Let $A \in X$ and $B \in Y$ such that $A < B$. Define $Z = \{x \in \bbR \mid [A,x] \subset X\}$. $Z$ is nonempty because $A \in \bbZ$. We now show that $Z$ is also bounded by $B \in Y$ above. Suppose $x \in Z$ such that $x > B$, then $B \in [A,x]$. $B \in Y, X \cap Y = \emptyset$ so then $[A,x] \not \subset X$. Thus, we know that for $x \in Z$, $x < B$. So it follows that $Z$ is bounded by $B$ above. Then we have that $\sup(Z)$ exists by Theorem 4.18. \newline
+Let $s = \sup(Z)$, we know that $s \in \bbR$ so $s \in X$ or $s \in Y$. \newline
+Suppose $s \in X$. $X$ is open, so there exists a region $\_{ab}$ such that $s \in \_{ab} \subset X$ (Theorem 3.10). Then we know that there exists $s_1$ such that $s < s_1 < b$. $[A, s_1] \subset X$, so $s$ is not an upper bound. This is a contradiction, so $s \not \in X$. \newline
+Suppose $s \in Y$. $Y$ is open, so there exists a region $\_{ab}$ such that $s \in \_{ab} \subset Y$ (Theorem 3.10). We know that $a < s$ and that for any $p \in \bbR$ such that $a < p < s$, $p \in \_{ab} \subset Y$ so $p \not \in X$. This is a contradiction to Lemma 4.29, so $s \not \in Y$. \newline
+So we have that $s \not \in X$ and $s \not \in Y$, so $s \not \in \bbR$. This is a contradiction, so $\bbR$ must be connected, and $\bbR$ satisfies Axiom 4.
+\end{proof}
+%{\it Hint:} Qu.2, HW8, Math161
+
+\begin{lemma}
+$\bbN$ is an unbounded subset of $\bbR.$ 
+\end{lemma}
+
+\begin{proof}
+Assume that $\bbN$ is bounded above. Then let $B \in \bbR$ be an upper bound of $\bbN$. We know then that for all $n \in N$, $n < B$, so there must exist some $q \in Q$ such that $n < q < B$. $q$ is a rational, so it can be expressed as $q = \frac{c}{d}$ for $c,d \in \bbN$. It follows then that $q < c + 1$, and $c + 1 \in \bbN$, so this is a contradiction as $c + 1 \in \bbN$ and $c + 1 > q$, so $n < q$ is not true for all $n \in \bbN$. Thus $\bbN$ must be unbounded.
+\end{proof}
+
+\begin{theorem} (The Archimedean Property) Let $A\in\bbR$ be a positive real number. Then there exist nonzero natural numbers $m,n\in\bbN$ such that $\frac1n<A<m.$
+\end{theorem}
+
+\begin{proof}
+Assume that there does not exist $m \in \bbN$ such that $A < m$. Then $A$ bounds $\bbN$, which contradicts Lemma 8.24. Similarly, assume that there does not exist $n \in \bbN$ such that $\frac{1}{n} < A$. There is no $n$ such that $\frac{1}{n} < A$, so it follows then by multiplying by the multiplicative inverse $A^{-1}$  that there does not exist $n$ such that $A^{-1} < n$ (Theorem 8.19). Then we have that there exists no $n \in \bbN$ such that $A^{-1} < n$, so $A^{-1}$ bounds $\bbN$. This is also a contradiction to Lemma 8.24, so $m,n \in \bbN$ must exist such that $\frac{1}{n} < A < m$.
+\end{proof}
+
+\begin{corollary} If $A\in\bbR$ is a real number, then there is an integer $n$ such that 
+$n-1\leq A<n.$
+\end{corollary}
+
+\begin{proof}
+Suppose that for $A \in \bbR$ there does not exist $n \in \bbZ$ such that $n - 1 \leq A < n$. We have three cases, where $A < 0, A = 0, A >0$. \newline
+Let $A = 0$, then we have $0 \leq A < 1$ for $1 \in \bbZ$. \newline
+Let $A > 0$, then by the Archimedean Property we know that there exists $m \in \bbN$ such that $A < m$. We let $S$ be the set of all $m \in \bbN$ such that $m > A$. Then we let $n$ be equal to the minimum of the set $S$. It follows then that $n - 1 \leq A$, so we have that $n - 1 \leq A < n$ for $n \in \bbN \in \bbZ$. \newline
+Let $A < 0$, then we have $(-A) > 0$. Then we know there exists $m \in \bbN$ such that $(-A) < m$. Then similarly to the logic for $A > 0$, we can find $n - 1 \leq (-A) < n$ for $n \in \bbN$. Then we have that $-(n - 1) > A \geq (-n)$. Let $m = -n + 1$, then we have that $m \in \bbZ$ and that $m - 1 \leq A < m$. \newline
+So we know that for $A \in \bbR$, there exists $n \in \bbZ$ such that $(n - 1) < A < n$.
+\end{proof}
+
+\begin{definition} Consider a subset $X\subset C$ of the continuum. We say that $X$ is {\it dense} in $C$ if every $p\in C $ is a limit point of $X.$
+\end{definition}
+
+\begin{lemma} A subset $X\subset C$ is dense in $C$ if, and only if, $\overline{X}=C.$
+\end{lemma}
+
+\begin{proof}
+Let $X \subset C$ be dense in $C$. Then it follows by Definition 8.27 that every point $p \in C$ is a limit point of $X$. Let $p \in C$ be an arbitrary point, then we have $p \in \overline{X}$, so $C \subset \overline{X}$. $\overline{X}$ is by definition a subset of $C$, so we have that $C = \overline{X}$. \newline
+Let $\overline{X} = C$. Let $p \in C$ be an arbitrary point. If $p$ is a limit point of $X$, then we have that $X$ is dense in $C$. So assume that $p$ is not a limit point of $X$. It follows then that there exists a region $R$ containing $p$ such that $R \cap (X \setminus\{p\}) = \emptyset$. Let $R = \_{ab}$ for $a,b \in C$. Then we have $a < p < b$, and we know by Theorem 4.4 that there exists a point $q$ such that $a < p < q < b$. $q \in C$, so we have that $q \in \overline{X}$. It follows then by Homework 4 that for all regions $S$ containing $q$, $S \cap X \not = \emptyset$. $\_{pb}$ is a region containing $q$, so we have that $\_{pb} \cap X \not = \emptyset$. However, we also have that $\_{ab} \cap (X \setminus\{p\}) = \emptyset$, and $\_{pb} \subset \_{ab}$, so $\_{pb} \cap X = \emptyset$. This is a contradiction, so $p$ must be a limit point of $X$, so $X$ is dense in $C$.
+Then we have that $p \in \overline{X}$. So it follows that for all regions $R$ containing $p$, $R \cap X \not = \emptyset$ (Homework 4). 
+ \end{proof}
+
+\begin{lemma} A subset $X\subset C$ is dense in $C$ if, and only if, for every non-empty open set $U\subset C,$ we have $U\cap X\neq \emptyset.$ 
+\end{lemma}
+
+\begin{proof}
+Let $X \subset C$ be dense in $C$. Then we have that for $p \in C$, $p$ is a limit point of $X$. Every non-empty open set in $C$ can be written as a union of regions, and every region in $C$ contains a limit point of $X$ so every region $R$ containing an arbitrary point $q \in C$ has non-empty intersection with $X \setminus \{q\}$. Note then that $R \cap X \not = \emptyset$. Thus, it follows that every non-empty open set in $C$ may be written as a union of regions, each of which has non-empty intersection with $X$. It follows then that every non-empty open set in $C$ must have non-empty intersection with $X$. \newline
+Let it be true that for every non-empty open set $U \subset C$, $U \cap X \not = \emptyset$. Let $p \in C$ be an arbitrary point. If $p$ is a limit point of $X$, then we are done. Assume that $p$ is not a limit point of $X$, so we have that there exists a region $R$ containing $p$ such that $R \cap (X \setminus \{p\}) = \emptyset$. Let $R = \_{ab}$ for some $a,b \in C$. Then we have that $a < p < b$. We know by Theorem 4.4 that there exists $q$ such that $a < p < q < b$. $\_{pb}$ is a region so it is an open set, thus $\_{pb} \cap X \not = \emptyset$. It follows then that $\_{ab} \cap (X \setminus \{p\}) \not = \emptyset$, so this is a contradiction. Therefore $p$ must be a limit point of $X$, so $X$ is dense in $C$.
+\end{proof}
+
+\begin{lemma} Given $A,B\in\bbR$ with $A<B$, there exists $p\in\bbQ$ such that $A<p<B.$ 
+\end{lemma}
+
+\begin{proof}
+We have that $A < B$, so we know that there exists $p \in B$ such that $p \not \in A$. $p \not \in A$, so we have that for all $a \in A$, $a < p$. $p \in B$, so we know that there exists $r \in B$ such that $p < r$ by Definition 8.1. So we define $P = \{x \in \bbQ \mid x < r\}$. We know that for all $p \not \in A$ and $p \in P$, so $A < P$. We also know that there exists $q \in B$ such that $r < q$ by Definition 8.1. Then we have that $A \subset P \subset B$ because $q \in B$ and $q \not \in P$. So we have $A < P < B$.
+\end{proof}
+
+\begin{theorem}
+$\bbQ$ is dense in $\bbR.$
+\end{theorem}
+
+\begin{proof}
+We know that $R$ satisfies Axioms 1-4, so $R$ is a continuum, $\bbQ \subset \bbR$. Let $S \in \bbR$ be some arbitrary point. Then consider an arbitrary region $R$ containing $S$ such that $S \in R \subset \bbR$. We write $R = \_{AB}$ for $A,B \in \bbR$. Then we know by Lemma 8.30 that there exists $p \in \bbQ$ such that $A < p < S$. So it follows that $p \in (R \setminus \{S\})$ and that $p \in \bbQ$. So we have that $(R \setminus \{S\}) \cap \bbQ \not = \emptyset$. Then we know that $S$ is a limit point of $\bbQ$. $S \in \bbR$ is arbitrary, so we have by Definition 8.27 that $\bbQ$ is dense in $R$.
+\end{proof}
+
+
+
+\subsection*{8D. \ The continuum is isomorphic to the real numbers}
+
+\begin{axiom} The continuum contains a countable dense subset.
+\end{axiom}
+
+\begin{exercise} Let $K\subset C$ be a countable dense subset of $C.$ Construct an order-preserving bijection $f:\bbQ\longrightarrow K.$ 
+
+(A map $f:\bbQ\longrightarrow K$ is order-preserving if $r<s$ in $\bbQ\Longrightarrow f(r)<_C f(x)$ in $K.$ )
+\end{exercise}
+
+\begin{proof}
+Note that $\bbQ$ and $K$ are both countable dense subsets of $C$. Additionally, we show that because $K$ and $\bbQ$ are dense, $K$ and $\bbQ$ have no first or last points. \newline
+Assume that $K$ has a first point $a$ such that for all $p \in C$ such that $p < a$, $p \not \in K$. We know that $C$ has no first or last point, so we can find a point $q \in C$ such that $q < a$. Then the region $\_{qa}$ is a nonempty open set, and $\_{qa} \cap K = \emptyset$, which is a contradiction by Lemma 8.29 because $K$ is dense. Without loss of generality we can show that $K$ must not have a last point and similarly that $\bbQ$ must not have first or last points. \newline
+We now construct a map $f : \bbQ \longrightarrow K$. $K, \bbQ$ are countable, so we write $K = \{k_1,k_2,...,k_n,...\}$ and $\bbQ = \{q_1,q_2,...,q_n,...\}$. We define $f(q_1) = k_1$. Then we construct $f$ as follows: \newline
+1) Choose the first $q_i$ for the smallest $i$ such that $q_i$ is not yet mapped to some $k_j$. We then map $q_i$ to the first $k_{i'} \in K$ for the smallest $i'$ such that no $q_m \in \bbQ$ already maps to $k_{i'}$ and such that: \newline
+For all $q_a, q_b \in \bbQ$ and $k_{a'}, k_{b'} \in K$ such that $f(q_a) = k_{a'}$ and $f(q_b) = k_{b'}$
+$$q_a < q_i \implies k_{a'} < k_{i'}$$ 
+$$q_i < q_b \implies k_{i'} < k_{b'}$$
+So we have $f(q_i) = k_{i'}$. \newline
+
+2) Choose the first $k_i$ for the smallest $i$ such that no $q_{j}$ already maps to $k_i$. Then we choose $q_{i'} \in \bbQ$ for the smallest $i'$ such that $q_{i'}$ does not already map to some $k_m \in K$ and such that: \newline
+For all $k_a, k_b \in K$ and $q_{a'}, q_{b'} \in \bbQ$ such that $f(q_{a'}) = k_a$ and $f(q_{b'}) = k_b$ 
+$$k_a < k_i \implies q_{a'} < q_{i'}$$
+$$k_i < k_b \implies q_{i'} < q_{b'}$$
+Then we define $f(q_{i'}) = k_{i}$. \newline
+
+We then repeat 1) and 2) until we have mapped all $q_n \in \bbQ$ to some $k_{n'} \in K$. We know this process will terminate because $\bbQ$ and $K$ are countable. \newline
+Note that it is always possible to find such $k_{i'} \in K, q_{i'} \in \bbQ$ for steps 1 and 2 because $\bbQ$ and $K$ are dense, so to find $k_{i'}$ we take the maximum $k_n \in K$ of the already mapped $k_a \in K$ such that $k_a < k_{i'}$ and take the minimum $k_m \in K$ of the already mapped $k_b \in K$ such that $k_{i'} < k_b$. $K$ is dense, so we can find $k_{i'}$ such that $k_n < k_{i'} < k_m$. Similarly, we can always find such a $q_{i'}$. \newline
+We know $f$ is injective because at each step in the mapping, we only choose $q_{i'}$ and $k_{i'}$ such that they are not already mapped, so if $f(q_a) = f(q_b)$, then we know that $q_a = q_b$. \newline
+We know $f$ is surjective because we consider in step 1 the first non-mapped $q_i$ and in step 2 the first non-mapped $k_i$, so in the construction of the map, $f$ is guaranteed to cover all of $K$. \newline
+We know that $f$ is order-preserving because we construct it so that if for $q_a, q_b \in \bbQ$, $q_a < q_b$, then $f(q_a) < f(q_b)$.
+
+\end{proof}
+
+\begin{exercise} Let $f:\bbQ\longrightarrow K$ be an order-preserving bijection, as found in the previous exercise. Let $A\in \bbR.$ Then $A\subset \bbQ$ and so $f(A)\subset K\subset C.$ Define
+$F:\bbR\longrightarrow C$ by 
+$$F(A)=\sup f(A).$$
+Show
+\begin{enumerate}
+\item $\sup f(A)$ exists, so $F$ is well-defined.
+\item $F$ is injective and order-preserving.
+\end{enumerate}
+\end{exercise}
+
+\begin{proof}
+We first show that $\sup f(A)$ exists. We know that $A \in \bbR$ so $A$ is bounded above. Let $b \in \bbQ$ such that $b$ is an upper bound of $A$. Then we know that for all $a \in A$, $a < b$. We also have that $f$ is order preserving, so we know that $f(a) < f(b)$ for all $a \in A$. So we have that $f(A)$ is bounded above by $f(b)$. Note that $f(A) \subset C$ and we know that $A \not = \emptyset$ so $f(A) \not = \emptyset$. Then by Theorem 4.18, $\sup f(A)$ exists so $F$ is well-defined. \newline
+To show that $F$ is injective, we prove the contrapositive, that if $A \not = B$, then $F(A) \not = F(B)$ for $A,B \in \bbR$. Let $A \not = B$ for $A,B \in \bbR$. We consider the case $A < B$, and without loss of generality the same argument may be used for the case $B < A$. $A < B$, so we know that there exists $p \in B$ such that $p \not \in A$. $p \not \in A$, so we know that for all points $a \in A$, $a < p$, so $p$ is an upper bound of $A$. We know that $B \in \bbR$, so we know there exists $q$ such that $p < q$ and $q \in B$. Note also that $q < \sup(B)$. $p$ is an upper bound of $A$, so $p \geq \sup A$. Then it follows that $\sup B > q > p \geq \sup A$, so $q > \sup A$. We know that $f$ is order-preserving, so we have then that $f(q) > \sup(f(A))$ and that $\sup(f(B)) > f(q)$. It follows then that $F(A) < F(B)$ so $F(B) \not = F(A)$ and $F$ must be injective. \newline
+To show that $F$ is order-preserving, we let $A < B$ for $A,B \in \bbR$. Then we have shown in the proof for injectivity of $F$ that $F(A) < F(B)$, so $F$ is order-preserving. 
+\end{proof}
+
+\begin{theorem} Suppose that $C$ is a continuum satisfying Axioms 1-5. Then $C$ is isomorphic to the real numbers $\bbR.$
+i.e. 
+If we let $ <$ be the order on $\bbR$ and 
+$<_C$ be the order on $C,$ then there is a bijection
+$F:\bbR\longrightarrow C$ such that, for all $A,B\in \bbR,$  
+
+$$A<B  \Longrightarrow  F(A)<_C F(B).$$
+
+\end{theorem}
+
+\begin{proof}
+We let $p \in C$ and define $V = \{q \in \bbQ \mid f(q) < p \}$. Then we will first show that $V \in \bbR$ by Definition 8.1. We know that $K$ is dense, so we know that there exists $f(x) \in K$ such that $f(x) < p$. $x \in \bbQ$, so $x \in V$, so $V \not = \emptyset$. Also, $K$ is dense so there exists $f(x) \in K$ such that $p \in f(x)$ so $x \not \in V$, but $x \in \bbQ$, so $V \not = \bbQ$. \newline
+Let $r \in V$ be arbitrary, then $\forall s \in \bbQ$ such that $s < r$, we know that $f(s) < f(r) < p$ because $f$ is order preserving. It follows then that because $f(s) < p$, $s \in V$. \newline
+Let $r \in V$, then $f(r) < p$. Since $K$ is dense, we know that there exists $f(s) \in K$ such that $f(r) < f(s) < p$. So it follows then that since $f$ is order preserving, $r < s$. Also, $f(s) < p$ so we know that $s \in V$. \newline
+We have shown that $V \in \bbR$ by Definition 8.1. We now show that $\sup(V) = p$. Suppose $F(V) \not = p$. Then we have two cases, where $F(V) < p$ and where $p < F(V)$. \newline
+Let $F(V) < p$. Then we have that $\sup(f(V)) < p$. Since $K$ is dense, we know there exists $f(x) \in K$ such that $\sup f(V) < f(x) < p$. Then we have that $x \in V$ and for all $f(a) \in f(V)$, $f(a) \leq f(V)< f(x)$ so $\forall a \in V$, $a < x$. This is a contradiction because we know $x \in V$ and $x \not < x$. \newline
+Let $p < F(V)$. Then we have that $p < \sup f(V)$. Since $K$ is dense, we know that there exists $f(x) \in K$ such that $p < f(x) < \sup f(V)$. $p < f(x)$, so $x \not \in V$. It follows then that $x$ is an upper bound of $V$. However, we know that $f(x) < \sup f(V)$, so $x < \sup V$ because $f$ is order-preserving. This is a contradiction, as $x$ is an upper bound of $V$ and $x < \sup V$. \newline
+So we have that $F(V) = p$, then we know that $F$ is surjective. We have from 8.33 that $F$ is injective, so we know that $F$ is bijective.
+\end{proof}
+
+\bigskip
+
+Axioms 1-5 completely characterize the continuum in the sense that there is only one model for them, namely the real numbers. The main consequence for us is that we will no longer refer to $C$ as anything but $\bbR.$ 
+
+In addition, now that we have constructed $\bbR$ and proved the fundamental facts about it, we will forget about Dedekind cuts and think of elements of $\bbR$ as numbers. From now on, we will agree to use lower-case letters like $x$ for real numbers and to write $+$ and $\cdot$ for $\oplus$ and $\otimes$ like people usually do.
+
+
+\end{document}

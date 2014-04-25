@@ -1,0 +1,361 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 2: Introducing the Continuum}
+\author{John Lind}
+
+\begin{document}
+
+\begin{center}
+{\large MATH 161, SHEET 2: INTRODUCING THE CONTINUUM} \\ 
+\vspace{.2in}  
+%John Boller, Daniele Rosso \quad $\bullet$ \quad September 28, 2010
+\end{center}
+Sheet 2 Journal, Jeffrey Zhang
+\bigskip \bigskip
+
+This sheet introduces the continuum $C$ through a series of axioms.
+
+%%---  sheet number for theorem counter
+\setcounter{section}{2}   
+
+\begin{axiom}  The continuum is a nonempty set $C$.  
+\end{axiom}
+
+We often refer to elements of $C$ as \emph{points}.
+
+
+\begin{definition}  Let $X$ be a set.  An \emph{ordering} on the set $X$ is a subset $<$ of $X \times X$, with elements $(x, y) \in <$ written as $x < y$, satisfying the following properties:
+\begin{itemize}
+\item[(a)] For all $x, y \in X$ such that $x \neq y$, either $x < y$ or $y < x$.
+\item[(b)] For all $x, y \in X$, if $x < y$ then $x \neq y$.
+\item[(c)] For all $x, y, z \in X$, if $x < y$ and $y < z$ then $x < z$.
+\end{itemize}
+\end{definition}
+
+\begin{axiom}  There exists an ordering $<$ on $C$.
+\end{axiom}
+
+\begin{theorem}  If $x$ and $y$ are points of $C$, then $x < y$ and $y < x$ are not both true.
+\end{theorem}
+
+\begin{proof}
+Let $x$ and $y$ be points in $C$. We know by Axiom 2 that there exists an ordering < on $C$. Let $x < y$ then by Definition 2.1, $x \not = y$. If $x \not = y$, then either $x < y$ or $y < x$ (Definition 2.1). We know that $x < y$, so $y < x$ is not true. Let $y < x$, then similarly we know that $y \not = x$. Then it follows that either $y < x$ or $x < y$ is true. But we know that $y < x$, so $x < y$ is not true. Thus, we know that if $x$ and $y$ are points of $C$, $x < y$ and $y < x$ are not both true.
+\end{proof}
+
+\begin{definition}  If $A \subset C$ is a subset of $C$, then a point $a \in A$ is a \emph{first} point of $A$ if, for every element $x \in A$, either $a < x$ or $a = x$.  Similarly, a point $b \in A$ is called a \emph{last} point of $A$ if, for every $x \in A$, either $x < b$ or $x = b$.
+\end{definition}
+
+\begin{lemma}  If $A$ is a nonempty, finite subset of $C$, then $A$ has a first and last point.
+\end{lemma}
+
+\begin{proof}
+We let the proposition $P(n)$ be that if $|A| = n$ for a finite $n$, $A$ has a first and last point. To show the base case, we let $A = \{1\}$ so $|A| = 1$. The first and last points of $A$ are both $1$, so $A$ has a first and last point. We assume $P(n)$ to be true and let $|B| = n + 1$, then $B = A' \cup \{x\}$ where $A'$ is a set with $n$ elements with finite $n$, and $\{x\} \not \in A'$. We know that $A'$ has a first and last point by the inductive hypothesis. Let $y$ is the first element of $A'$ and $z$ is the last element of $A'$ for $y < z$ and $y,z \in C$. If $x < y$, then $x$ is the first element of $B$ (Definition 2.3). If $z < x$, then $x$ is the last element of $B$. We know that $x \not \in A'$, so $x \not = y$ and $x \not = z$. If $y < x$ and $x < z$, then $y$ is the first element of $B$ and $z$ is the last element of $B$. So we know that $B$ has a first and last point.
+\end{proof}
+
+\begin{theorem}  Suppose that $A$ is a set of $n$ distinct points in $C$, or, in other words, $A \subset C$ has cardinality $n$.  Then symbols $a_1, \dotsc, a_n$ may be assigned to each point of $A$ so that $a_1 < a_2 < \dotsm < a_n$, i.e. $a_i < a_{i + 1}$ for $1 \leq i \leq n - 1$.
+\end{theorem}
+
+\begin{proof}
+By Definition 2.4, we know that $A$ has a first and last point. Let $a_1$ be the first point of $A$, and $a_n$ be the last point of $A$ for $|A| = n$ with a finite $n$. $A$ is finite, so any subset of $A$ is finite and therefore has a first and last point. We define $A_k = A \setminus \{a_1,a_2,\dotsm,a_{k-1}\}$ for $1 \leq k \leq (n-1)$. So $A_{k+1} = A_k \setminus a_k$, and thus $A_n = A_{n-1} \cup a_n$ where $a_n$ is the last point of $A_n$. This can be repeated from $1 \leq k \leq n$, so it follows that $a_1 < a_2 < \dotsm < a_n$ for $A = \{a_1, a_2, \dotsm , a_n\}$. 
+\end{proof}
+
+\begin{definition}  If $x, y, z \in C$ and both $x < y$ and $y < z$, then we say that $y$ is \emph{between} $x$ and $z$.
+\end{definition}
+
+\begin{corollary}  Of three distinct points, one must be between the other two.
+\end{corollary}
+\begin{proof}
+We let $x,y,z \in C$ be three arbitrary points and $A$ be a set such that $A = \{x,y,z\}$. $A$ is finite, so by Theorem 2.5 it follows that the the symbols $a_1, a_2, a_3$ may be assigned to $x, y, z$ such that $a_1 < a_2$ and $a_2 < a_3$. Thus we know that $a_2$ is between $a_1$ and $a_3$ by Definition 2.6, so of three distinct points there must be a point between the other two. 
+\end{proof}
+
+\begin{axiom}  $C$ has no first or last point.
+\end{axiom}
+
+\begin{definition} If $a,b\in C$ and $a < b$, then the set of points between $a$ and $b$ is called a \emph{region}, denoted by $\_{ab}$.  
+\end{definition}
+
+\begin{warning}  One often sees the notation $(a, b)$ for regions.  We will reserve the notation $(a, b)$ for ordered pairs in a product $A \times B$.  These are very different things.  
+\end{warning}
+
+\begin{theorem} If $x$ is a point of $C$, then there exists a region $\_{ab}$ such that $x \in \_{ab}$.
+\end{theorem}
+
+\begin{proof}
+$C$ has no first or last point by Axiom 3, so for any point $x \in C$ there exist $a,b \in C$ such that $a < x$ and $x < b$. It follows then that $x$ is between $a$ and $b$. So by Definition 2.8, $x \in \_{ab}$.
+\end{proof}
+
+We now come to one of the most important definitions of this course:
+
+\begin{definition}
+Let $A$ be a subset of $C$.  A point $p$ of $C$ is called a \emph{limit point} of $A$ if every region $R$ containing $p$ has nonempty intersection with $A \setminus \{p\}$.  Explicitly, this means:
+\[
+\text{for every region $R$ with $p \in R$, we have $R \cap (A \setminus \{p \}) \neq \emptyset$.}
+\]
+\end{definition}
+
+Notice that we do not require that a limit point $p$ of $A$ be an element of $A$.
+
+\begin{theorem} If $p$ is a limit point of $A$ and $A \subset B$, then $p$ is a limit point of $B$.
+\end{theorem}
+
+\begin{proof}
+Let $p$ be a limit point of $A$ and $A \subset B$. Then we know by Definition 2.11 that for a region $R$, $\forall R$ such that $p \in R$, $R \cap (A \setminus \{p\}) \not = \emptyset$. So we know that for $x \in C$, $\exists x$ such that $x \in R \cap (A \setminus \{p\})$. Because $A \subset B$, $(A \setminus \{p\})$ is a subset of $(B \setminus \{p\})$, so we know that $x \in B \setminus \{p\}$. It follows then that $x \in R \cap (B \setminus \{p\})$ because $x \in R$, so we know that $\forall R$ such that $p \in R$, $x \in R \cap (B \setminus \{p\})$ and thus that $R \cap (B \setminus \{p\} \not = \emptyset$. So by Definition 2.11, $p$ is a limit point of $B$.
+\end{proof}
+
+\begin{lemma} If $\_{ab}$ is a region in $C$, then:
+\[
+C = \{ x\in C \mid x < a \} \cup \{a\} \cup \_{ab} \cup \{b \} \cup \{ x\in C \mid b < x \}.
+\]
+\end{lemma}
+
+\begin{proof}
+We know that $C = \_{ab} \cup (C \setminus \_{ab})$. It is also obvious that $(C \setminus \_{ab}) = \{x \in C \mid x \not \in \_{ab}\}$. By Definition 2.8, $\{x \in C \mid x \not \in \_{ab}\}$ can be rewritten as $\{x \in C \mid x < a\} \cup \{a\} \cup \{b\} \cup \{x \in C \mid b < x\}$. Substituting, we get $C = \{ x\in C \mid x < a \} \cup \{a\} \cup \_{ab} \cup \{b \} \cup \{ x\in C \mid b < x \}$.
+\end{proof}
+
+\begin{definition} If $\_{ab}$ is a region in $C$, then $C \setminus (\{a\} \cup \_{ab} \cup \{b\})$ is called the \emph{exterior} of $\_{ab}$ and is denoted by $\ext{ab}$.
+\end{definition}
+
+\begin{lemma}  If $\_{ab}$ is a region in $C$, then:
+\[
+C = \ext{ab} \cup \{a\} \cup \{b\} \cup \_{ab}. 
+\]
+\end{lemma}
+
+\begin{proof}
+By Definition 2.14 we know that $\ext{ab} = C \setminus (\{a\} \cup \_{ab} \cup \{b\})$. It follows then that $C = \ext{ab} \cup \{a\} \cup \{b\} \cup \_{ab}$. 
+\end{proof}
+
+\begin{lemma}  No point in the exterior of a region is a limit point of that region.  No point of a region is a limit point of the exterior of that region.
+\end{lemma}
+
+\begin{proof}
+Let $\_{ab}$ be a region and $p$ be a point such that $p \in \ext{ab}$. $p \in \ext{ab}$ so $p < a$ or $b < p$. If $p < a$, then we let $c \in C$ be a point such that $c < p$. Then we know that $\_{ca} \cap (\_{ab} \setminus \{p\} = \emptyset$ by Definition 2.8. If $b < p$, we let $d \in C$ be a point such that $p < d$. Then similarly we know that $\_{bd} \cap (\_{ab} \setminus \{p\} = \emptyset$ by Definition 2.8. Thus, we have shown that $\forall p \in \ext{ab}$, for a region $R$ $\exists R$ such that $p \in R$ and $R \cap (\_ab \setminus \{p\}) = \emptyset$. So $\forall p \in \ext{ab}$, $p$ is not a limit point of $\_{ab}$.
+Let $\_{ab}$ be a region and $p$ be a point such that $p \in \_{ab}$. It follows then that $a < p$ and $p < b$. Assume $p$ is a limit point of $\ext{ab}$. $p \in \_{ab}$, so if $p$ is a limit point of $\ext{ab}$ then $\_{ab} \cap (\ext{ab} \setminus \{p\}) \neq \emptyset$. This is a contradiction however, because it is obvious that $\_{ab} \cap \ext{ab} = \emptyset$ so $\_{ab} \cap (\ext{ab} \setminus \{p\}) = \emptyset$. So $\forall p \in \_{ab}$, $p$ is not a limit point of $\ext{ab}$.
+\end{proof}
+
+\begin{theorem}  If two regions have a point $x$ in common, their intersection is a region containing $x$.
+\end{theorem}
+
+\begin{proof}
+Let $x$ be a point $x \in C$ such that $x \in \_{ab}$ and $x \in \_{a'b'}$ for two regions $\_{ab}, \_{a'b'}$. It follows that $x \in (\_{ab} \cap \_{a'b'})$, so $\_{ab} \cap \_{a'b'} \neq \emptyset$. By Definition 2.8, we know that $a < x < b$ and $a' < x < b'$ so it is clear that $a < b'$ and $a' < b$. Let $c$ be the greater of $a, a'$ and $d$ be the lesser of $b, b'$. Let $c'$ be the lesser of $a, a'$ and $d'$ be the greater of $b, b'$. Let $y \in \_{ab} \cap \_{a'b'}$, then $c < y < d$ and it follows that $y \in \_{cd}$. Let $y' \in \_{cd}$, then we have $c' < c < y' < d < d'$. It is clear that $\_{c'd'} \cap \_{cd} = \_{cd}$, $\_{c'd} \cap \_{cd'} = \_{cd}$, $\_{cd'} \cap \_{c'd} = \_{cd}$, so $y' \in \_{ab} \cap \_{a'b'}$ regardless of the relation between $a, a'$ and between $b, b'$. Thus, we have shown that $\_{ab} \cap \_{a'b'} = \_{cd}$ and that $x \in \_{cd}$.
+\end{proof}
+
+\begin{corollary}  If $n$ regions $R_1, \dotsc, R_n$ have a point $x$ in common, then their intersection $R_1 \cap \dotsm \cap R_n$ is a region containing $x$.
+\end{corollary}
+
+\begin{proof}
+Let $P(n)$ be that if $n$ regions $R_1,..., R_n$ have a point $x$ in common, then their intersection $R_1 \cap \dotsm \cap R_n$ is a region containing $x$. To prove the base case, let $n = 2$, then by Theorem 2.17 $P(2)$ is shown to be true. Assume that $P(n)$ is true. Then by the inductive hypothesis, $\forall x$ let the intersection of $R_1 \cap \dotsm \cap R_n$ be a region $A$ containing $x$. Let $R_{n+1}$ be a region containing $x$, then $A \cap R_{n+1}$ is a region containing $x$ by Theorem 2.17. Substituting, we get that $R_1 \cap \dotsm \cap R_n \cap R_{n+1}$ is a region containing $x$. Thus by induction $P(n)$ is shown to be true.
+\end{proof}
+
+\begin{theorem}  Let $A, B \subset C$.  If $p$ is a limit point of $A \cup B$, then $p$ is a limit point of $A$ or $B$.
+\end{theorem}
+
+\begin{proof}
+Assume $p$ is a limit point of $A \cup B$ and $p$ is not a limit point of $A$ or $B$. Then we know that there exists a region $R_a$ such that $p \in R_a$ and $R_a \cap (A \setminus \{p\}) = \emptyset$. Similarly, there exists a region $R_b$ such that $p \in R_b$ and $R_b \cap (B \setminus \{p\}) = \emptyset$. We know that $p \in R_a$ and $p \in R_b$ so $R_a \cap R_b \neq \emptyset$. It follows then by Theorem 2.17 that there exists a region $R_c$ such that $p \in R_c$ and $R_c = R_a \cap R_b$. We know $p \in R_c$ and that $R_c \cap ((A \cup B) \setminus \{p\}) \neq \emptyset$ because $p$ is a limit point of $A \cup B$. However, this is a contradiction because $R_c \subset R_b$ and $R_c \subset R_a$, so $R_c \cap A = \emptyset$ and $R_c \cap B = \emptyset$, so $R_c \cap (A \cup B) = \emptyset$ and therefore $R_c \cap ((A \cup B) \setminus \{p\}) = \emptyset$. So if $p$ is a limit point of $A \cup B$, then $p$ must be a limit point of $A$ or $B$.
+\end{proof}
+
+\begin{corollary}  Let $A_1, \dotsc, A_n$ be $n$ subsets of $C$.  If $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$, then $p$ is a limit point of at least one of the sets $A_k$.
+\end{corollary}
+
+\begin{proof}
+Assume $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$. We let $A_1 \cup \dotsm \cup A_n = A_n \cup X_{n-1}$ with $X_{n-1} = A_1 \cup \dotsm \cup A_{n-1}$. By Theorem 2.19, $p$ is a limit point of either $A_n$ or $X_{n-1}$. If $p$ is a limit point of $A_n$, then we are done. If $p$ is a limit point of $X_{n-1}$, then we write $X_{n-1} = A_{n-1} \cup X_{n-2}$ and apply Theorem 2.19. In general, $X_i = A_i \cup X_{i-1}$ where $1 \leq i \leq n$, and $X_1 = A_1$. Therefore if $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$, then $p$ must be a limit point of at least one of the sets $A_k$.
+\end{proof}
+
+The converse is also true, so we have both directions:
+
+\begin{corollary}
+Let $A_1, \dotsc, A_n$ be $n$ subsets of $C$.  Then $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$ if and only if $p$ is a limit point of at least one of the sets $A_k$.
+\end{corollary}
+
+\begin{proof}
+We assume $p$ is a limit point of $A_k$ for some $A_k$ in $A_1,...,A_n$. We let $A = A_1 \cup \dotsm \cup A_n$. It is obvious then that $A_k \subset A$. By Theorem 2.12, we know then that $p$ is a limit point of $A$. Combining this with Corollary 2.20, we have that $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$ if and only if $p$ is a limit point of at least one of the sets $A_k$.
+\end{proof}
+
+\begin{definition}  Two sets $A$ and $B$ are \emph{disjoint} if $A \cap B = \emptyset$. 
+\end{definition}
+
+\begin{theorem}  If $p$ and $q$ are distinct points of $C$, then there exist disjoint regions $R$ and~$S$ containing $p$ and $q$, respectively.
+\end{theorem}
+\begin{proof}
+We know that because $p \not = q$, either $p > q$ or $p < q$ (Definition 2.1). Let $p > q$ be true, then we know by Axiom 3 that $\exists a,b \in C$ such that $b < q < p < a$. It is obvious that either $\exists m$ or $\nexists m$ such that $q < m < p$. Consider the case that there $\exists m$ such that $q < m < p$, then $p \in \underline{ma}$ and $q \in \underline {bm}$. Let $R = \underline{ma}$ and $S = \underline {bm}$, then we know that $\forall x \in R, x > m$ and that $\forall x \in S, x < m$, so it follows that $R \cap S = \emptyset$, and $R$ and $S$ are disjoint.. We now consider the case that there $\nexists m$ such that $q < m < p$. It follows then that $\underline{qp} = \emptyset$. Let $R = \underline{qa}$, $S = \underline {bp}$. So $\forall x \in R, x > q$ and $\forall x \in S, x < p$ so we can can conclude that $\forall x \in (R \cap S), x \in \underline{qp}$. Thus $R \cap S = \emptyset$ because $\underline{qp} = \emptyset$ so $R$ and $S$ are disjoint. Using a similar argument, it can be shown that if $p < q$, then $\exists R,S$ such that $R \cap S = \emptyset$.
+\end{proof}
+\begin{corollary}  A subset of $C$ consisting of one point has no limit points.
+\end{corollary}
+\begin{proof}
+Let $x \in C$ be some arbitrary $x$ such that $A \subset C$ is the set $A = \{x\}$. We assume $\exists p$ such that $p$ is a limit point of A. It follows then that $\forall Q, p \in Q, Q \cap (A \setminus \{p\}) \not = \emptyset$ (Definition 2.11). If $p = x$, then $A \setminus \{p\} = \emptyset$ and $Q \cap (A \setminus \{p\}) = \emptyset$ for any set $Q$. This is a contradiction to the definition of a limit point. If $p \not = x$, then $p$ and $x$ are distinct points in $C$. Then by Theorem 2.23, $\exists R,S$ such that $R \cap S = \emptyset$ with $p \in R$ and $x \in S$. Because $x \in S$, we know that $A \subset S$. $R \cap S = \emptyset$, and $A \subset S$, so $R \cap A = \emptyset$. But we assumed that $p$ is a limit point so $\forall Q, p \in Q, Q \cap A \not = \emptyset$ (we know that $A \setminus \{p\} = A$). $R$ is a counterexample, because $p \in R$ and $R \cap A = \emptyset$. This is a contradiction to the definition of a limit point. Because we reach a contradiction by assuming that $\exists p$ such that $p$ is a limit point of $A$, we know that $\forall A \subset C$ if $A$ only has one point, then $A$ has no limit points.
+\end{proof}
+\begin{theorem} A finite subset $A \subset C$ has no limit points.
+\end{theorem}
+\begin{proof}
+Let $|A| = n$ for finite $n$, $A= \{a_1, a_2, \dotsm, a_n\}$. Then it follows that $A = \bigcup _{i=1}^n\{a_i\}$. By Corollary 2.21, we know that $p$ is a limit point of $A$ if and only if $p$ is a limit point of some $\{a_i\} \subset A$. However, we know by Corollary 2.24 that $\forall \{a_i\} \subset A, \{a_i\}$ has no limit points. It follows then that a finite subset $A \subset C$ has no limit points.
+\end{proof}
+
+\begin{corollary}  If $A \subset C$ is finite and $x \in A$, then there exists a region $R$ such that $A \cap R = \{ x \}$.
+\end{corollary}
+\begin{proof}b
+By Theorem 2.25, $A$ has no limit points because it is finite. So $x \in A$ is not a limit point of $A$. By Definition 2.11, we know that for a region $R$, $\exists R, x \in R$ such that $R \cap (A \setminus \{x\}) = \emptyset$. It follows that $(R \cup \{x\}) \cap ((A \setminus \{x\}) \cup \{x\}) = \{x\}$. But we know that $x \in R$ and $x \in A$, so $R \cap A = \{x\}$.
+\end{proof}
+\begin{definition}  A set is \emph{infinite} if it is not finite.
+\end{definition}
+
+\begin{theorem}  If $p$ is a limit point of $A$ and $R$ is a region containing $p$, then the set $R \cap A$ is infinite.
+\end{theorem}
+\begin{proof}
+$p$ is a limit point of $A$, so we know that for a region R, $\forall R$ such that $p \in R$, $R \cap (A \setminus \{p\}) \not = \emptyset$ (Definition 2.13). Similarly, for a region S, $\forall S$ such that $p \in S$, $S \cap (A \setminus \{p\P) \not = \emptyset$. Let $S'$ be a region such that $S' = R \cap S$ for some $R,S$. Thus, we know that $\forall R,S$, $p \in R,S$, $S' = R \cap S$ and $p \in S'$ for $S'$ a region by Theorem 2.17. Because $S'$ is a region and $p \in S'$, we know that $S' \cap (A \setminus \{p\}) \not = \emptyset$. So $R \cap S \cap (A \setminus \{p\}) \not = \emptyset$. It follows then that because $p \in R$, $S \cap ((R \cap A) \setminus \{p\}) \not = \emptyset$. We know that this holds $\forall S$, $p \in S$, so by Definition 2.13, $p$ is a limit point of $R \cap A$. Because $R \cap A$ has a limit point, we know that $R \cap A$ is not finite (Theorem 2.25) so $R \cap A$ is infinite (Definition 2.27).
+\end{proof}
+\begin{exercise}  Find realizations of the continuum $(C, <)$.  That is, find concrete sets $C$ endowed with a relation $<$ satisfying all of the axioms (so far).  Are they the same?  What does ``the same'' mean here?
+\end{exercise}
+
+$\mathbb Z$, $\mathbb R$, $\mathbb Q$ are all realizations of the continuum as defined thus far. For each of these realizations it is fairly clear that all the axioms hold. These three realizations are "the same" in that they all satisfy the three axioms that define the continuum so far, so all of the theorems on the continuum so far apply to each of the realizations.
+
+
+\end{document}

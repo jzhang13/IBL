@@ -1,0 +1,455 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\sarr}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+
+\begin{document}
+
+\begin{center}
+{\large SHEET 11: UNIFORM CONTINUITY AND INTEGRATION} \\ 
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{11}   
+
+We will now consider a notion of continuity that is stronger than ordinary continuity.  
+
+\begin{definition}  Let $f \colon A \arr \bbR$ be a function.  We say that $f$ is \emph{uniformly continuous} if for all $\epsilon > 0$, there exists a $\delta > 0$ such that for all $x, y \in A$
+\[
+\text{ if $\abs{x - y} < \delta$,} \quad \text{then $\abs{f(x) - f(y)} < \epsilon$.}
+\]
+\end{definition}
+
+\begin{theorem}  If $f$ is uniformly continuous, then $f$ is continuous.
+\end{theorem}
+
+\begin{proof}
+Let $f$ be uniformly continuous, then we know that for $\epsilon > 0$, there exists $\delta > 0$ such that for all $x,y \in A$, if $\abs{x - y} < \delta$, then $\abs{f(x) - f(y)} < \epsilon$. This is a more general case of Theorem 9.21, so we have that $f$ is clearly continuous by 9.21 as we can simply fix $a \in A$ to reach 9.21.
+\end{proof}
+
+\begin{exercise}  
+Determine with proof whether the following functions $f$ are uniformly continuous on the given
+intervals $A$:
+\begin{enumerate}
+\item
+$f(x)=x^2$ on $A=\bbR$
+
+\item
+$f(x)=x^2$ on $A=(-2,2)$
+
+\item
+$f(x)=\frac{1}{x}$ on $A=(0,+\infty)$
+
+\item
+$f(x)=\frac{1}{x}$ on $A=[1,+\infty)$
+
+\item
+$f(x)=\sqrt{x}$ on $A=[0,+\infty)$
+
+\item
+$f(x)=\sqrt{x}$ on $A=[1,+\infty)$
+\end{enumerate}
+%Find a function $f$ that is uniformly continuous.  Find a function that is continuous but not uniformly continuous.
+\end{exercise}
+
+\begin{proof}
+1. Let $f(x) = x^2$ for $f : \bbR \to \bbR$. Assume $f$ is uniformly continuous, let $\epsilon = 1$, then we have that there exists $\delta > 0$ such that for all $x,y \in A$, if $\abs{x - y} < \delta$, then $\abs{f(x) - f(y)} < \epsilon$ by 11.1. Let $x = \frac{\epsilon}{\delta}$, $y = \frac{\epsilon}{\delta} + \frac{\delta}{2}$. Then simplifying $\abs{x - y} < \delta$, we have that $\frac{\delta}{2} < \delta$ which is true for $\delta > 0$. It follows then by 11.1 that $\abs{f(x) - f(x + \frac{\delta}{2}} < \epsilon$. Simplifying, we get that $\abs{-\epsilon - \frac{\delta^2}{4}} < \epsilon$ for $\delta, \epsilon > 0$, so it follows that $\epsilon + \frac{\delta^2}{4} < \epsilon$ which is false becuase $\delta > 0$. Tus, this is a contradiction, and $f$ is not uniformly continuous. \newline
+2. Let $f(x) = x^2$ for $f : (-2,2) \to \bbR$. Let $\epsilon > 0$ be arbitrary, and let $\delta = \frac{\epsilon}{4}$. It follows then that for $x,y \in (-2,2)$, $\abs{x - y} < \frac{\epsilon}{4}$ implies that $\abs{x^2 - y^2} < \epsilon$. Rearranging $\abs{x^2 - y^2} < \epsilon$, we get that $\abs{x - y} < \frac{\epsilon}{\abs{x + y}}$. So we have that for $x,y \in (-2,2)$, if $\abs{x - y} < \frac{\epsilon}{4}$, then $\abs{x - y} < \frac{\epsilon}{\abs{x + y}}$. Note that for $x,y \in (-2,2)$, we know that $0 \leq \abs{x + y} < 4$. Thus we know that if $\abs{x-y} < \frac{\epsilon}{4}$, then $\abs{x-y} < \frac{\epsilon}{\abs{x+y}}$. In the case that $\abs{x + y} = 0$, then we have that $x = 0, y = 0$, so we know that $\abs{x^2 - y^2} < \epsilon$ for $\epsilon > 0$. Thus we have shown that $f$ is uniformly continuous by 11.1. \newline
+3. Let $f(x) = \frac{1}{x}$ for $f : (0, +\infty) \to \bbR$. Assume that $f$ is uniformly continuous \newline
+4. Let $f(x) = \frac{1}{x}$ for $f : [1, +\infty) \to \bbR$. Let $\epsilon > 0$ be arbitrary and let $\delta = \frac{\epsilon}{2}$. Assume that for $x,y \in [1, +\infty)$ that $\abs{x - y} < \frac{\epsilon}{2}$. Then we have that $\abs{x - y} < \epsilon$, because $\epsilon > 0$. Note that $x,y \geq 1$, so we know that $\abs{xy} > 1$, so $\epsilon \abs{xy} > \epsilon$. It follows then that $\abs{x-y} < \epsilon \abs{xy}$. Dividing by $\abs{xy}$, we have that $\frac{\abs{x-y}}{\abs{xy}} < \epsilon$. Simplifying, we have that $\abs{f(x) - f(y)} < \epsilon$, so by 11.1 we know that $f$ is uniformly continuous. \newline
+5. Let $f(x) = \sqrt(x)$ for $f : [0, +\infty]$. \newline
+6. 
+\end{proof}
+
+\begin{exercise}
+Let $f:\bbR\longrightarrow \bbR$ be defined by $f(x)=x^n,$ for $n\in\bbN.$ Show that $f$ is uniformly continuous if, and only if, $n=1.$ 
+
+{\bf Challenge:} Let $p:\bbR\rightarrow\bbR$ be a polynomial with real coefficients.  Show that $p$ is uniformly
+continuous on $\bbR$ if and only if $\mbox{deg}(p)\leq 1$.
+
+{\it There is no deadline for the Challenge problem. Once a student has a solution he/she should present it to Sarah or Laurie
+and we will then schedule a class presentation of it.}
+
+\end{exercise}
+\begin{proof}
+Let $f$ be uniformly continuous. Assume that $n \geq 2$ and let $\epsilon = 1$. Then by the definition of uniform continuity, we know there exists $\delta > 0$ such that we can choose $x$ and $y = x + \frac{\delta}{2}$. $\abs{x - y} = \frac{\delta}{2} < \delta$, so we have by uniform continuity that $\abs{f(x) - f(y)} < \epsilon$. It follows then that $\abs{f(x) - f(x + \frac{\delta}{2})} < 1$ for any $x \in \bbR$. So we have that $\abs{x^n - (x + \frac{\delta}{2})^n} < 1$. Expanding, we get that $x^{n-1}(\frac{\delta}{2}) + \dotsm + x(\frac{\delta}{2})^{n-1} + {\frac{delta}{2}}^n < 1$. Note that all terms are positive, so if we let $x = \frac{1}{\frac{\delta}{2}}^{n-1}$, then we get that $1 + p < 1$ where $p$ is some positive value. This is a contradiction, so we know that if $f$ is uniformly continuous, then $n = 1$. \newline
+Let $f(x) = x$, then we have that for $\epsilon > 0$, choose $\delta = \frac{\epsilon}{2}$. Then we know that for any $x,y \in \bbR$, if $\abs{x - y} < \frac{\epsilon}{2}$, then clearly $\abs{x - y} < \frac{\epsilon}{2} < \epsilon$, so by definition of uniform continuity we have that $f$ is uniformly continuous. 
+\end{proof}
+
+\begin{exercise}
+Let $f$ and $g$ be uniformly continuous on $A\subset \bbR$.  Show that:
+\begin{enumerate}
+\item  The function $f+g$ is uniformly continuous on $A$.
+
+\item  For any constant $c\in \bbR$, the function $c\cdot f$ is uniformly continuous on $A$.
+
+\end{enumerate}
+\end{exercise}
+
+%\noindent  
+We will now prove that continuous functions with compact domain are automatically uniformly continuous.  To this end, first consider:
+
+\begin{lemma}  
+Let $f \colon A \arr \bbR$ be continuous.  Fix $\epsilon > 0$.  By the definition of continuity, for each $p \in A$ there exists $\delta(p) > 0$ such that for all $x \in A$
+\[
+\text{ if $\abs{x - p} < \delta(p)$,} \quad \text{then $\abs{f(x) - f(p)} < \tfrac{\epsilon}{2}$.}
+\]
+For each $p\in A$, define
+$U(p) = \{ x \in \bbR \mid \abs{x - p} < \tfrac{1}{2} \delta(p) \}.$
+Then the collection $\{ U(p) \mid p \in A \}$ is an open cover of $A$.
+\end{lemma}
+
+
+
+\begin{theorem}
+Suppose that $X \subset \bbR$ is compact and $f \colon X \arr \bbR$ is continuous.  Then $f$ is uniformly continuous.
+\end{theorem}
+
+\begin{corollary}
+Suppose that $f \colon [a, b] \arr \bbR$ is continuous.  Then $f$ is uniformly continuous.
+\end{corollary}
+
+\begin{definition}
+We say that a function $f:A\to\bbR$ is \emph{bounded} if $f(A)$ is a bounded subset of $\bbR$.
+\end{definition}
+\begin{theorem}
+Suppose that $X \subset \bbR$ is compact and $f \colon X \arr \bbR$ is continuous.  Then $f$ is bounded.
+\end{theorem}
+
+\begin{exercise}
+Show that if $f$ and $g$ are bounded on $A$ and uniformly continuous on $A$, 
+then $fg$ is uniformly continuous on $A$.
+\end{exercise}
+
+\medskip
+
+We are now ready to turn to integration.  
+
+\begin{definition} A \emph{partition} of the interval $[a, b]$ is a finite set of points in $[a, b]$ that includes $a$ and $b$:
+\[
+a = t_0 < t_1 < \dotsm < t_{n - 1} < t_n = b.
+\]
+If $P$ and $Q$ are partitions of the interval $[a,b]$ and $P\subset Q$, we refer to $Q$ 
+as a \emph{refinement} of $P$.
+\end{definition}
+
+We usually write partitions as ordered lists $P = \{t_0, t_1, \dotsc, t_n\}$ with $t_{i - 1} < t_{i}$ for each $i=1,\ldots, n$.
+
+
+
+
+\begin{definition}  Suppose that $f \colon [a, b] \arr \bbR$ is bounded and that $P = \{t_0, t_1, \dotsc, t_n\}$ is a partition of $[a, b]$.  Define:
+\begin{align*}
+m_i &= \inf \{ f(x) \mid t_{i - 1} \leq x \leq  t_i \} \\
+M_i &= \sup \{ f(x) \mid t_{i - 1} \leq x \leq  t_i \}.
+\end{align*}
+The \emph{lower sum} of $f$ for the partition $P$ is the number:
+\[
+L(f, P) = \sum_{i = 1}^n m_i (t_i - t_{i - 1}).
+\]
+The \emph{upper sum} of $f$ for the partition $P$ is the number:
+\[
+U(f, P) = \sum_{i = 1}^n M_i (t_i - t_{i - 1}).
+\]
+\end{definition}
+
+\noindent Notice that it is always the case that $L(f, P) \leq U(f, P)$.  
+
+\begin{lemma}  Suppose that $P$ and $Q$ are partitions of $[a, b]$ and that $Q$ is a refinement of $P$.
+%\footnote{in which case we say that $Q$ is a \emph{refinement} of $P$}.  
+Then:
+\[
+L(f, P) \leq L(f, Q)  \quad \text{and} \quad U(f, P) \geq U(f, Q).
+\]
+\end{lemma}
+
+\begin{theorem}  Let $P_1$ and $P_2$ be partitions of $[a, b]$ and suppose that $f \colon [a, b] \arr \bbR$ is bounded.  Then:
+\[
+L(f, P_1) \leq U(f, P_2).
+\]
+\end{theorem}
+
+\begin{definition}  Let $f:[a,b]\rightarrow\bbR$ be bounded.  We define:
+\begin{align*}
+L(f) &= \sup \{ L(f, P) \mid \text{$P$ is a partition of $[a, b]$} \} \\
+U(f) &= \inf \{ U(f, P) \mid \text{$P$ is a partition of $[a, b]$} \}
+\end{align*}
+to be, respectively, the \emph{lower integral} and \emph{upper integral} of $f$ from $a$ to $b$.
+\end{definition}
+
+\begin{exercise}  Why do $L(f)$ and $U(f)$ exist?  Find a function $f$ for which $L(f) = U(f)$.  Find a function $f$ for which $L(f) \neq U(f)$.  Is there a relationship between $L(f)$ and $U(f)$ in general?
+\end{exercise}
+
+\begin{definition}  Let $f \colon [a, b] \arr \bbR$ be bounded.  We say that $f$ is \emph{integrable} on $[a, b]$ if $L(f) = U(f)$.  In this case, the common value $L(f) = U(f)$ is called the \emph{integral} of $f$ from $a$ to $b$ and we write it as:
+\[
+\int_{a}^{b} f.
+\]
+\end{definition}
+
+When we want to display the variable of integration, we write the integral as follows, including
+the symbol $dx$ to indicate that variable of integration:
+\[
+\int_{a}^{b} f(x) \, dx.
+\]
+For example, if $f(x)=x^2$, we would write 
+$\displaystyle{\int_{a}^{b} x^2 \, dx}$ but not $\displaystyle{\int_{a}^{b} x^2}$.
+
+
+\begin{theorem}\label{int_criterion}  Let $f \colon [a, b] \arr \bbR$ be bounded.  Then $f$ is integrable if and only if for every $\epsilon > 0$ there exists a partition $P$ of $[a, b]$ such that
+\[
+U(f, P) - L(f, P) < \epsilon.
+\]
+\end{theorem}
+
+
+\begin{theorem}\label{cont_implies_integrable}  If $f \colon [a, b] \arr \bbR$ is continuous, then $f$ is integrable.
+\end{theorem}
+
+\noindent (Hint: Use theorem \ref{int_criterion} and uniform continuity.)
+
+\begin{exercise}  
+Fix $c\in\bbR$ and let $f:[a,b]\rightarrow \bbR$ be defined by $f(x)=c$, for each $x\in [a,b]$.
+Show that $f$ is integrable on $[a,b]$ and that $\int_a^bf=c(b-a)$.
+\end{exercise}
+
+\begin{exercise}  
+Define $f:[0,b]\rightarrow \bbR$ by the formula $f(x)=x$.  
+Show that $f$ is integrable on $[0,b]$ and that $\int_0^bf=\frac{b^2}{2}$.
+\end{exercise}
+
+\begin{exercise}  
+Show that the converse of theorem \ref{cont_implies_integrable} is false in general.
+\end{exercise}
+
+\begin{exercise}
+Let $f:[0,1]\rightarrow\bbR$ be defined by 
+$$
+f(x)=\left\{
+\begin{array}{cl}
+1 & \mbox{if $x\in \bbQ$} \\
+0 & \mbox{if $x\not\in \bbQ$.} \\
+\end{array}
+\right.
+$$
+Show that $f$ is not integrable on $[0,1]$.  Compute the upper and lower integrals of $f$ on $[0,1]$.
+\end{exercise}
+
+\begin{theorem}  Let $a < b < c$.  A function $f \colon [a, c] \arr \bbR$ is integrable on $[a, c]$ if and only if $f$ is integrable on $[a, b]$ and $[b, c]$.  When $f$ is integrable on $[a,c]$, we have
+\[
+\int_{a}^{c} f = \int_{a}^{b} f + \int_{b}^{c}f.
+\]
+\end{theorem}
+
+%\noindent 
+If $b < a$, we define
+\[
+\int_{a}^{b} f = - \int_{b}^{a} f,
+\]
+whenever the latter integral exists.  With this notational convention, it follows that the equation
+\[
+\int_{a}^{c} f = \int_{a}^{b} f + \int_{b}^{c}f
+\]
+always holds, regardless of the ordering of $a$, $b$ and $c$, whenever $f$ is integrable on
+the largest of the three intervals.
+
+\begin{proof}
+Let $f$ be integrable on $[a,c]$. Then by Theorem 11.19, we know that for any $\epsilon > 0$, $U(f,P_0) - L(f,P_0) < \epsilon$ for some partition $P_0 = \{a, t_1, t_2, \dotsm, t_{n-1}, c\}$ of $[a,c]$. Let $P = \{a, t_1, t_2, \dotsm, t_{n-1}, c\} \cup \{b\}$ be a partition of $[a,c]$. Then we define partitions $Q = \{a, t_1, t_2, \dotsm, b\}$ and $R = \{b, \dotsm, t_{n-1}, c\}$. By Definition 11.13 and properties of sums, we know that $L(f,P) = L(f,Q) + L(f,R)$ and that $U(f,P) = U(f,Q) + U(f,R)$. We also have that $U(f,P) - L(f,P) < \epsilon$ so substuting we have that $[U(f,Q) + U(f,R)] - [L(f,Q) + L(f,R)] < \epsilon$. Rearranging, we get $[U(f,Q) - L(f,Q)] + [U(f,R) - L(f,R)] < \epsilon$. Note that both terms are positive, as $U(f,Q) > L(f,Q)$ and $U(f,R) > L(f,R)$. Thus we have that $U(f,Q) - L(f,Q) < \epsilon$ and similarly that $U(f,R) - L(f,R) < \epsilon$. So we have by 11.19 that $f$ is integrable on $[a,b]$ and $[b,c]$. \newline
+Let $f$ be integrable on $[a,b]$ and $[b,c]$ and let $\epsilon > 0$ be arbitrary. Choose $\epsilon' = \frac{\epsilon}{2}$. Then by 11.19, we get that $U(f,Q) - L(f,Q) < \epsilon'$ and that $U(f,R) - L(f,R) < \epsilon'$ for some partitions $Q$ and $R$. Combining, we have that $U(f,Q) - L(f,Q) + U(f,R) - L(f,R) < 2\epsilon' = \epsilon$. Let $P = Q \cup R$, then it follows that $U(f,P) - L(f,P) < \epsilon$, so we have by 11.19 that $f$ is integrable on $[a,c]$.
+\end{proof}
+
+
+
+
+
+
+
+
+\begin{theorem}  Suppose that $f$ and $g$ are integrable functions on $[a, b]$ and that $c \in \bbR$ is a constant.  Then $f+g$ and $cf$ are integrable on $[a,b]$ and
+\begin{align*}
+\hspace{-1.75in}&\mathrm{(i)} \quad  \int_{a}^{b} (f + g) = \int_{a}^{b} f + \int_{a}^{b} g, \\
+\hspace{-1.75in}&\mathrm{(ii)} \quad \int_{a}^{b} c \cdot f = c \int_{a}^{b} f.
+\end{align*}
+\end{theorem}
+
+\begin{theorem}  Suppose that $f$ is integrable on $[a, b]$ and that there exists numbers $m$ and $M$ such that:
+\[
+m \leq f(x) \leq M \qquad \text{for all $x \in [a, b]$.}
+\]
+Then:
+\[
+m (b - a) \leq \int_{a}^{b} f \leq M(b - a).
+\]
+\end{theorem}
+
+\begin{proof}
+Let $P$ be any partition of $[a,b]$. We write $P = \{t_0, t_1, \dotsm, t_n\}$ for $n \in \bbN$. Then we know that $L(f,P) \leq L(f) \leq \sum_{i=1}^n M_i(t_i, t_{i-1}) \leq M(b - a)$. $f$ is integrable, so $L(f) = \int_{a}^{b}$. It follows then that $\int_{a}^{b} f \leq M(b-a)$. Without loss of generality, the same argument can be used to show that $m(b-a) \leq \int_{a}^{b} f$ using $U(f)$ and $U(f,P)$.
+\end{proof}
+
+\begin{theorem}  Suppose that $f$ is integrable on $[a, b]$.  Define  $F \colon [a, b] \arr \bbR$ by
+\[
+F(x) = \int_{a}^{x} f 
+\]
+Then $F$ is continuous.
+\end{theorem}
+
+\begin{proof}
+Let $F(x) = \int_{a}^{x} f$ and suppose that $f$ is integrable on $[a,b]$. Then choose $\epsilon > 0$. We take two cases, where $x > c$ and $x < c$ (note that if $x = c$, then $\abs{x - c} < \delta$ and $\abs{F(x) - F(c)} < \epsilon$ will always be true and so $f$ will be continuous). \newline
+Case 1: Let $x > c$, then we let $\delta = \frac{\epsilon}{M}$ for $M$ such that $f(x) \leq M$. Now let $\abs{x - c} < \frac{\epsilon}{M}$. It follows then that $x > c$ so $M(x-c) < \epsilon$. We know by 11.26 and 11.27 that $\abs{F(x) - F(c)} = \abs{\int_{c}^{x} f} < M(x-c) < \epsilon$. So we have that $f$ is continuous by definition. \newline
+Case 2: Let $x < c$, then we let $\delta = \frac{\epsilon}{m}$ for $m$ such that $m \leq f(x)$. Now let $\abs{x - c} < \frac{\epsilon}{m}$. It follows then that $x < c$ so $m(c-x) < \epsilon$. $x < c$, so we know by 11.25, 11.26, and 11.27 that $\abs{F(x) - F(c)} = \int_{x}^{c} f \leq m(c - x) < \epsilon$. So we have that $f$ is continuous by definition.
+\end{proof}
+
+
+\end{document}

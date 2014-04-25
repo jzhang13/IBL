@@ -1,0 +1,295 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\sarr}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheorem*{axiom4}{Axiom 4}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example}[theorem]{Example}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+
+\begin{document}
+
+\begin{center}
+{\large SHEET 12: THE FUNDAMENTAL THEOREM OF CALCULUS AND INVERSE FUNCTIONS} \\ 
+\end{center}
+
+\bigskip \bigskip
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{12}   
+
+
+\begin{lemma}  Let $f \colon [a, b] \arr \bbR$ be continuous at $p \in (a, b)$.  Define functions $m$ and $M$ by:
+\begin{align*}
+m(h) &= \begin{cases} 
+\inf \{ f(x) \mid p \leq x \leq p + h \} \quad \text{if $h \geq 0$} , \\
+\inf \{ f(x) \mid p + h \leq x \leq p \}  \quad \text{if $h < 0$} 
+\end{cases} \\
+M(h) &= \begin{cases} 
+\sup \{ f(x) \mid p \leq x \leq p + h \} \quad \text{if $h \geq 0$} , \\
+\sup \{ f(x) \mid p + h \leq x \leq p \}  \quad \text{if $h < 0$} 
+\end{cases}\end{align*}
+Then $\lim\limits_{h \rightarrow 0} m(h) = f(p)$ and $\lim\limits_{h \rightarrow 0} M(h) = f(p)$.
+\end{lemma}
+
+\begin{theorem}[The First Fundamental Theorem of Calculus]  Suppose that $f$ is integrable on $[a, b]$.  Define $F \colon [a, b] \arr \bbR$ by
+\[
+F(x) = \int_{a}^{x} f.
+\]
+If $f$ is continuous at $p \in (a, b)$, then $F$ is differentiable at $p$ and
+\[
+F'(p) = f(p).
+\]
+\end{theorem}
+
+\begin{lemma}  Suppose that $f \colon [a, b] \arr \bbR$ is integrable and that $I$ is a number satisfying
+\[
+L(f, P) \leq I \leq U(f, P) \qquad \text{for every partition $P$ of $[a, b]$.}
+\]
+Then 
+\[
+\int_{a}^{b} f = I.
+\]
+\end{lemma}
+
+\begin{theorem}[The Second Fundamental Theorem of Calculus]
+Suppose that $f$ is integrable on $[a, b]$ and that $f = F'$ on $(a,b)$ for some function $F$ that is continuous on $[a,b]$.  Then
+\[
+\int_{a}^{b} f = F(b) - F(a).
+\]
+\end{theorem}
+
+\begin{corollary} [Integration by Parts]
+Let $f,g$ be functions defined on some open interval containing $[a,b]$ such that 
+$f'$ and $g'$ exist and are continuous on $[a,b].$ Then
+$$\int_a^b fg' = [f(b)g(b)-f(a)g(a)]-\int_a^b f' g.$$
+\end{corollary}   
+
+\begin{corollary}[Change of Variables]
+Let $g$ be a function defined on some open interval containing $[a,b]$ such that $g'$ is continuous on $[a,b].$ Suppose that 
+$g([a,b])\subset [c,d]$ and $f:[c,d]\longrightarrow\bbR$ is continuous. Define $F:[c,d]\longrightarrow \bbR$ by $F(x)=\int_c^x f.$
+Then
+$$\int_a^b f(g(x))\cdot g'(x)dx=F(g(b))-F(g(a)).$$
+\end{corollary}
+
+
+%\begin{corollary}[Integration by Parts]
+%Let $f:[a,b]\rightarrow \bbR$  and  $g:[a,b]\rightarrow \bbR$ be continuous, 
+%and suppose that
+%$g$ is continuously differentiable on $(a,b)$.  Suppose there exists $F:[a,b]\rightarrow \bbR$ such that 
+%$F$ is differentiable on $(a,b)$ and that $F'=f$ on $(a,b)$.  Then:
+%\[
+%\int_a^b f(x)\cdot g(x)\,dx=[F(b)g(b)-F(a)g(a)]-\int_a^bF(x)\cdot g'(x)\, dx.
+%\]
+%\end{corollary}
+
+%\begin{corollary}[Change of Variables]
+%Let $g:[a,b]\rightarrow \bbR$ be integrable on $[a,b]$ and differentiable on $(a,b)$, and suppose that $g'$
+%is continuous on $(a,b)$.
+%Suppose that $[c,d]$ is a closed interval such that $g([a,b])\subset [c,d]$, and that  
+%$f:[c,d]\rightarrow \bbR$ is a continuous function.  Suppose further that there exists 
+%a function $F:[c,d]\rightarrow\bbR$ that is differentiable on $(c,d)$ and such that
+%$F'=f$ on $(c,d)$.  Then:
+%\[
+%\int_a^bf(g(x))\cdot g'(x)\,dx=F(g(b))-F(g(a)).
+%\]
+%\end{corollary}
+
+\medskip
+
+Now, we prove another very important theorem that tells us about inverse functions and their derivatives. To get there we will need a few lemmas.
+
+\begin{definition}
+Let $A\subset\bbR$, and let $f:A\to\bbR$ be a function. We say that $f$ is \emph{strictly increasing} on $A$ if, for $x,y\in A$, if $x< y$, then $f(x)<f(y)$. Similarly, we say that $f$ is \emph{strictly decreasing} on $A$ if, for $x,y\in A$, if $x<y$, then $f(x)>f(y)$. 
+\end{definition}
+ 
+%\noindent 
+\begin{exercise}
+Show that if $f$ is strictly increasing or strictly decreasing on an interval, then $f$ is injective.
+\end{exercise}
+
+\begin{lemma}
+If $f:(a,b)\to\bbR$ is continuous and injective, then $f$ is either strictly increasing or strictly decreasing on $(a,b)$.
+\end{lemma}
+
+\begin{theorem}\label{invfun}
+If $f:(a,b)\to\bbR$ is continuous and injective, then there exists a function $g:f(a,b)\to (a,b)$ such that $g(f(x))=x$ for all $x\in(a,b)$ and $g$ is continuous.
+\end{theorem}
+
+We call the function $g$ from Theorem \ref{invfun} the \emph{inverse function} of $f$ and we denote it by $f^{-1}$.
+
+\begin{lemma}
+If $f:(a,b)\to\bbR$ is differentiable and $f'(x)>0$ for all $x\in(a,b)$, then $f$ is strictly increasing on $(a,b)$. Similarly, if $f$ is differentiable on $(a,b)$ and $f'(x)<0$ for all $x\in(a,b)$, then $f$ is strictly decreasing on $(a,b)$.
+\end{lemma}
+
+\begin{lemma}
+If $f:(a,b)\to\bbR$ is continuous and $f(c)>0$ for some $c\in(a,b)$, then there exists a region $R\subset (a,b)$ such that $c\in R$ and $f(x)>0$ for all $x\in R$. The analogous statement is true if $f(c)<0$.
+\end{lemma}
+
+\begin{theorem}\label{IFT}
+Suppose that $f:(a,b)\to\bbR$ is differentiable and that the derivative $f':(a,b)\to\bbR$ is continuous. Also suppose that there is a point $p\in(a,b)$ such that $f'(p)\neq 0$. 
+Then there exists a region $R\subset (a,b)$ such that $p\in R$ and $f$ with domain restricted to $R$ is injective. 
+Furthermore, $f^{-1}:f(R)\to R$ is differentiable at the point $f(p)$ and
+$$ (f^{-1})'(f(p))=\frac{1}{f'(p)} .$$
+\end{theorem} 
+
+\begin{exercise}
+Consider the function $f(x)=x^n$ for a fixed $n\in\bbN$.  If $n$ is even, then $f$ is strictly increasing
+on the set of non-negative real numbers.  If $n$ is odd, then $f$ is strictly increasing on all of $\bbR$.
+For a given $n$, let $A$ be the aforementioned set on which $f$ is strictly increasing.  Define the
+inverse function $f^{-1}:f(A)\rightarrow A$ by $f^{-1}(x)=\sqrt[n]{x}$, which we sometimes also
+denote $f^{-1}(x)=x^{1/n}$.  Use Theorem\ \ref{IFT} to find the points $y\in f(A)$ at
+which $f^{-1}$ is differentiable, and determine $(f^{-1})'(y)$ at these points.
+\end{exercise}
+
+
+
+
+\end{document}
